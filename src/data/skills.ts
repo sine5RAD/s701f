@@ -194,7 +194,7 @@ export const skillsData: Skill[] = [
 		id: "jialichuang",
 		name: "嘉立创EDA",
 		description: "画板子的",
-		icon: "logos:circuit",
+		icon: "openmoji:circuit",
 		category: "other",
 		level: "beginner",
 		experience: { years: 0, months: 3 },
