@@ -1,6 +1,5 @@
 # build output
-# 明确允许将 dist 目录及其内部所有文件加入版本控制
-!/dist/**
+dist/
 
 # generated types
 .astro/
