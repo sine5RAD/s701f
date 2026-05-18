@@ -55,8 +55,8 @@ pnpm build #构建网站
 为了成为一个正常的网页，我们需要设置域名<br>
 首先在腾讯云界面设置域名解析
 ![域名解析](./域名解析.png)
-然后回到[spaceship](https://www.spaceship.com/zh/ "spaceship")，进入[DNS预设管理器](https://www.spaceship.com/zh/application/dns-presets-manager/ "DNS预设管理器")，点击创建自定义预设并添加腾讯云给你的记录<br>
-![添加DNS预设](./添加DNS预设.png)
+然后回到[spaceship](https://www.spaceship.com/zh/ "spaceship")，进入[高级DNS](https://www.spaceship.com/zh/application/advanced-dns-application/manage/ "高级DNS")，点击创建自定义预设并添加腾讯云给你的记录<br>
+![添加DNS记录](./添加DNS记录.png)
 进入宝塔面板，选择网站，点击添加站点，根目录选择/dist<br>
 然后去域名管理，添加你的域名和端口号<br>
 ![添加网站域名](./添加网站域名.png)
