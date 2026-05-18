@@ -52,6 +52,8 @@
 &lt;p&gt;已逃离&lt;/p&gt;
 &lt;h3&gt;钢铁雄心4&lt;/h3&gt;
 &lt;p&gt;只会打原版&lt;/p&gt;
+&lt;h3&gt;杀戮尖塔2&lt;/h3&gt;
+&lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
 </content:encoded></item><item><title>樱羽艾玛cos服测评</title><link>https://s701f.top/posts/%E6%A8%B1%E7%BE%BD%E8%89%BE%E7%8E%9Bcos%E6%9C%8D%E6%B5%8B%E8%AF%84/</link><guid isPermaLink="true">https://s701f.top/posts/%E6%A8%B1%E7%BE%BD%E8%89%BE%E7%8E%9Bcos%E6%9C%8D%E6%B5%8B%E8%AF%84/</guid><description>第二件cos服</description><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;项目做完之后给咱自己挑的奖励也是到货了。本来是从对立cos和一件猫耳常服里面选的，但是不知道为什么脑子一热就买了这套&amp;lt;br&amp;gt;&lt;/p&gt;
@@ -103,8 +105,8 @@ pnpm build #构建网站
 为了成为一个正常的网页，我们需要设置域名&amp;lt;br&amp;gt;
 首先在腾讯云界面设置域名解析
 &lt;img src=&quot;./%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.png&quot; alt=&quot;域名解析&quot; /&gt;
-然后回到&lt;a href=&quot;https://www.spaceship.com/zh/&quot;&gt;spaceship&lt;/a&gt;，进入&lt;a href=&quot;https://www.spaceship.com/zh/application/dns-presets-manager/&quot;&gt;DNS预设管理器&lt;/a&gt;，点击创建自定义预设并添加腾讯云给你的记录&amp;lt;br&amp;gt;
-&lt;img src=&quot;./%E6%B7%BB%E5%8A%A0DNS%E9%A2%84%E8%AE%BE.png&quot; alt=&quot;添加DNS预设&quot; /&gt;
+然后回到&lt;a href=&quot;https://www.spaceship.com/zh/&quot;&gt;spaceship&lt;/a&gt;，进入&lt;a href=&quot;https://www.spaceship.com/zh/application/advanced-dns-application/manage/&quot;&gt;高级DNS&lt;/a&gt;，点击创建自定义预设并添加腾讯云给你的记录&amp;lt;br&amp;gt;
+&lt;img src=&quot;./%E6%B7%BB%E5%8A%A0DNS%E8%AE%B0%E5%BD%95.png&quot; alt=&quot;添加DNS记录&quot; /&gt;
 进入宝塔面板，选择网站，点击添加站点，根目录选择/dist&amp;lt;br&amp;gt;
 然后去域名管理，添加你的域名和端口号&amp;lt;br&amp;gt;
 &lt;img src=&quot;./%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E5%9F%9F%E5%90%8D.png&quot; alt=&quot;添加网站域名&quot; /&gt;
