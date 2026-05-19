@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-05-18T08:02:48.974Z</updated>
+  <updated>2026-05-19T02:38:03.179Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,122 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>racknerd服务器搭建</title>
+    <link href="https://s701f.top/posts/racknerd%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/racknerd%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</id>
+    <published>2026-05-18T00:00:00.000Z</published>
+    <updated>2026-05-18T00:00:00.000Z</updated>
+    <summary>一个腾讯云难民的故事</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>在遭到不可抗力因素的打压之后，咱决定从腾讯云跑路到racknerd&lt;br&gt;</p>
+<h1>账号注册</h1>
+<p>首先是之前说的验证码问题，咱换了一个clash节点就解决了</p>
+<h1>racknerd的优势</h1>
+<ol>
+<li>不需要实名制。这是咱从腾讯云跑路的核心原因。在国内需要把域名转到厂商那里然后实名认证才能让把域名解析到ip</li>
+<li>可以直连github</li>
+</ol>
+<h1>racknerd的劣势</h1>
+<p>贵，我租个单核1GB RAM的服务器爆了150块</p>
+<h1>在遇到问题之前...</h1>
+<p>咱照着之前<a href="../%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E4%BB%A5%E5%8F%8A%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA">在腾讯云上部署的方式</a>重新跑了一遍。一切都很正常，直到咱运行<code>pnpm build</code>&lt;br&gt;
+爆内存了...</p>
+<h1>解决爆内存的问题</h1>
+<p>为什么会爆内存呢？&lt;br&gt;
+当然是因为这是个1G RAM的服务器&lt;br&gt;
+VUE3项目构建时的最少需要1GB的内存，而咱的破烂服务器在运行nginx之后只有大概600MB的剩余了&lt;br&gt;
+所以构建并不能在服务器端进行...&lt;br&gt;
+首先的想法是本地构建，然后把dist文件夹传上去。&lt;br&gt;
+但考虑到每次更新都要手动上传，咱决定把它作为没有办法的办法&lt;del&gt;（咱这该死的完美主义）&lt;/del&gt;&lt;br&gt;
+于是求助群友&lt;br&gt;
+&lt;q&gt;github workflow&lt;/q&gt;——Alumopper姐姐&lt;br&gt;</p>
+<h1>github workflow</h1>
+<p>不会写，遂bing一下&lt;br&gt;
+github的官方文档说它遵循yaml语法&lt;del&gt;（什么是yaml）&lt;/del&gt;&lt;br&gt;
+那么我们着手开始写&lt;br&gt;</p>
+<h2>on</h2>
+<p>首先是我们的需求，要在推送到master分支的时候自动触发构建&lt;br&gt;
+那么我们的on可以这样写</p>
+<pre><code>push:
+    branches:
+        - main
+        - master
+</code></pre>
+<h2>permission</h2>
+<p>我们要将构建出来的dist文件夹写入仓库的pages分支，那么我们需要</p>
+<pre><code>permissions:
+    contents: write
+</code></pre>
+<p>这段代码的作用是给予脚本写入权限&lt;br&gt;</p>
+<h2>job</h2>
+<p>接下来到了重头戏，这是我们脚本的核心功能，以<code>job:</code>开头&lt;br&gt;
+job里面是运行流程，github会自上而下执行你编写的流程</p>
+<h3>build-and-deploy</h3>
+<p>我们首先需要构建代码&lt;br&gt;
+由于我们构建出来的网站运行在ubuntu20.04操作系统上，所以我们添加一行</p>
+<pre><code>runs-on: ubuntu-latest
+</code></pre>
+<p>之后是运行流程，在<code>steps</code>标签下&lt;br&gt;</p>
+<h4>checkout</h4>
+<p>首先我们需要知道github action是怎么运行的&lt;br&gt;
+github会给你提供一台临时运行机，然后在这台机器上执行你的流程&lt;br&gt;
+但是我们要构建代码，而咱的代码又不会自动下载到虚拟机上&lt;br&gt;
+怎么办呢？&lt;br&gt;
+当然是前人栽树后人乘凉，</p>
+<pre><code>- name: Checkout
+  uses: actions/checkout@v4
+</code></pre>
+<p>搞定</p>
+<h4>setup pnpm</h4>
+<p>想要运行<code>pnpm build</code>，我们需要什么呢？&lt;br&gt;
+当然是需要pnpm了（&lt;br&gt;
+我们依然可以用别人写好的构建代码&lt;br&gt;</p>
+<pre><code>- name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+          version: 10.33.0
+          run_install: false
+</code></pre>
+<p>安装的pnpm版本应该与本地的pnpm版本一致，并且不自动执行依赖安装（就是<code>pnpm install</code>）&lt;br&gt;
+不自动执行依赖安装的原因是我们还没装node.js</p>
+<h4>setup node.js</h4>
+<p>仿照上例显然</p>
+<pre><code>- name: Setup Node.js
+  uses: actions/setup-node@v4
+  with:
+      node-version: 22.12.0
+      cache: pnpm
+</code></pre>
+<h4>install dependence</h4>
+<p>既然已经安装完node.js了，我们终于可以安装依赖了</p>
+<pre><code>- name: Install dependencies
+  run: pnpm install --frozen-lockfile
+</code></pre>
+<h4>build site</h4>
+<p>就像教程里说的那样，直接</p>
+<pre><code>- name: Build site
+  run: pnpm build
+</code></pre>
+<p>就好了</p>
+<h4>Deploy to pages branch</h4>
+<p>然后我们要把生成的dist文件夹推送到pages分支上&lt;br&gt;
+恰巧前人还帮我们写好了&lt;br&gt;
+那么最后一步</p>
+<pre><code>- name: Deploy to pages branch
+  uses: JamesIves/github-pages-deploy-action@v4
+  with:
+      branch: pages
+      folder: dist
+      clean: true
+</code></pre>
+<p>完成</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="互联网"></category>
   </entry>
   <entry>
     <title>樱羽艾玛cos服测评</title>
