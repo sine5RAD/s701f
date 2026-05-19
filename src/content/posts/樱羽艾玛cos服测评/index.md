@@ -3,7 +3,7 @@ title: 樱羽艾玛cos服测评
 published: 2026-05-15
 description: '第二件cos服'
 image: ''
-tags: ['cos']
+tags: ['cos', '日常']
 category: 'cos'
 draft: false 
 lang: ''
