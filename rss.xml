@@ -56,6 +56,35 @@
 &lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
+</content:encoded></item><item><title>带有源极交流阻抗的MOS管放大器设计</title><link>https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;任务&lt;/h1&gt;
+&lt;p&gt;依然是使用&lt;strong&gt;BS170&lt;/strong&gt;进行设计，这次要求$V_{DD} = 15V$，$R_L = 26k$，$A_V = 27$&lt;/p&gt;
+&lt;h1&gt;步骤&lt;/h1&gt;
+&lt;p&gt;还是需要先确定元件参数
+&lt;img src=&quot;%E7%94%B5%E8%B7%AF%E5%9B%BE.png&quot; alt=&quot;电路图&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;第一步&lt;/h2&gt;
+&lt;p&gt;按照&lt;a href=&quot;../MOSFET%E5%8A%9F%E6%94%BE%E8%AE%BE%E8%AE%A1%E8%AE%B0%E5%BD%95/&quot;&gt;上一次实验&lt;/a&gt;的流程，我们搭建一个相同的电路&amp;lt;br&amp;gt;
+什么？你问$R_{S1}$和$R_{S2}$是什么东西？&amp;lt;del&amp;gt;咱不知道啊，把它当成源极电阻吧，只需要两个加一起等于算出来的$R_S$就行&amp;lt;/del&amp;gt;&amp;lt;br&amp;gt;
+什么？你问$I_D$该怎么选择？&amp;lt;del&amp;gt;为了装作咱真的掌握了MOS管相关内容，一定要和之前选的不一样啊，那就4mA吧&amp;lt;/del&amp;gt;
+于是在$V_{GS} = 7.5V, R_{G1} = R_{G2} = 100k, I_D = 4mA$的情况下完成了电路设计&amp;lt;br&amp;gt;
+我超$A_V$怎么等于0.2，大失败&lt;/p&gt;
+&lt;h2&gt;错误分析&lt;/h2&gt;
+&lt;p&gt;问题出在哪里呢？原因在于先前的实验中交流信号可以直接走电阻，不会被$R_S$影响。但现在的设计中交流信号依然要走$R_{S1}$&amp;lt;br&amp;gt;
+那么问题来了，真实的增益公式是什么呢？&amp;lt;br&amp;gt;
+当然是$A_V = \frac{g_m(R_D//R_L)}{1 + g_mR_{S1} }$啦&amp;lt;br&amp;gt;
+让我们重新计算，然后仿真&amp;lt;br&amp;gt;
+我超，怎么$V_o$只有几$\mu V$了，还是大失败&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h2&gt;错误分析2&lt;/h2&gt;
+&lt;p&gt;这次的错误是什么呢？答案在我们之前选取的$R{S1}$上。&amp;lt;br&amp;gt;
+由公式可得，$R_{S1}$越大，$R_D//R_L$就越大。由于$R_L$为定值，那么只能增大$R_D$&amp;lt;br&amp;gt;
+这就是问题的原因，$V_D = I_DR_D$，我们的$R_{S1} = 390$，这时$R_D≈22k$，对应的分压$V_D = 88V$，而我们的$V_{DD}$只有可怜的15V，导致漏极电压为负&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h2&gt;结果&lt;/h2&gt;
+&lt;p&gt;让我们重新计算，增加$R_D$的约束条件。顺便把$I_D$降到2mA以降低$R_S$&amp;lt;br&amp;gt;
+因为$V_D &amp;gt; V_S + 0.5V$(这个0.5V是工程常数)&amp;lt;br&amp;gt;
+又因为我们选取的$V_S = 5.15V$，故$V_D &amp;gt; 5.65V$（这个条件下$R_{G1} = R_{G2}$，分压都是7.5V）&amp;lt;br&amp;gt;
+这样可以得到$R_D &amp;lt; \frac{V_{DD} - V_D}{I_D} = 4675$&amp;lt;br&amp;gt;
+我们选择一个小一点的$R_{S1} = 50$，这时$R_{S2} = 2390$，解得$R_D = 3009$，符合条件&amp;lt;br&amp;gt;
+设计完成
+&lt;img src=&quot;%E7%BB%93%E6%9E%9C%E5%9B%BE.png&quot; alt=&quot;结果图&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>racknerd服务器搭建</title><link>https://s701f.top/posts/racknerd%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://s701f.top/posts/racknerd%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</guid><description>一个腾讯云难民的故事</description><pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;在遭到不可抗力因素的打压之后，咱决定从腾讯云跑路到racknerd&amp;lt;br&amp;gt;&lt;/p&gt;
 &lt;h1&gt;账号注册&lt;/h1&gt;

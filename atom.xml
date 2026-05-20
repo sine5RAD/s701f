@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-05-19T11:51:38.759Z</updated>
+  <updated>2026-05-20T07:54:52.155Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,48 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>带有源极交流阻抗的MOS管放大器设计</title>
+    <link href="https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</id>
+    <published>2026-05-20T00:00:00.000Z</published>
+    <updated>2026-05-20T00:00:00.000Z</updated>
+    <summary></summary>
+    <content type="html"><![CDATA[<h1>任务</h1>
+<p>依然是使用<strong>BS170</strong>进行设计，这次要求$V_{DD} = 15V$，$R_L = 26k$，$A_V = 27$</p>
+<h1>步骤</h1>
+<p>还是需要先确定元件参数
+<img src="%E7%94%B5%E8%B7%AF%E5%9B%BE.png" alt="电路图" /></p>
+<h2>第一步</h2>
+<p>按照<a href="../MOSFET%E5%8A%9F%E6%94%BE%E8%AE%BE%E8%AE%A1%E8%AE%B0%E5%BD%95/">上一次实验</a>的流程，我们搭建一个相同的电路&lt;br&gt;
+什么？你问$R_{S1}$和$R_{S2}$是什么东西？&lt;del&gt;咱不知道啊，把它当成源极电阻吧，只需要两个加一起等于算出来的$R_S$就行&lt;/del&gt;&lt;br&gt;
+什么？你问$I_D$该怎么选择？&lt;del&gt;为了装作咱真的掌握了MOS管相关内容，一定要和之前选的不一样啊，那就4mA吧&lt;/del&gt;
+于是在$V_{GS} = 7.5V, R_{G1} = R_{G2} = 100k, I_D = 4mA$的情况下完成了电路设计&lt;br&gt;
+我超$A_V$怎么等于0.2，大失败</p>
+<h2>错误分析</h2>
+<p>问题出在哪里呢？原因在于先前的实验中交流信号可以直接走电阻，不会被$R_S$影响。但现在的设计中交流信号依然要走$R_{S1}$&lt;br&gt;
+那么问题来了，真实的增益公式是什么呢？&lt;br&gt;
+当然是$A_V = \frac{g_m(R_D//R_L)}{1 + g_mR_{S1} }$啦&lt;br&gt;
+让我们重新计算，然后仿真&lt;br&gt;
+我超，怎么$V_o$只有几$\mu V$了，还是大失败&lt;br&gt;</p>
+<h2>错误分析2</h2>
+<p>这次的错误是什么呢？答案在我们之前选取的$R{S1}$上。&lt;br&gt;
+由公式可得，$R_{S1}$越大，$R_D//R_L$就越大。由于$R_L$为定值，那么只能增大$R_D$&lt;br&gt;
+这就是问题的原因，$V_D = I_DR_D$，我们的$R_{S1} = 390$，这时$R_D≈22k$，对应的分压$V_D = 88V$，而我们的$V_{DD}$只有可怜的15V，导致漏极电压为负&lt;br&gt;</p>
+<h2>结果</h2>
+<p>让我们重新计算，增加$R_D$的约束条件。顺便把$I_D$降到2mA以降低$R_S$&lt;br&gt;
+因为$V_D &gt; V_S + 0.5V$(这个0.5V是工程常数)&lt;br&gt;
+又因为我们选取的$V_S = 5.15V$，故$V_D &gt; 5.65V$（这个条件下$R_{G1} = R_{G2}$，分压都是7.5V）&lt;br&gt;
+这样可以得到$R_D &lt; \frac{V_{DD} - V_D}{I_D} = 4675$&lt;br&gt;
+我们选择一个小一点的$R_{S1} = 50$，这时$R_{S2} = 2390$，解得$R_D = 3009$，符合条件&lt;br&gt;
+设计完成
+<img src="%E7%BB%93%E6%9E%9C%E5%9B%BE.png" alt="结果图" /></p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
   </entry>
   <entry>
     <title>racknerd服务器搭建</title>
