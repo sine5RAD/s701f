@@ -20,6 +20,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://www.alumopper.top/",
 		tags: ["Friend", "Blog"],
 	},
+	{
+		id: 2,
+		title: "言子的博客",
+		imgurl: "https://www.maincand.top/favicon.svg",
+		desc: " Hello World\nLet's change the world",
+		siteurl: "https://www.maincand.top/",
+		tags: ["Friend", "Blog"],
+	},
 ];
 
 // 获取所有友情链接数据
