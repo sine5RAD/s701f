@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-05-22T13:26:42.057Z</updated>
+  <updated>2026-05-30T16:45:02.254Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,319 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>AIHistorySimulator源码学习</title>
+    <link href="https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</id>
+    <published>2026-05-30T00:00:00.000Z</published>
+    <updated>2026-05-30T00:00:00.000Z</updated>
+    <summary>咱的第一个vibe coding项目</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>最近与以前在推特上认识的朋友玩文游。讲几个外星国家走向宇宙的故事&lt;br&gt;
+由于一共有九个人，关系过于复杂，于是乎想着AI推演&lt;br&gt;
+但是手动让AI推演太过麻烦，就想着能不能自己做一个交互网页，让推进游戏更简单一点&lt;br&gt;
+于是就有了这个项目&lt;br&gt;</p>
+<h1>难点</h1>
+<h2>墨卡托投影地图转球面地图</h2>
+<p>项目的世界生成页面需要实现一个墨卡托投影地图转球面地图的功能&lt;br&gt;</p>
+<h3>我们需要知道的参数</h3>
+<ol>
+<li>图片</li>
+</ol>
+<pre><code>const pixels = context.createImageData(width, height)
+</code></pre>
+<ol>
+<li>画布中心，一个坐标，咱们要把球面中心放在这里</li>
+</ol>
+<pre><code>const centerX = width / 2
+const centerY = height / 2
+</code></pre>
+<ol>
+<li>球体半径，实践中半径要比画布的长宽最小值小一点</li>
+</ol>
+<pre><code>const radius = Math.min(width, height) * 0.42
+</code></pre>
+<ol>
+<li>旋转角，包括左右旋转角（绕y轴旋转，逆时针为正）和俯仰旋转角（绕x轴旋转，逆时针为正）</li>
+</ol>
+<pre><code>const yaw = rotation.value
+const pitch = tilt.value
+</code></pre>
+<p>其中rotation是全局的经度偏移量，pitch是全局的纬度偏移量
+5. 可选的光照方向，让球体更立体。咱的设置如下</p>
+<pre><code>const lightX = -0.35
+const lightY = 0.35
+const lightZ = 0.87
+</code></pre>
+<h3>将图片映射到球面</h3>
+<p>对于我们生成的图片pixel，其中的每一个像素都要被映射到球面上对应的位置&lt;br&gt;
+首先我们归一化图片，将宽和高映射到$[-1, 1]$区间内&lt;br&gt;</p>
+<pre><code>for (let y = 0; y &lt; height; y += 1) 
+  // 将画布 y 坐标归一化到球面坐标系中，值域约为 [-1, 1]。
+  const normalizedY = (centerY - y) / radius
+  for (let x = 0; x &lt; width; x += 1) 
+    // 将画布 x 坐标归一化到球面坐标系中，值域约为 [-1, 1]。
+    const normalizedX = (x - centerX) / radius
+</code></pre>
+<h1>为什么normalizedY和normalizedX的计算方式不一样呢？&lt;br&gt;
+我们需要知道canvas和context.createImageData(width, height)的坐标系&lt;br&gt;
+<a href="https://www.runoob.com/html/html5-canvas.html">菜鸟教程</a> 告诉我们，canvas的(0, 0)坐标位于左上角&lt;br&gt;
+也就是说，canvas的x轴正半轴向右，y轴正半轴向下&lt;br&gt;
+然而在球面坐标系中，x轴正半轴向右，而y轴正半轴向上&lt;br&gt;
+&lt;br&gt;
+接下来，由于球面上所有点同球心的距离都是1，根据勾股定理，我们可以计算出在归一化的球面中，这个像素对应的normalizedZ的值，即$z = \sqrt{1 - x^2 - y^2}$&lt;br&gt;
+&lt;br&gt;
+下一步是计算旋转&lt;br&gt;
+yaw和pitch实际上组成了一个欧拉角&lt;br&gt;
+&lt;del&gt;如果是unity我们可以调用一行transform.rotate解决&lt;/del&gt;&lt;br&gt;
+但在这里，我们必须自己计算&lt;br&gt;
+这里要用到线性代数的相关知识&lt;br&gt;
+yaw的旋转矩阵是
+$
+Y =
+\begin{bmatrix}
+\cos(\text{yaw}) &amp; 0 &amp; \sin(\text{yaw})\
+0 &amp; 1 &amp; 0\
+-\sin(\text{yaw}) &amp; 0 &amp; \cos(\text{yaw})
+\end{bmatrix}
+$, 而pitch的旋转矩阵是
+$
+P =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\
+0 &amp; \cos(\text{pitch}) &amp; \sin(\text{pitch})\
+0 &amp; -\sin(\text{pitch}) &amp; \cos(\text{pitch})
+\end{bmatrix}
+$
+&lt;br&gt;
+为了达到我们想要的效果，咱们先做pitch旋转，再做yaw旋转&lt;br&gt;
+即
+$$
+% 先做 pitch（绕 x 轴旋转）
+\begin{bmatrix}
+x_1\
+y_1\
+z_1
+\end{bmatrix}</h1>
+<h1>\begin{bmatrix}
+1 &amp; 0 &amp; 0\
+0 &amp; \cos(\text{pitch}) &amp; -\sin(\text{pitch})\
+0 &amp; \sin(\text{pitch}) &amp; \cos(\text{pitch})
+\end{bmatrix}
+\begin{bmatrix}
+x_n\
+y_n\
+z_n
+\end{bmatrix}</h1>
+<h1>\begin{bmatrix}
+x_n\
+y_n\cos(\text{pitch}) - z_n\sin(\text{pitch})\
+y_n\sin(\text{pitch}) + z_n\cos(\text{pitch})
+\end{bmatrix}
+$$
+$$
+% 再做 yaw（绕 y 轴旋转）
+\begin{bmatrix}
+x_r\
+y_r\
+z_r
+\end{bmatrix}</h1>
+<h1>\begin{bmatrix}
+\cos(\text{yaw}) &amp; 0 &amp; \sin(\text{yaw})\
+0 &amp; 1 &amp; 0\
+-\sin(\text{yaw}) &amp; 0 &amp; \cos(\text{yaw})
+\end{bmatrix}
+\begin{bmatrix}
+x_1\
+y_1\
+z_1
+\end{bmatrix}</h1>
+<p>\begin{bmatrix}
+x_1\cos(\text{yaw}) + z_1\sin(\text{yaw})\
+y_1\
+-x_1\sin(\text{yaw}) + z_1\cos(\text{yaw})
+\end{bmatrix}
+$$</p>
+<p>旋转代码为</p>
+<pre><code>const rotatedY = normalizedY * cosPitch - normalizedZ * sinPitch
+const pitchZ = normalizedY * sinPitch + normalizedZ * cosPitch
+const rotatedX = normalizedX * cosYaw + pitchZ * sinYaw
+const rotatedZ = -normalizedX * sinYaw + pitchZ * cosYaw
+</code></pre>
+<p>其中pitchZ为中间量&lt;br&gt;
+&lt;br&gt;
+然后我们需要将旋转后的点渲染在球面上&lt;br&gt;
+首先获取其经纬度&lt;br&gt;</p>
+<pre><code>const latitude = Math.asin(Math.max(-1, Math.min(1, rotatedY)))
+const longitude = Math.atan2(rotatedX, rotatedZ)
+</code></pre>
+<p>由于墨卡托投影在接近极点时拉伸严重，故剪裁(但是这会导致极区不被渲染，咱也没有什么比较好的解决方案)</p>
+<pre><code>// Mercator 投影对纬度做上限裁剪，避免极区无限拉伸。
+const clampedLatitude = Math.max(
+  -maxMercatorLatitude,
+  Math.min(maxMercatorLatitude, latitude),
+)
+</code></pre>
+<p><img src="%E5%8F%A4%E5%BE%B7%E6%9B%BC%E5%87%BD%E6%95%B0%E9%80%86%E6%8E%A8%E5%AF%BC.svg" alt="墨卡托投影在球面上的y值计算公式" />
+这个图必须调成白天模式才能看见www&lt;br&gt;
+根据古德曼函数的逆推导，咱们可以计算出y&lt;br&gt;</p>
+<pre><code>const mercatorY = 0.5 - Math.log(Math.tan(Math.PI / 4 + clampedLatitude / 2)) / (2 * Math.PI)
+</code></pre>
+<p>这样我们就有了所有用于渲染纹理的数据</p>
+<pre><code>// u/v 分别表示纹理中的水平和垂直位置，范围都在 [0, 1]。
+const u = (longitude + Math.PI) / (2 * Math.PI)
+const v = clamp01(mercatorY)
+</code></pre>
+<p>添加光照，这里我们假设基础亮度为$0.28 + 0.72 \times 0.15$，最大亮度为1</p>
+<pre><code>const brightness =
+  0.28 +
+  0.72 * Math.max(0.15, normalizedX * lightX + normalizedY * lightY + normalizedZ * lightZ)
+</code></pre>
+<p>当前像素在pixels中的起始下标。createImageData函数返回一个图片数组。其中第$4x-4$、$4x-3$、$4x-2$、$4x-1$位分别表示第x个像素的rgba值，</p>
+<pre><code>const pixelIndex = (y * width + x) * 4
+</code></pre>
+<p>对纹理进行采样</p>
+<pre><code>// 纹理采样坐标：减去 0.5 可以让采样落在像素中心，而不是像素边缘。
+const sampleX = u * globeTextureWidth - 0.5
+const sampleY = v * globeTextureHeight - 0.5// 分别采样纹理的 R/G/B 通道，用于还原原始地图颜色。
+
+const sampleR = sampleTextureChannel(
+  globeTextureData,
+  globeTextureWidth,
+  globeTextureHeight,
+  sampleX,
+  sampleY,
+  0,
+)
+const sampleG = sampleTextureChannel(
+  globeTextureData,
+  globeTextureWidth,
+  globeTextureHeight,
+  sampleX,
+  sampleY,
+  1,
+)
+const sampleB = sampleTextureChannel(
+  globeTextureData,
+  globeTextureWidth,
+  globeTextureHeight,
+  sampleX,
+  sampleY,
+  2,
+)
+</code></pre>
+<p>这样我们就完成了一个简易的图片渲染器</p>
+<h2>陆地识别</h2>
+<p>公理：一个像素，如果不是海洋，它就是陆地&lt;br&gt;
+我们可以预先生成陆地的掩码&lt;br&gt;
+在watch()中添加</p>
+<pre><code>const prepared = await prepareGlobeTexture(src)
+if (!prepared) {
+  return
+}
+</code></pre>
+<p>prepareGlobeTexture的代码</p>
+<pre><code>const prepareGlobeTexture = async (src: string) =&gt; {
+  // 增加一个 render token 用于取消旧的异步加载任务（防止竞态）
+  const renderToken = ++globeRenderToken
+
+  try {
+    // 1) 加载图片资源（DataURL 或外部 URL）
+    //    loadImageElement 返回在图片加载成功时解析的 HTMLImageElement。
+    const image = await loadImageElement(src)
+
+    // 2) 检查 renderToken：如果在等待期间另一次渲染请求已启动，则放弃本次结果
+    if (renderToken !== globeRenderToken) {
+      return false
+    }
+
+    // 3) 获取图片像素尺寸，用于创建与图片等尺寸的离屏画布
+    const sourceWidth = image.naturalWidth || image.width
+    const sourceHeight = image.naturalHeight || image.height
+
+    if (!sourceWidth || !sourceHeight) {
+      return false
+    }
+
+    // 4) 准备离屏 canvas（复用以减少频繁创建）
+    if (!globeTextureCanvas) {
+      globeTextureCanvas = document.createElement('canvas')
+    }
+
+    globeTextureCanvas.width = sourceWidth
+    globeTextureCanvas.height = sourceHeight
+
+    // 5) 获取 2D 上下文（将 willReadFrequently 设置为 true 以优化 readPixel 场景）
+    const sourceContext = globeTextureCanvas.getContext('2d', { willReadFrequently: true })
+    if (!sourceContext) {
+      return false
+    }
+
+    // 6) 将图片绘制到离屏画布，并读取像素数据用于后续采样
+    sourceContext.drawImage(image, 0, 0, sourceWidth, sourceHeight)
+    globeTextureData = sourceContext.getImageData(0, 0, sourceWidth, sourceHeight).data
+    globeTextureWidth = sourceWidth
+    globeTextureHeight = sourceHeight
+
+    // 7) 尝试基于纹理颜色在客户端生成陆地掩码（提高渲染时的判定性能）
+    //    若生成失败则保留 globeLandMask 为 null，渲染时退回到按颜色判断。
+    globeLandMask = null
+    try {
+      generateLandMaskClient()
+    } catch (err) {
+      console.error('客户端生成陆地掩码失败', err)
+      globeLandMask = null
+    }
+
+    return true
+  } catch (error) {
+    console.error('Failed to prepare globe texture', error)
+    return false
+  }
+}
+</code></pre>
+<p>在加载完成后我们调用generateLandMaskClient()，用第六步中保存的globeTextureData生成陆地掩码</p>
+<pre><code>const generateLandMaskClient = () =&gt; {
+  if (!globeTextureData || !globeTextureWidth || !globeTextureHeight) return
+
+  const w = globeTextureWidth
+  const h = globeTextureHeight
+  const mask = new Uint8Array(w * h)
+
+  for (let y = 0; y &lt; h; y++) {
+    for (let x = 0; x &lt; w; x++) {
+      const idx = (y * w + x) * 4
+      const r = globeTextureData[idx] ?? 0
+      const g = globeTextureData[idx + 1] ?? 0
+      const b = globeTextureData[idx + 2] ?? 0
+      const a = globeTextureData[idx + 3] ?? 255
+      mask[y * w + x] = sampleIsLand(r, g, b, a) ? 1 : 0
+    }
+  }
+
+  globeLandMask = mask
+}
+</code></pre>
+<p>判断是否为陆地的函数，通过检测颜色的b通道值同r, g的关系来判断是否为陆地</p>
+<pre><code>const sampleIsLand = (r: number, g: number, b: number, a = 255) =&gt; {
+  const alphaThreshold = 10
+  if (a &lt;= alphaThreshold) return false
+  const blueRatio = 1.1
+  const blueMargin = 24
+  const maxrg = Math.max(r, g)
+  const blueIsDominant = b &gt;= maxrg * blueRatio &amp;&amp; b &gt;= maxrg + blueMargin
+  return !blueIsDominant
+}
+</code></pre>
+<h2>国土记录</h2>
+<h2>与模型提供商通信</h2>
+<h2>存档</h2>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="前端开发"></category>
   </entry>
   <entry>
     <title>带有源极交流阻抗的MOS管放大器设计</title>
