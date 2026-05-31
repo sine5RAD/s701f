@@ -250,7 +250,54 @@ const sampleB = sampleTextureChannel(
   2,
 )
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样我们就完成了一个简易的图片渲染器&lt;/p&gt;
+&lt;p&gt;这样我们就完成了一个简易的图片渲染器&amp;lt;br&amp;gt;
+接下来是鼠标交互，我们可以用unity中学来的经验&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 鼠标/触控拖拽交互：更新 rotation 并重渲染
+const onPointerDown = (e: PointerEvent) =&amp;gt; {
+  // 编辑模式：左键（或触控）放置图钉，右键继续拖拽地图
+  if (isEditingLand.value) {
+    if (!globeCanvas.value) return
+
+    if (e.pointerType !== &apos;touch&apos; &amp;amp;&amp;amp; e.button === 2) {
+      isDragging.value = true
+      dragStartX.value = e.clientX
+      dragStartY.value = e.clientY
+      startRotation.value = rotation.value
+      startTilt.value = tilt.value
+      activePointerId.value = e.pointerId
+
+      try {
+        globeCanvas.value.setPointerCapture(e.pointerId)
+      } catch {
+        // ignore
+      }
+      return
+    }
+
+    if (e.pointerType !== &apos;touch&apos; &amp;amp;&amp;amp; e.button !== 0) return
+    onCanvasPlacePin(e.clientX, e.clientY)
+    return
+  }
+
+  // 非编辑模式：仅响应右键或触控开始拖拽（将左键保留给编辑）
+  if (e.pointerType !== &apos;touch&apos; &amp;amp;&amp;amp; e.button !== 2) return
+
+  if (!globeCanvas.value) return
+
+  isDragging.value = true
+  dragStartX.value = e.clientX
+  dragStartY.value = e.clientY
+  startRotation.value = rotation.value
+  startTilt.value = tilt.value
+  activePointerId.value = e.pointerId
+
+  try {
+    globeCanvas.value.setPointerCapture(e.pointerId)
+  } catch {
+    // ignore
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;陆地识别&lt;/h2&gt;
 &lt;p&gt;公理：一个像素，如果不是海洋，它就是陆地&amp;lt;br&amp;gt;
 我们可以预先生成陆地的掩码&amp;lt;br&amp;gt;
@@ -353,9 +400,393 @@ if (!prepared) {
   return !blueIsDominant
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;国土记录&lt;/h2&gt;
+&lt;p&gt;现在我们可以在地图上染色了，具体代码也在renderWorldGlobe()函数里&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// isLand 表示当前纹理点是否属于陆地；优先使用预计算掩码提高性能。
+let isLand = false
+if (globeLandMask &amp;amp;&amp;amp; globeTextureWidth &amp;gt; 0 &amp;amp;&amp;amp; globeTextureHeight &amp;gt; 0) {
+  // 将采样位置映射到掩码网格中，和纹理坐标保持一致。
+  const tx = wrapTextureX(Math.floor(u * globeTextureWidth), globeTextureWidth)
+  const ty = clampTextureY(Math.floor(v * globeTextureHeight), globeTextureHeight)
+  isLand = !!globeLandMask[ty * globeTextureWidth + tx]
+} else {
+  // 掩码不可用时，回退到按颜色判断是否为陆地。
+  isLand = sampleIsLand(Math.round(sampleR), Math.round(sampleG), Math.round(sampleB), 255)
+}
+// baseR/baseG/baseB 是经过光照修正后的底色。
+const baseR = Math.round(sampleR * brightness)
+const baseG = Math.round(sampleG * brightness)
+const baseB = Math.round(sampleB * brightness)
+if (isLand) {
+  // 陆地区域再叠加一层半透明黄色，增强地表区域的辨识度。
+  const overlayR = LAND_OVERLAY_R
+  const overlayG = LAND_OVERLAY_G
+  const overlayB = LAND_OVERLAY_B
+  // 通过原底色与叠加色混合，得到最终显示颜色。
+  data[pixelIndex] = Math.round(
+    baseR * (1 - LAND_OVERLAY_ALPHA) + overlayR * LAND_OVERLAY_ALPHA,
+  )
+  data[pixelIndex + 1] = Math.round(
+    baseG * (1 - LAND_OVERLAY_ALPHA) + overlayG * LAND_OVERLAY_ALPHA,
+  )
+  data[pixelIndex + 2] = Math.round(
+    baseB * (1 - LAND_OVERLAY_ALPHA) + overlayB * LAND_OVERLAY_ALPHA,
+  )
+  data[pixelIndex + 3] = alpha
+} else {
+  // 海洋区域只保留原始底色与光照效果。
+  data[pixelIndex] = baseR
+  data[pixelIndex + 1] = baseG
+  data[pixelIndex + 2] = baseB
+  data[pixelIndex + 3] = alpha
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;编辑领土&lt;/h2&gt;
+&lt;p&gt;然后我们需要记录给每个国家分配的国土&amp;lt;br&amp;gt;
+咱的思路是顺时针在地图上摆放图钉，围起来的地方就是领土&amp;lt;br&amp;gt;
+所以领土的数据类包含一个数组，数组的每个元素都是一个坐标数组&amp;lt;br&amp;gt;
+其中sx，sy是画布内部坐标，u，v是纹理坐标&amp;lt;br&amp;gt;
+canvasPixelToUV是将屏幕坐标映射到纹理坐标的函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const onCanvasPlacePin = (clientX: number, clientY: number) =&amp;gt; {
+  const canvas = globeCanvas.value
+  if (!canvas) return
+  const rect = canvas.getBoundingClientRect()
+  const sx = Math.round(clientX - rect.left)
+  const sy = Math.round(clientY - rect.top)
+  const uv = canvasPixelToUV(sx, sy)
+  if (!uv) return
+
+  // 如果点击靠近第一个图钉，则认为关闭多边形并尝试保存
+  if (editingPins.value.length &amp;gt; 0) {
+    const first = editingPins.value[0]
+    if (first) {
+      const canvasEl = globeCanvas.value
+      if (canvasEl) {
+        const firstScreen = uvToScreen(first.u, first.v, canvasEl)
+        const dx = sx - firstScreen.sx
+        const dy = sy - firstScreen.sy
+        const dist2 = dx * dx + dy * dy
+        if (dist2 &amp;lt; 20 * 20) {
+          // 结束编辑
+          finishEditingPolygon()
+          return
+        }
+      }
+    }
+  }
+
+  // 存储 uv 即可，屏幕坐标在渲染时实时计算
+  editingPins.value.push({ u: uv.u, v: uv.v, sx, sy })
+  scheduleRenderWorldGlobe()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中editingPins是&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const editingPins = ref&amp;lt;{ u: number; v: number; sx: number; sy: number }[]&amp;gt;([])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在选择地块时我们需要渲染图钉&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 绘制当前正在编辑的图钉与连线（编辑态预览）
+if (isEditingLand.value &amp;amp;&amp;amp; editingPins.value.length) {
+  context.save() // 保存样式状态（随后 restore）
+  // 使用强调色与较粗线条让编辑内容显眼
+  context.strokeStyle = &apos;rgba(40,120,240,0.95)&apos;
+  context.fillStyle = &apos;rgba(40,120,240,0.95)&apos;
+  context.lineWidth = 2
+  // 绘制连线：依次连接每个图钉的当前屏幕位置
+  context.beginPath()
+  for (let i = 0; i &amp;lt; editingPins.value.length; i++) {
+    const p = editingPins.value[i]
+    if (!p) continue
+    // 优先根据当前画布与投影计算屏幕坐标，若 canvas 不可用则回退到保存的快照坐标
+    const { sx: px, sy: py } = globeCanvas.value
+      ? uvToScreen(p.u, p.v, globeCanvas.value)
+      : { sx: p.sx, sy: p.sy }
+    if (i === 0)
+      context.moveTo(px, py) // 起点
+    else context.lineTo(px, py) // 连接线段
+  }
+  context.stroke() // 绘制多边形预览的轮廓线
+  // 绘制每个图钉的控制点圆点，便于手动拖拽/删除
+  for (const p of editingPins.value) {
+    const { sx: px, sy: py } = globeCanvas.value
+      ? uvToScreen(p.u, p.v, globeCanvas.value)
+      : { sx: p.sx, sy: p.sy }
+    context.beginPath()
+    context.arc(px, py, 6, 0, Math.PI * 2) // 固定半径的圆点标记
+    context.fill() // 使用与连线相同的填充色
+  }
+  context.restore() // 恢复到此前保存的画布样式
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后我们把选中的地块染色&amp;lt;br&amp;gt;
+依然在renderWorldGlobe()函数里&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 选中国家名称（如果存在），用于在渲染时高亮对应区域。
+const selCountryName = currentCountry.value?.国家名称?.trim() || &apos;&apos;
+// 若没有任何国家数据则跳过绘制区域的流程，避免不必要的 canvas 操作。
+if (landMap.value &amp;amp;&amp;amp; Object.keys(landMap.value).length) {
+  context.save() // 保存画布状态，绘制后使用 restore 恢复
+  context.lineWidth = 1.5 // 默认描边宽度（会针对选中状态作调整）
+  // 遍历每个国家及其地块
+  for (const [countryName, land] of Object.entries(landMap.value)) {
+    if (!land || !land.areas) continue // 跳过无效数据
+    const isSelected = countryName === selCountryName // 标记是否为被选中国家
+    const countryColor = getCountryColor(countryName) // 获取该国的主题颜色
+    for (const area of land.areas) {
+      if (!area || !area.vertices || !area.vertices.length) continue // 忽略空区域
+      // 将每个顶点从纹理坐标 (u,v) 转换为经过视角旋转的平面坐标
+      const rotatedPoints = area.vertices
+        .filter((vert): vert is [number, number] =&amp;gt; !!vert)
+        .map(([u, v]) =&amp;gt; uvToRotatedPoint(u, v))
+      // 对多边形边界做插值平滑，减少锯齿状直线感
+      const curvedPoints = buildCurvedPolygonPoints(rotatedPoints, 16)
+      // 裁剪到当前可见半球，只绘制朝向用户的片段
+      const clippedPoints = clipPolygonToFrontHemisphere(curvedPoints)
+      if (clippedPoints.length &amp;lt; 3) continue // 不足 3 个点无法构成多边形
+      // 计算画布中心与投影半径，用于将旋转坐标映射回屏幕坐标
+      const centerX = canvas.width / 2
+      const centerY = canvas.height / 2
+      const radius = Math.min(canvas.width, canvas.height) * 0.42
+      context.beginPath()
+      // 将裁剪后的每个点转换为屏幕坐标并绘制路径
+      for (let i = 0; i &amp;lt; clippedPoints.length; i += 1) {
+        const point = clippedPoints[i]
+        if (!point) continue
+        const sx = centerX + point.x * radius // x 投影：中心偏移 + 单位坐标 * 半径
+        const sy = centerY - point.y * radius // y 投影：注意画布 y 方向与数学坐标相反
+        if (i === 0) {
+          context.moveTo(sx, sy) // 起点
+        } else {
+          context.lineTo(sx, sy) // 连续线段
+        }
+      }
+      context.closePath() // 封闭路径，准备填充与描边
+      // 根据是否为选中状态选择不同的填充与描边透明度与粗细
+      context.fillStyle = isSelected
+        ? withColorAlpha(countryColor, 0.22)
+        : withColorAlpha(countryColor, 0.2)
+      context.strokeStyle = isSelected
+        ? withColorAlpha(countryColor, 0.95)
+        : withColorAlpha(countryColor, 0.65)
+      context.lineWidth = isSelected ? 2 : 1
+      context.fill() // 绘制填充
+      context.stroke() // 绘制边框
+    }
+  }
+  context.restore() // 恢复画布状态，避免影响后续绘制样式
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;clipPolygonToFrontHemisphere函数如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 将多边形裁剪到前半球（z &amp;gt;= 0），并在被地平线切割的边界处沿地平线补齐点，
+// 以便渲染出被地平线遮挡部分的可视化边界（例如闭合的海平线片段）。
+const clipPolygonToFrontHemisphere = (points: RotatedPoint[]) =&amp;gt; {
+  // 至少需要 3 个点才能构成多边形，短路返回空结果
+  if (points.length &amp;lt; 3) return [] as RotatedPoint[]
+
+  // 容差值：用于判断点是否在前半球（允许极小的数值误差导致 z 略小于 0）
+  const epsilon = 1e-6
+  // 在两次地平线交点之间插入的弧段细分数，用于在地平线间补齐曲线（越大越平滑）
+  const horizonSegments = 16
+
+  // 判定函数：点是否位于前半球（z &amp;gt;= 0）
+  const isInside = (point: RotatedPoint) =&amp;gt; point.z &amp;gt;= -epsilon
+
+  /**
+   * 在结果数组中添加从 `from` 到 `to` 的地平线弧段点（z = 0）。
+   * - 通过 atan2 获得两个点在平面上的角度，沿最短角度差插值生成若干弧段顶点。
+   * - 若角度差接近 0（几乎重合），则不插入任何点以避免重复。
+   */
+  const addHorizonArc = (result: RotatedPoint[], from: RotatedPoint, to: RotatedPoint) =&amp;gt; {
+    const fromAngle = Math.atan2(from.y, from.x) // 起点角度
+    const toAngle = Math.atan2(to.y, to.x) // 终点角度
+    let delta = toAngle - fromAngle
+
+    // 将角度差规约到 (-PI, PI]，以便沿最短方向插值
+    while (delta &amp;lt;= -Math.PI) delta += Math.PI * 2
+    while (delta &amp;gt; Math.PI) delta -= Math.PI * 2
+
+    // 若差值约为 0，则两点方向一致，不需要插入弧段
+    if (Math.abs(delta) &amp;lt; 1e-6) {
+      return
+    }
+
+    // 将弧沿 angle 从 fromAngle 到 toAngle 分割为若干段，并在 z=0 平面上添加单位向量点
+    for (let step = 1; step &amp;lt;= horizonSegments; step += 1) {
+      const t = step / horizonSegments
+      const angle = fromAngle + delta * t
+      result.push({ x: Math.cos(angle), y: Math.sin(angle), z: 0 })
+    }
+  }
+
+  const result: RotatedPoint[] = []
+  // 找到第一个位于前半球的顶点作为起点（从该点开始顺时针/逆时针遍历多边形）
+  const startIndex = points.findIndex((point) =&amp;gt; isInside(point))
+  if (startIndex &amp;lt; 0) {
+    // 若所有点均在背面，则没有需要绘制的前半球片段
+    return result
+  }
+
+  const startPoint = points[startIndex]
+  if (!startPoint) {
+    return result
+  }
+
+  // 归一化并添加起点（将可能略微偏离单位球的点投影回单位球表面）
+  result.push(normalizeRotatedPoint(startPoint))
+  // pendingExit 用来记录上一个从前半球到背半球的交点，当再次进入前半球时用它补齐地平线弧
+  let pendingExit: RotatedPoint | null = null
+
+  // 从 startIndex 开始遍历多边形的每条边，使用环绕索引处理闭合边
+  for (let offset = 1; offset &amp;lt;= points.length; offset += 1) {
+    const currentIndex = (startIndex + offset - 1) % points.length
+    const nextIndex = (startIndex + offset) % points.length
+    const current = points[currentIndex]
+    const next = points[nextIndex]
+    if (!current || !next) continue
+
+    const currentInside = isInside(current)
+    const nextInside = isInside(next)
+
+    // 情形 A：当前点与下一个点都在前半球 —— 直接将下一个点（归一化）加入结果（除非它是起点）
+    if (currentInside &amp;amp;&amp;amp; nextInside) {
+      if (nextIndex !== startIndex) {
+        result.push(normalizeRotatedPoint(next))
+      }
+      continue
+    }
+
+    // 情形 B：当前在前半球，下一个在背半球 —— 边穿过地平线，计算交点并添加到结果，记录为 pendingExit
+    if (currentInside &amp;amp;&amp;amp; !nextInside) {
+      // 线性插值参数 t，按 z 分量解得当前到 next 在 z=0 处的插值比例
+      const t = current.z / (current.z - next.z)
+      // 在球面上插值后将点投影到地平线（z=0 单位向量）以获得准确的边界点
+      const horizonPoint = projectRotatedPointToHorizon(lerpRotatedPoint(current, next, t))
+      result.push(horizonPoint)
+      pendingExit = horizonPoint
+      continue
+    }
+
+    // 情形 C：当前在背半球，下一个进入前半球 —— 边从背面进入前半球，需要：
+    //  (1) 计算进入点并添加，(2) 如果之前存在 pendingExit（之前的退出点），在二者间插入沿地平线的弧段，
+    //  (3) 添加下一个顶点的归一化投影（除非它是起点）。
+    if (!currentInside &amp;amp;&amp;amp; nextInside) {
+      const t = current.z / (current.z - next.z)
+      const horizonPoint = projectRotatedPointToHorizon(lerpRotatedPoint(current, next, t))
+      if (pendingExit) {
+        // 在上一次退出点与本次进入点之间补齐沿地平线的弧段
+        addHorizonArc(result, pendingExit, horizonPoint)
+      }
+      result.push(horizonPoint)
+      if (nextIndex !== startIndex) {
+        result.push(normalizeRotatedPoint(next))
+      }
+      pendingExit = null // 已处理完 pendingExit
+    }
+  }
+
+  return result
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就完成了www&lt;/p&gt;
 &lt;h2&gt;与模型提供商通信&lt;/h2&gt;
-&lt;h2&gt;存档&lt;/h2&gt;
+&lt;p&gt;首先我们需要准备需要的参数:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const settings = readAiSettingsFromStorage()
+const provider = prepared.provider ?? settings?.provider ?? &apos;OpenAI&apos;
+const apiKey = settings?.api ?? &apos;&apos;
+const model = prepared.model ?? settings?.model ?? &apos;gpt-3.5-turbo&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;以deepseek为例（os：我们需要一个国际标准来统一ai的返回结果）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// DeepSeek 分支：同样先尝试 OpenAI 兼容 SDK，再回退到官方 REST endpoint。
+if (provider === &apos;DeepSeek&apos;) {
+  // DeepSeek REST Chat endpoint (assumed). Uses Bearer token in Authorization header.
+  // 没有 API Key 时无法请求 DeepSeek，直接返回 null。
+  if (!apiKey) {
+    console.error(&apos;No API key available for DeepSeek&apos;)
+    return null
+  }
+  // 优先尝试使用 OpenAI 官方 SDK（DeepSeek 兼容 OpenAI 格式）。
+  try {
+    // baseURL 指向 DeepSeek 的兼容入口。
+    const sdkResult = await callOpenAiCompatibleSdk(&apos;https://api.deepseek.com&apos;)
+    // 如果 SDK 成功返回了非空字符串，直接作为最终结果。
+    if (typeof sdkResult === &apos;string&apos; &amp;amp;&amp;amp; sdkResult.length &amp;gt; 0) {
+      return sdkResult
+    }
+  } catch (err) {
+    // 如果无法导入 SDK（例如在浏览器中），则使用 fetch 回退。
+    console.debug(&apos;OpenAI SDK not available, using fetch fallback&apos;, err)
+  }
+  // 官方文档推荐的 DeepSeek OpenAI 兼容 endpoint。
+  const endpoint = &apos;https://api.deepseek.com/chat/completions&apos;
+
+  // REST 回退路径：直接请求 DeepSeek 兼容接口。
+  try {
+    const res = await fetch(endpoint, {
+      method: &apos;POST&apos;,
+      headers: {
+        &apos;Content-Type&apos;: &apos;application/json&apos;,
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({ model, messages: prepared.messages }),
+    })
+
+    // 非成功响应时读取服务端错误信息并返回 null。
+    if (!res.ok) {
+      const text = await res.text()
+      console.error(&apos;DeepSeek API error&apos;, res.status, text)
+      return null
+    }
+
+    // 正常返回时解析 JSON 并抽取统一文本结果。
+    const data = await res.json()
+    return extractCompletionText(data)
+  } catch (e) {
+    // 任何请求失败都在这里收敛，避免向上抛出未处理异常。
+    console.error(&apos;Failed to call DeepSeek&apos;, e)
+    return null
+  }
+  // 对未实现的 provider 给出明确错误，避免静默失败。
+  console.error(&apos;Provider not implemented:&apos;, provider)
+  return null
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后我们需要一个把模型的返回结果转为string类型的函数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 将模型返回结果统一提取成文本，避免不同 provider 的响应结构差异影响上层调用。
+const extractCompletionText = (data: unknown) =&amp;gt; {
+  // 非对象数据无法按统一结构解析，直接返回 null。
+  if (!data || typeof data !== &apos;object&apos;) {
+    return null
+  }
+  // 以宽松结构接收多种兼容接口返回值，便于处理 OpenAI / DeepSeek / 其他兼容实现。
+  const response = data as {
+    choices?: Array&amp;lt;{ message?: { content?: unknown }; text?: unknown }&amp;gt;
+    output?: unknown
+    result?: unknown
+  }
+  // 优先处理 OpenAI 风格的 choices 数组。
+  if (Array.isArray(response.choices) &amp;amp;&amp;amp; response.choices.length &amp;gt; 0) {
+    // 收集所有 choice 中的文本片段，最后拼接为一个完整回复。
+    const parts: string[] = []
+    // 遍历每个 choice，兼容 message.content 与 text 两种常见字段。
+    for (const choice of response.choices) {
+      // 先读 message.content，若没有则回退到 text。
+      const content = choice.message?.content ?? choice.text
+      // 只收集字符串内容，避免把对象或其他非文本数据混入结果。
+      if (typeof content === &apos;string&apos;) {
+        parts.push(content)
+      }
+    }
+    // 若至少提取到一个字符串片段，则按换行连接后返回。
+    if (parts.length &amp;gt; 0) {
+      return parts.join(&apos;\n&apos;)
+    }
+  }
+  // 兼容某些接口直接返回 output 字段的情况。
+  if (typeof response.output === &apos;string&apos;) return response.output
+  // 兼容某些接口直接返回 result 字段的情况。
+  if (typeof response.result === &apos;string&apos;) return response.result
+  // 如果无法识别具体结构，则返回原始 JSON 字符串，至少保留调试信息。
+  return JSON.stringify(data)
+}
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>带有源极交流阻抗的MOS管放大器设计</title><link>https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;任务&lt;/h1&gt;
 &lt;p&gt;依然是使用&lt;strong&gt;BS170&lt;/strong&gt;进行设计，这次要求$V_{DD} = 15V$，$R_L = 26k$，$A_V = 27$&lt;/p&gt;
 &lt;h1&gt;步骤&lt;/h1&gt;
