@@ -60,7 +60,8 @@
 &lt;p&gt;最近与以前在推特上认识的朋友玩文游。讲几个外星国家走向宇宙的故事&amp;lt;br&amp;gt;
 由于一共有九个人，关系过于复杂，于是乎想着AI推演&amp;lt;br&amp;gt;
 但是手动让AI推演太过麻烦，就想着能不能自己做一个交互网页，让推进游戏更简单一点&amp;lt;br&amp;gt;
-于是就有了这个项目&amp;lt;br&amp;gt;&lt;/p&gt;
+于是就有了这个项目&amp;lt;br&amp;gt;
+&lt;a href=&quot;https://github.com/sine5RAD/AIHistorySimulator&quot;&gt;下载链接&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;难点&lt;/h1&gt;
 &lt;h2&gt;墨卡托投影地图转球面地图&lt;/h2&gt;
 &lt;p&gt;项目的世界生成页面需要实现一个墨卡托投影地图转球面地图的功能&amp;lt;br&amp;gt;&lt;/p&gt;
