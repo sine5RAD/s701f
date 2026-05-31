@@ -2,6 +2,19 @@ import type { TimelineItem } from "../components/features/timeline/types";
 
 export const timelineData: TimelineItem[] = [
 	{
+		id: "ai-history-simulator",
+		title: "AI历史模拟器",
+		description:
+			"基于VUE3和TypeScript开发的一个AI历史模拟器，可以使用ds、chatgpt和claude来生成历史事件的描述和对话，目前还在开发中",
+		type: "project",
+		startDate: "2026-05-27",
+		endDate: "2026-05-31",
+		skills: ["Vue3", "TypeScript"],
+		achievements: ["无"],
+		icon: "logos:vue",
+		color: "#EA580C",
+	},
+	{
 		id: "the-war-of-mystery",
 		title: "神秘之战游戏demo（这什么鬼名字）",
 		description:

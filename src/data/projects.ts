@@ -21,6 +21,21 @@ export interface Project {
 
 export const projectsData: Project[] = [
 	{
+		id: "ai-history-simulator",
+		title: "AI历史模拟器",
+		description: "基于VUE3和TypeScript开发的一个AI历史模拟器",
+		image: "/assets/projects/mizuki.webp",
+		category: "web",
+		techStack: ["Vue3", "TypeScript"],
+		status: "completed",
+		sourceCode: "https://github.com/sine5RAD/AIHistorySimulator",
+		startDate: "2026-05-27",
+		endDate: "2026-05-31",
+		featured: false,
+		tags: ["Vue3", "TypeScript", "AI"],
+		showImage: false,
+	},
+	{
 		id: "radical-slider",
 		title: "Unity圆形滑动条组件",
 		description: "一个简易的unity圆形滑动条组件",
