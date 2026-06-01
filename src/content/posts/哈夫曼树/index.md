@@ -99,3 +99,6 @@ void del(HuffmanNode* node)
     delete node;
 }
 ```
+
+## 完成
+[LGB2168通过](https://www.luogu.com.cn/record/280277639 'LGB2168通过')
