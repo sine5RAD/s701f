@@ -102,3 +102,96 @@ void del(HuffmanNode* node)
 
 ## 完成
 [LGB2168通过](https://www.luogu.com.cn/record/280277639 'LGB2168通过')
+
+# 完整代码
+```c++
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <map>
+
+struct HuffmanNode
+{
+    std::string word;
+    unsigned long long count;
+    HuffmanNode* left;
+    HuffmanNode* right;
+    HuffmanNode* parent;
+    bool operator<(const HuffmanNode& other) const
+    {
+        return count > other.count; // For min-heap
+    }
+};
+
+struct Cmp {
+    bool operator()(HuffmanNode* a, HuffmanNode* b) const {
+        return a->count > b->count; // min-heap by count
+    }
+};
+
+static std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, Cmp> pq;
+static std::vector<std::string> words;
+static std::map<std::string, std::string> wordCode;
+
+void anal(HuffmanNode* node, std::string code = "")
+{
+    if(node->left == nullptr && node->right == nullptr)
+    {
+        wordCode[node->word] = code;
+        return;
+    }
+    anal(node->left, code + "0");
+    anal(node->right, code + "1");
+}
+void del(HuffmanNode* node)
+{
+    if(node == nullptr) return;
+    del(node->left);
+    del(node->right);
+    node = nullptr;
+    delete node;
+}
+
+int main()
+{
+    int n;
+    std::cin >> n;
+    if(n == 1)
+    {
+        std::string word;
+        int count;
+        std::cin >> word >> count;
+        std::cout << word << " " << "0" << std::endl;
+        return 0;
+    }
+    for(int index = 0;index < n;index++)
+    {
+        std::string word;
+        unsigned long long count;
+        std::cin >> word >> count;
+        words.push_back(word);
+        wordCode[word] = "";
+        pq.push(new HuffmanNode{word, count, nullptr, nullptr, nullptr});
+    }
+    while(pq.size() > 1)
+    {
+        HuffmanNode* w1 = pq.top();
+        pq.pop();
+        HuffmanNode* w2 = pq.top();
+        pq.pop();
+        HuffmanNode* node = new HuffmanNode{w1->word + w2->word, w1->count + w2->count, w1, w2, nullptr};
+        w1->parent = node;
+        w2->parent = node;
+        pq.push(node);
+    }
+    HuffmanNode* root = pq.top();
+    pq.pop();
+    anal(root);
+    for(auto& word : words)
+    {
+        std::cout << word << " " << wordCode[word] << std::endl;
+    }
+    del(root);
+    return 0;
+}
+```
