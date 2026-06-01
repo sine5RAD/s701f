@@ -56,6 +56,90 @@
 &lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
+</content:encoded></item><item><title>prim最小生成树</title><link>https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>哈夫曼树</title><link>https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</guid><description>孩子们，不要逃数据结构与算法课...</description><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;数据结构与算法课不如杀戮尖塔好玩，所以咱没去（&lt;/p&gt;
+&lt;h1&gt;介绍&lt;/h1&gt;
+&lt;p&gt;在我的理解中，哈夫曼树是一种用来压缩数据大小的前缀树。233dada说这是用在zip压缩里面的&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h1&gt;实现（c++）&lt;/h1&gt;
+&lt;h2&gt;数据结构&lt;/h2&gt;
+&lt;p&gt;我们给一个哈夫曼树节点的结构体，其中叶子节点只存一个单词及其出现次数，非叶子节点的count值是其左右两个节点的count之和&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;struct HuffmanNode
+{
+    std::string word;
+    unsigned long long count;
+    HuffmanNode* left;
+    HuffmanNode* right;
+    HuffmanNode* parent;
+    bool operator&amp;lt;(const HuffmanNode&amp;amp; other) const
+    {
+        return count &amp;gt; other.count; // For min-heap
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;手写树很麻烦，好在c++提供了优先队列的模板&amp;lt;br&amp;gt;
+所以我们需要一个Cmp&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;struct Cmp {
+    bool operator()(HuffmanNode* a, HuffmanNode* b) const {
+        return a-&amp;gt;count &amp;gt; b-&amp;gt;count; // min-heap by count
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;建树&lt;/h2&gt;
+&lt;p&gt;我们用优先队列存我们即将建的树&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;static std::priority_queue&amp;lt;HuffmanNode*, std::vector&amp;lt;HuffmanNode*&amp;gt;, Cmp&amp;gt; pq;
+static std::vector&amp;lt;std::string&amp;gt; words;
+static std::map&amp;lt;std::string, std::string&amp;gt; wordCode;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在输入时把所有节点推到优先队列里面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;std::string word;
+unsigned long long count;
+std::cin &amp;gt;&amp;gt; word &amp;gt;&amp;gt; count;
+words.push_back(word);
+wordCode[word] = &quot;&quot;;
+pq.push(new HuffmanNode{word, count, nullptr, nullptr, nullptr});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;处理&lt;/h2&gt;
+&lt;p&gt;每一次操作，我们取出顶部的两个节点，将其合并为一个树，再把新生成的根节点插入优先队列里面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while(pq.size() &amp;gt; 1)
+{
+    HuffmanNode* w1 = pq.top();
+    pq.pop();
+    HuffmanNode* w2 = pq.top();
+    pq.pop();
+    HuffmanNode* node = new HuffmanNode{w1-&amp;gt;word + w2-&amp;gt;word, w1-&amp;gt;count + w2-&amp;gt;count, w1, w2, nullptr};
+    w1-&amp;gt;parent = node;
+    w2-&amp;gt;parent = node;
+    pq.push(node);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;分析&lt;/h2&gt;
+&lt;p&gt;然后我们需要把建成的树转化为编码&amp;lt;br&amp;gt;
+从根节点到叶子节点的路径，每当选择了左孩子节点，哈夫曼编码的对应位置为0，反之为1&amp;lt;br&amp;gt;
+所有我们可以对其进行深度优先搜索，每当搜索到叶子节点，就记录其对应的编码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;void anal(HuffmanNode* node, std::string code = &quot;&quot;)
+{
+    if(node-&amp;gt;left == nullptr &amp;amp;&amp;amp; node-&amp;gt;right == nullptr)
+    {
+        wordCode[node-&amp;gt;word] = code;
+        return;
+    }
+    anal(node-&amp;gt;left, code + &quot;0&quot;);
+    anal(node-&amp;gt;right, code + &quot;1&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;防止内存泄露&lt;/h2&gt;
+&lt;p&gt;在一切都做完之后，我们要递归地把分配的内存delete掉&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;void del(HuffmanNode* node)
+{
+    if(node == nullptr) return;
+    del(node-&amp;gt;left);
+    del(node-&amp;gt;right);
+    node = nullptr;
+    delete node;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;完成&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/record/280277639&quot;&gt;LGB2168通过&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>AIHistorySimulator源码学习</title><link>https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</link><guid isPermaLink="true">https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</guid><description>咱的第一个vibe coding项目</description><pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;最近与以前在推特上认识的朋友玩文游。讲几个外星国家走向宇宙的故事&amp;lt;br&amp;gt;
 由于一共有九个人，关系过于复杂，于是乎想着AI推演&amp;lt;br&amp;gt;

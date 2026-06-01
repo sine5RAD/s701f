@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-01T03:22:58.413Z</updated>
+  <updated>2026-06-01T10:53:04.082Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,115 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>prim最小生成树</title>
+    <link href="https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</id>
+    <published>2026-06-01T00:00:00.000Z</published>
+    <updated>2026-06-01T00:00:00.000Z</updated>
+    <summary></summary>
+    <content type="html"><![CDATA[]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+  </entry>
+  <entry>
+    <title>哈夫曼树</title>
+    <link href="https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</id>
+    <published>2026-06-01T00:00:00.000Z</published>
+    <updated>2026-06-01T00:00:00.000Z</updated>
+    <summary>孩子们，不要逃数据结构与算法课...</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>数据结构与算法课不如杀戮尖塔好玩，所以咱没去（</p>
+<h1>介绍</h1>
+<p>在我的理解中，哈夫曼树是一种用来压缩数据大小的前缀树。233dada说这是用在zip压缩里面的&lt;br&gt;</p>
+<h1>实现（c++）</h1>
+<h2>数据结构</h2>
+<p>我们给一个哈夫曼树节点的结构体，其中叶子节点只存一个单词及其出现次数，非叶子节点的count值是其左右两个节点的count之和</p>
+<pre><code>struct HuffmanNode
+{
+    std::string word;
+    unsigned long long count;
+    HuffmanNode* left;
+    HuffmanNode* right;
+    HuffmanNode* parent;
+    bool operator&lt;(const HuffmanNode&amp; other) const
+    {
+        return count &gt; other.count; // For min-heap
+    }
+};
+</code></pre>
+<p>手写树很麻烦，好在c++提供了优先队列的模板&lt;br&gt;
+所以我们需要一个Cmp</p>
+<pre><code>struct Cmp {
+    bool operator()(HuffmanNode* a, HuffmanNode* b) const {
+        return a-&gt;count &gt; b-&gt;count; // min-heap by count
+    }
+};
+</code></pre>
+<h2>建树</h2>
+<p>我们用优先队列存我们即将建的树</p>
+<pre><code>static std::priority_queue&lt;HuffmanNode*, std::vector&lt;HuffmanNode*&gt;, Cmp&gt; pq;
+static std::vector&lt;std::string&gt; words;
+static std::map&lt;std::string, std::string&gt; wordCode;
+</code></pre>
+<p>在输入时把所有节点推到优先队列里面</p>
+<pre><code>std::string word;
+unsigned long long count;
+std::cin &gt;&gt; word &gt;&gt; count;
+words.push_back(word);
+wordCode[word] = "";
+pq.push(new HuffmanNode{word, count, nullptr, nullptr, nullptr});
+</code></pre>
+<h2>处理</h2>
+<p>每一次操作，我们取出顶部的两个节点，将其合并为一个树，再把新生成的根节点插入优先队列里面</p>
+<pre><code>while(pq.size() &gt; 1)
+{
+    HuffmanNode* w1 = pq.top();
+    pq.pop();
+    HuffmanNode* w2 = pq.top();
+    pq.pop();
+    HuffmanNode* node = new HuffmanNode{w1-&gt;word + w2-&gt;word, w1-&gt;count + w2-&gt;count, w1, w2, nullptr};
+    w1-&gt;parent = node;
+    w2-&gt;parent = node;
+    pq.push(node);
+}
+</code></pre>
+<h2>分析</h2>
+<p>然后我们需要把建成的树转化为编码&lt;br&gt;
+从根节点到叶子节点的路径，每当选择了左孩子节点，哈夫曼编码的对应位置为0，反之为1&lt;br&gt;
+所有我们可以对其进行深度优先搜索，每当搜索到叶子节点，就记录其对应的编码</p>
+<pre><code>void anal(HuffmanNode* node, std::string code = "")
+{
+    if(node-&gt;left == nullptr &amp;&amp; node-&gt;right == nullptr)
+    {
+        wordCode[node-&gt;word] = code;
+        return;
+    }
+    anal(node-&gt;left, code + "0");
+    anal(node-&gt;right, code + "1");
+}
+</code></pre>
+<h2>防止内存泄露</h2>
+<p>在一切都做完之后，我们要递归地把分配的内存delete掉</p>
+<pre><code>void del(HuffmanNode* node)
+{
+    if(node == nullptr) return;
+    del(node-&gt;left);
+    del(node-&gt;right);
+    node = nullptr;
+    delete node;
+}
+</code></pre>
+<h2>完成</h2>
+<p><a href="https://www.luogu.com.cn/record/280277639">LGB2168通过</a></p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="算法"></category>
   </entry>
   <entry>
     <title>AIHistorySimulator源码学习</title>
