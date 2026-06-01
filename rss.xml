@@ -56,7 +56,176 @@
 &lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
-</content:encoded></item><item><title>prim最小生成树</title><link>https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>哈夫曼树</title><link>https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</guid><description>孩子们，不要逃数据结构与算法课...</description><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
+</content:encoded></item><item><title>prim最小生成树</title><link>https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/prim%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><description>其实我之前会这个，但是没有加堆优化www</description><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;没什么可说的了，总之不要逃数据结构与算法（&lt;/p&gt;
+&lt;h1&gt;介绍&lt;/h1&gt;
+&lt;p&gt;我对prim的理解是贪心算法，每一次从已加入最小生成树的点与未加入最小生成树的点之间的连线中选择最短的那条边，然后把这条边加入已选择的边中&lt;/p&gt;
+&lt;h1&gt;实现（c++）&lt;/h1&gt;
+&lt;h2&gt;前置数据&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;std::priority_queue&amp;lt;std::pair&amp;lt;int, int&amp;gt;, std::vector&amp;lt;std::pair&amp;lt;int, int&amp;gt;&amp;gt;, std::greater&amp;lt;std::pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; pq;// 堆优化用的优先队列，它始终保持pair的第一个值最小的元素在队列顶端
+std::vector&amp;lt;int&amp;gt; dist;// 当前最小生成树到每个点的距离
+std::vector&amp;lt;bool&amp;gt; vis;// 点是否已经加入最小生成树
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;链式前向星（存图）&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;struct edge
+{
+    int u, v, w;
+    int next;
+};
+std::vector&amp;lt;edge&amp;gt; edges;
+std::vector&amp;lt;int&amp;gt; head;
+void Add(int u, int v, int w)
+{
+    edges.push_back({u, v, w, head[u]});
+    head[u] = edges.size() - 1;
+    edges.push_back({v, u, w, head[v]});
+    head[v] = edges.size() - 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;初始化&lt;/h2&gt;
+&lt;p&gt;就像dijkstra那样，我们首先要把距离数组设置为inf&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dist.resize(N + 1, 0x3f3f3f3f);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后我们随便选一个点开始计算最小生成树，就选1吧&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dist[1] = 0;
+vis.resize(N + 1, false);
+externed(1);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;对新增顶点链接的边进行松弛操作&lt;/h2&gt;
+&lt;p&gt;externed函数的内容:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/// @brief 在新加入点n后，更新与n相邻的点的距离
+/// @param n 新加入的点
+void externed(int n)
+{
+    vis[n] = true;// 首先将该点设置为已加入最小生成树
+    for (int u = head[n]; u != -1; u = edges[u].next)// 遍历所有从该点出发的边
+    {
+        int v = edges[u].v;
+        int w = edges[u].w;
+        if (vis[v])// 如果v点已经加入最小生成树，则跳过
+        {
+            continue;
+        }
+        if (dist[v] &amp;gt; w)// 如果现有的最小生成树到v点的距离大于n点到v点的距离，则更新距离
+        {
+            dist[v] = w;
+            pq.push({w, v});// 把更新后的距离加入优先队列中。这个w, v的意思是现在的最小生成树连接到v点的距离是w
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;确定新增的顶点&lt;/h2&gt;
+&lt;p&gt;我们要持续把优先队列顶端且未加入最小生成树的顶点加入最小生成树集合中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;while (!pq.empty())
+{
+    auto [d, i] = pq.top();
+    pq.pop();
+    if (vis[i])
+    {
+        continue;
+    }
+    res += d;
+    externed(i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;判断联通与输出&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;for (int i = 1; i &amp;lt;= N; ++i)
+{
+    if (!vis[i])
+    {
+        std::cout &amp;lt;&amp;lt; &quot;orz&quot; &amp;lt;&amp;lt; std::endl;
+        return 0;
+    }
+}
+std::cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; std::endl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;完成&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/record/280280172&quot;&gt;LGP3366通过&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;完整代码&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;queue&amp;gt;
+
+struct edge
+{
+    int u, v, w;
+    int next;
+};
+std::vector&amp;lt;edge&amp;gt; edges;
+std::vector&amp;lt;int&amp;gt; head;
+void Add(int u, int v, int w)
+{
+    edges.push_back({u, v, w, head[u]});
+    head[u] = edges.size() - 1;
+    edges.push_back({v, u, w, head[v]});
+    head[v] = edges.size() - 1;
+}
+std::priority_queue&amp;lt;std::pair&amp;lt;int, int&amp;gt;, std::vector&amp;lt;std::pair&amp;lt;int, int&amp;gt;&amp;gt;, std::greater&amp;lt;std::pair&amp;lt;int, int&amp;gt;&amp;gt;&amp;gt; pq;
+std::vector&amp;lt;int&amp;gt; dist;
+std::vector&amp;lt;bool&amp;gt; vis;
+
+/// @brief 在新加入点n后，更新与n相邻的点的距离
+/// @param n 新加入的点
+void externed(int n)
+{
+    vis[n] = true;
+    for (int u = head[n]; u != -1; u = edges[u].next)
+    {
+        int v = edges[u].v;
+        int w = edges[u].w;
+        if (vis[v])
+        {
+            continue;
+        }
+        if (dist[v] &amp;gt; w)
+        {
+            dist[v] = w;
+            pq.push({w, v});
+        }
+    }
+}
+
+int main()
+{
+    int N, M;
+    std::cin &amp;gt;&amp;gt; N &amp;gt;&amp;gt; M;
+    edges.reserve(2 * M + 5);
+    long long res = 0;
+    head.resize(N + 1, -1);
+    for (int i = 0; i &amp;lt; M; ++i)
+    {
+        int u, v, w;
+        std::cin &amp;gt;&amp;gt; u &amp;gt;&amp;gt; v &amp;gt;&amp;gt; w;
+        Add(u, v, w);
+    }
+    dist.resize(N + 1, 0x3f3f3f3f);
+    dist[1] = 0;
+    vis.resize(N + 1, false);
+    externed(1);
+    while (!pq.empty())
+    {
+        auto [d, i] = pq.top();
+        pq.pop();
+        if (vis[i])
+        {
+            continue;
+        }
+        res += d;
+        externed(i);
+    }
+    for (int i = 1; i &amp;lt;= N; ++i)
+    {
+        if (!vis[i])
+        {
+            std::cout &amp;lt;&amp;lt; &quot;orz&quot; &amp;lt;&amp;lt; std::endl;
+            return 0;
+        }
+    }
+    std::cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; std::endl;
+}
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>哈夫曼树</title><link>https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/</guid><description>孩子们，不要逃数据结构与算法课...</description><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;数据结构与算法课不如杀戮尖塔好玩，所以咱没去（&lt;/p&gt;
 &lt;h1&gt;介绍&lt;/h1&gt;
 &lt;p&gt;在我的理解中，哈夫曼树是一种用来压缩数据大小的前缀树。233dada说这是用在zip压缩里面的&amp;lt;br&amp;gt;&lt;/p&gt;
@@ -140,6 +309,97 @@ pq.push(new HuffmanNode{word, count, nullptr, nullptr, nullptr});
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;完成&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/record/280277639&quot;&gt;LGB2168通过&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;完整代码&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;queue&amp;gt;
+#include &amp;lt;map&amp;gt;
+
+struct HuffmanNode
+{
+    std::string word;
+    unsigned long long count;
+    HuffmanNode* left;
+    HuffmanNode* right;
+    HuffmanNode* parent;
+    bool operator&amp;lt;(const HuffmanNode&amp;amp; other) const
+    {
+        return count &amp;gt; other.count; // For min-heap
+    }
+};
+
+struct Cmp {
+    bool operator()(HuffmanNode* a, HuffmanNode* b) const {
+        return a-&amp;gt;count &amp;gt; b-&amp;gt;count; // min-heap by count
+    }
+};
+
+static std::priority_queue&amp;lt;HuffmanNode*, std::vector&amp;lt;HuffmanNode*&amp;gt;, Cmp&amp;gt; pq;
+static std::vector&amp;lt;std::string&amp;gt; words;
+static std::map&amp;lt;std::string, std::string&amp;gt; wordCode;
+
+void anal(HuffmanNode* node, std::string code = &quot;&quot;)
+{
+    if(node-&amp;gt;left == nullptr &amp;amp;&amp;amp; node-&amp;gt;right == nullptr)
+    {
+        wordCode[node-&amp;gt;word] = code;
+        return;
+    }
+    anal(node-&amp;gt;left, code + &quot;0&quot;);
+    anal(node-&amp;gt;right, code + &quot;1&quot;);
+}
+void del(HuffmanNode* node)
+{
+    if(node == nullptr) return;
+    del(node-&amp;gt;left);
+    del(node-&amp;gt;right);
+    node = nullptr;
+    delete node;
+}
+
+int main()
+{
+    int n;
+    std::cin &amp;gt;&amp;gt; n;
+    if(n == 1)
+    {
+        std::string word;
+        int count;
+        std::cin &amp;gt;&amp;gt; word &amp;gt;&amp;gt; count;
+        std::cout &amp;lt;&amp;lt; word &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; &quot;0&quot; &amp;lt;&amp;lt; std::endl;
+        return 0;
+    }
+    for(int index = 0;index &amp;lt; n;index++)
+    {
+        std::string word;
+        unsigned long long count;
+        std::cin &amp;gt;&amp;gt; word &amp;gt;&amp;gt; count;
+        words.push_back(word);
+        wordCode[word] = &quot;&quot;;
+        pq.push(new HuffmanNode{word, count, nullptr, nullptr, nullptr});
+    }
+    while(pq.size() &amp;gt; 1)
+    {
+        HuffmanNode* w1 = pq.top();
+        pq.pop();
+        HuffmanNode* w2 = pq.top();
+        pq.pop();
+        HuffmanNode* node = new HuffmanNode{w1-&amp;gt;word + w2-&amp;gt;word, w1-&amp;gt;count + w2-&amp;gt;count, w1, w2, nullptr};
+        w1-&amp;gt;parent = node;
+        w2-&amp;gt;parent = node;
+        pq.push(node);
+    }
+    HuffmanNode* root = pq.top();
+    pq.pop();
+    anal(root);
+    for(auto&amp;amp; word : words)
+    {
+        std::cout &amp;lt;&amp;lt; word &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; wordCode[word] &amp;lt;&amp;lt; std::endl;
+    }
+    del(root);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>AIHistorySimulator源码学习</title><link>https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</link><guid isPermaLink="true">https://s701f.top/posts/aihistorysimulator%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</guid><description>咱的第一个vibe coding项目</description><pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;最近与以前在推特上认识的朋友玩文游。讲几个外星国家走向宇宙的故事&amp;lt;br&amp;gt;
 由于一共有九个人，关系过于复杂，于是乎想着AI推演&amp;lt;br&amp;gt;
@@ -872,7 +1132,7 @@ const extractCompletionText = (data: unknown) =&amp;gt; {
   return JSON.stringify(data)
 }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>带有源极交流阻抗的MOS管放大器设计</title><link>https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;任务&lt;/h1&gt;
+</content:encoded></item><item><title>带有源极交流阻抗的MOS管放大器设计</title><link>https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%B8%A6%E6%9C%89%E6%BA%90%E6%9E%81%E4%BA%A4%E6%B5%81%E9%98%BB%E6%8A%97%E7%9A%84mos%E7%AE%A1%E6%94%BE%E5%A4%A7%E5%99%A8%E8%AE%BE%E8%AE%A1/</guid><description>更难了，需要考虑交流阻抗</description><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;任务&lt;/h1&gt;
 &lt;p&gt;依然是使用&lt;strong&gt;BS170&lt;/strong&gt;进行设计，这次要求$V_{DD} = 15V$，$R_L = 26k$，$A_V = 27$&lt;/p&gt;
 &lt;h1&gt;步骤&lt;/h1&gt;
 &lt;p&gt;还是需要先确定元件参数
@@ -884,7 +1144,7 @@ const extractCompletionText = (data: unknown) =&amp;gt; {
 于是在$V_{GS} = 7.5V, R_{G1} = R_{G2} = 100k, I_D = 4mA$的情况下完成了电路设计&amp;lt;br&amp;gt;
 我超$A_V$怎么等于0.2，大失败&lt;/p&gt;
 &lt;h2&gt;错误分析&lt;/h2&gt;
-&lt;p&gt;问题出在哪里呢？原因在于先前的实验中交流信号可以直接走电阻，不会被$R_S$影响。但现在的设计中交流信号依然要走$R_{S1}$&amp;lt;br&amp;gt;
+&lt;p&gt;问题出在哪里呢？原因在于先前的实验中交流信号可以直接走电容，不会被$R_S$影响。但现在的设计中交流信号依然要走$R_{S1}$&amp;lt;br&amp;gt;
 那么问题来了，真实的增益公式是什么呢？&amp;lt;br&amp;gt;
 当然是$A_V = \frac{g_m(R_D//R_L)}{1 + g_mR_{S1} }$啦&amp;lt;br&amp;gt;
 让我们重新计算，然后仿真&amp;lt;br&amp;gt;
