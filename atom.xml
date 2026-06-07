@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-07T00:59:10.284Z</updated>
+  <updated>2026-06-07T01:03:24.854Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -87,14 +87,14 @@
     <summary>学习lua的第一天</summary>
     <content type="html"><![CDATA[<h1>前言</h1>
 <p>因为一些神秘原因（指玩的游戏做mod需要lua），我决定把它学了&lt;br&gt;
-这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，我自己摸索出的东西</p>
+这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，咱自己摸索出的东西</p>
 <h1>table中有nil会发生什么</h1>
 <p>教程当中讲，对于一个lua表</p>
 <pre><code>local array = {1, nil, 2}
 print(#array)
 </code></pre>
 <p>输出结果应该是3&lt;br&gt;
-但是我在实操当中结果是2&lt;br&gt;
+但是咱在实操当中结果是2&lt;br&gt;
 AI的回答是在lua表中添加nil会导致#运算符和ipair的结果不可预测&lt;br&gt;
 lua把#table定义为table的第一个border（t[i]返回nil）&lt;br&gt;
 但是问题在于，对于我们给出的array，t[2]（赋值为nil）和t[4]（超出表边界，不存在）的返回值都是nil&lt;br&gt;

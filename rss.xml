@@ -58,14 +58,14 @@
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
 </content:encoded></item><item><title>lua学习记录1</title><link>https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</link><guid isPermaLink="true">https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</guid><description>学习lua的第一天</description><pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;因为一些神秘原因（指玩的游戏做mod需要lua），我决定把它学了&amp;lt;br&amp;gt;
-这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，我自己摸索出的东西&lt;/p&gt;
+这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，咱自己摸索出的东西&lt;/p&gt;
 &lt;h1&gt;table中有nil会发生什么&lt;/h1&gt;
 &lt;p&gt;教程当中讲，对于一个lua表&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;local array = {1, nil, 2}
 print(#array)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;输出结果应该是3&amp;lt;br&amp;gt;
-但是我在实操当中结果是2&amp;lt;br&amp;gt;
+但是咱在实操当中结果是2&amp;lt;br&amp;gt;
 AI的回答是在lua表中添加nil会导致#运算符和ipair的结果不可预测&amp;lt;br&amp;gt;
 lua把#table定义为table的第一个border（t[i]返回nil）&amp;lt;br&amp;gt;
 但是问题在于，对于我们给出的array，t[2]（赋值为nil）和t[4]（超出表边界，不存在）的返回值都是nil&amp;lt;br&amp;gt;
