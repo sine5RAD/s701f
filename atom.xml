@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-01T13:03:42.456Z</updated>
+  <updated>2026-06-07T00:59:10.284Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,176 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>lua学习记录1</title>
+    <link href="https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</id>
+    <published>2026-06-07T00:00:00.000Z</published>
+    <updated>2026-06-07T00:00:00.000Z</updated>
+    <summary>学习lua的第一天</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>因为一些神秘原因（指玩的游戏做mod需要lua），我决定把它学了&lt;br&gt;
+这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，我自己摸索出的东西</p>
+<h1>table中有nil会发生什么</h1>
+<p>教程当中讲，对于一个lua表</p>
+<pre><code>local array = {1, nil, 2}
+print(#array)
+</code></pre>
+<p>输出结果应该是3&lt;br&gt;
+但是我在实操当中结果是2&lt;br&gt;
+AI的回答是在lua表中添加nil会导致#运算符和ipair的结果不可预测&lt;br&gt;
+lua把#table定义为table的第一个border（t[i]返回nil）&lt;br&gt;
+但是问题在于，对于我们给出的array，t[2]（赋值为nil）和t[4]（超出表边界，不存在）的返回值都是nil&lt;br&gt;
+所以#array在寻找border时，既可能找到2，也可能找到4&lt;br&gt;
+比如对于下面这行代码&lt;br&gt;</p>
+<pre><code>local array = {5, nil, "红酱自动机", 6, 7, 8}
+print(#array)
+</code></pre>
+<p>输出结果就是6而不是2&lt;br&gt;
+所以实践当中最好不要在lua表里面加nil</p>
+<h1>pair, ipair的区别以及pair的一些特性</h1>
+<p>对于下面这段代码</p>
+<pre><code>do
+    local table = {
+        [false] = "false",
+        [true] = "true",
+        [1] = "one",
+        [2] = "two",
+        [3] = "three",
+        name = "张三",
+        age = 18,
+        friend = {
+            name = "李四",
+            age = 20
+        }
+    }
+    for k, v in pairs(table) do
+        print(k, v)
+    end
+    print("-------------")
+    for k, v in ipairs(table) do
+        print(k, v)
+    end
+    print("-------------")
+    print(#table) -- 3
+end
+</code></pre>
+<p>其输出为</p>
+<pre><code>false   false
+true    true
+2       two
+3       three
+name    张三
+friend  table: 0000000000fba550
+age     18
+1       one
+-------------
+1       one
+2       two
+3       three
+-------------
+3
+</code></pre>
+<p>lua的table被分为数组区和哈希区&lt;br&gt;
+ipair只遍历数组区，而pair把数组区和哈希区一起遍历&lt;br&gt;
+我们可以看到</p>
+<pre><code>[1] = "one",
+[2] = "two",
+[3] = "three",
+</code></pre>
+<p>这些是被存在数组区的&lt;br&gt;
+那我们不禁要问了</p>
+<pre><code>int luaH_next (lua_State *L, Table *t, StkId key) {
+  unsigned int asize = t-&gt;asize;
+  unsigned int i = findindex(L, t, s2v(key), asize);  /* find original key */
+  for (; i &lt; asize; i++) {  /* try first array part（数组区遍历） */
+    lu_byte tag = *getArrTag(t, i);
+    if (!tagisempty(tag)) {  /* a non-empty entry? */
+      setivalue(s2v(key), cast_int(i) + 1);
+      farr2val(t, i, tag, s2v(key + 1));
+      return 1;
+    }
+  }
+  for (i -= asize; i &lt; sizenode(t); i++) {  /* hash part（哈希区遍历） */
+    if (!isempty(gval(gnode(t, i)))) {  /* a non-empty entry? */
+      Node *n = gnode(t, i);
+      getnodekey(L, s2v(key), n);
+      setobj2s(L, key + 1, gval(n));
+      return 1;
+    }
+  }
+  return 0;  /* no more elements */
+}
+</code></pre>
+<p>源码里面写的是先顺序遍历数组区，再顺序遍历哈希区啊，怎么用pair进行遍历的时候，数组区的元素也没有按顺序输出呢？&lt;br&gt;
+答案是数组区是一个会随着插入元素数量变化的变长数组，而pair不保证后加入的数据一定在数组区</p>
+<pre><code>/*
+** Insert a key in a table where there is space for that key, the
+** key is valid, and the value is not nil.
+*/
+static void newcheckedkey (Table *t, const TValue *key, TValue *value) {
+  unsigned i = keyinarray(t, key);
+  if (i &gt; 0)  /* is key in the array part? */
+    obj2arr(t, i - 1, value);  /* set value in the array */
+  else {
+    int done = insertkey(t, key, value);  /* insert key in the hash part */
+    lua_assert(done);  /* it cannot fail */
+    cast(void, done);  /* to avoid warnings */
+  }
+}
+</code></pre>
+<p>插入的源码是这么写的www&lt;br&gt;
+如果keyinarray（一个用来检测key是否在数组区范围内的宏）告诉我们新元素的范围还在数组区内，就将其插入数组区，否则将其插入哈希区&lt;br&gt;
+那么如何让pair按顺序遍历呢（不建议这么做，因为插入新元素的时候会rehash，不保证新元素一定在数组区，会发生问题）?&lt;br&gt;
+将table按照默认方式初始化就行</p>
+<pre><code>do
+    local table = {
+        "one",
+        "two",
+        "three",
+        [false] = "false",
+        [true] = "true",
+        name = "张三",
+        age = 18,
+        friend = {
+            name = "李四",
+            age = 20
+        }
+    }
+    for k, v in pairs(table) do
+        print(k, v)
+    end
+    print("-------------")
+    for k, v in ipairs(table) do
+        print(k, v)
+    end
+    print("-------------")
+    print(#table) -- 3
+end
+</code></pre>
+<p>输出为</p>
+<pre><code>1       one
+2       two
+3       three
+false   false
+true    true
+age     18
+name    张三
+friend  table: 0000000000eca1d0
+-------------
+1       one
+2       two
+3       three
+-------------
+3
+</code></pre>
+<p>两相对比，我们还可以得到另外一个结论，lua表中非默认元素是在数组区初始化完成后再加入表的</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="lua"></category>
   </entry>
   <entry>
     <title>prim最小生成树</title>
