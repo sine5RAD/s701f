@@ -56,6 +56,71 @@
 &lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
+</content:encoded></item><item><title>kruskal最小生成树</title><link>https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><description>老师课上讲的是kruskal...我prim白学了</description><pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;今天看ppt，才发现老师讲的是kruskal算法...&lt;/p&gt;
+&lt;h1&gt;介绍&lt;/h1&gt;
+&lt;p&gt;这是一种每次将分属不同树的最小边加入图的算法&amp;lt;br&amp;gt;
+所以我们不难联想到并查集&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;h2&gt;前置数据&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;struct edge
+{
+    int f, t, l;
+};// 边，是的，我们甚至不需要链式前向星
+struct cmp
+{
+    bool operator()(edge a, edge b)
+    {
+        return a.l &amp;gt; b.l;
+    }
+};
+
+std::priority_queue&amp;lt;edge, std::vector&amp;lt;edge&amp;gt;, cmp&amp;gt; pq;// 存储边的优先队列，队顶是最短的边
+
+std::vector&amp;lt;int&amp;gt;disjoint_set;// 并查集
+int find(int x)// 查询
+{
+    if(disjoint_set[x] != x)
+        disjoint_set[x] = find(disjoint_set[x]);
+    return disjoint_set[x];
+}
+void init_disjoint_set(int n)// 初始化并查集
+{
+    disjoint_set.resize(n);
+    for(int i = 0; i &amp;lt; n; i++)
+        disjoint_set[i] = i;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;合并子树&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;while(!pq.empty())
+{
+    // std::clog&amp;lt;&amp;lt;&quot;RUA!&quot;&amp;lt;&amp;lt;std::endl;
+    edge e = pq.top();// 获取最短边
+    pq.pop();
+    int f = find(e.f);
+    int t = find(e.t);
+    if(f == t)// 如果这条边属于同一个子最小生成树，那么不进行任何操作
+        continue;
+    if(f != t)
+    {
+        disjoint_set[f] = t;// 合并子树
+        cnt += e.l;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;判断是否联通&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for(int i = 1; i &amp;lt;= N; i++)
+{
+    if(find(i) != find(1))
+    {
+        std::cout &amp;lt;&amp;lt; &quot;orz&quot; &amp;lt;&amp;lt; std::endl;
+        return 0;
+    }
+}
+std::cout &amp;lt;&amp;lt; cnt &amp;lt;&amp;lt; std::endl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;没什么难点，就这么简单&lt;/p&gt;
 </content:encoded></item><item><title>lua学习记录1</title><link>https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</link><guid isPermaLink="true">https://s701f.top/posts/lua%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</guid><description>学习lua的第一天</description><pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;因为一些神秘原因（指玩的游戏做mod需要lua），我决定把它学了&amp;lt;br&amp;gt;
 这里不会记录一些语法之类的可以从网上找到的教程内容，只会记录那些教程不讲，咱自己摸索出的东西&lt;/p&gt;

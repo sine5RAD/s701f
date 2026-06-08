@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-07T01:03:24.854Z</updated>
+  <updated>2026-06-08T02:16:23.312Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,83 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>kruskal最小生成树</title>
+    <link href="https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</id>
+    <published>2026-06-08T00:00:00.000Z</published>
+    <updated>2026-06-08T00:00:00.000Z</updated>
+    <summary>老师课上讲的是kruskal...我prim白学了</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>今天看ppt，才发现老师讲的是kruskal算法...</p>
+<h1>介绍</h1>
+<p>这是一种每次将分属不同树的最小边加入图的算法&lt;br&gt;
+所以我们不难联想到并查集&lt;br&gt;</p>
+<h1>实现</h1>
+<h2>前置数据</h2>
+<pre><code>struct edge
+{
+    int f, t, l;
+};// 边，是的，我们甚至不需要链式前向星
+struct cmp
+{
+    bool operator()(edge a, edge b)
+    {
+        return a.l &gt; b.l;
+    }
+};
+
+std::priority_queue&lt;edge, std::vector&lt;edge&gt;, cmp&gt; pq;// 存储边的优先队列，队顶是最短的边
+
+std::vector&lt;int&gt;disjoint_set;// 并查集
+int find(int x)// 查询
+{
+    if(disjoint_set[x] != x)
+        disjoint_set[x] = find(disjoint_set[x]);
+    return disjoint_set[x];
+}
+void init_disjoint_set(int n)// 初始化并查集
+{
+    disjoint_set.resize(n);
+    for(int i = 0; i &lt; n; i++)
+        disjoint_set[i] = i;
+}
+
+</code></pre>
+<h2>合并子树</h2>
+<pre><code>while(!pq.empty())
+{
+    // std::clog&lt;&lt;"RUA!"&lt;&lt;std::endl;
+    edge e = pq.top();// 获取最短边
+    pq.pop();
+    int f = find(e.f);
+    int t = find(e.t);
+    if(f == t)// 如果这条边属于同一个子最小生成树，那么不进行任何操作
+        continue;
+    if(f != t)
+    {
+        disjoint_set[f] = t;// 合并子树
+        cnt += e.l;
+    }
+}
+</code></pre>
+<p>判断是否联通</p>
+<pre><code>for(int i = 1; i &lt;= N; i++)
+{
+    if(find(i) != find(1))
+    {
+        std::cout &lt;&lt; "orz" &lt;&lt; std::endl;
+        return 0;
+    }
+}
+std::cout &lt;&lt; cnt &lt;&lt; std::endl;
+</code></pre>
+<p>没什么难点，就这么简单</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
   </entry>
   <entry>
     <title>lua学习记录1</title>
