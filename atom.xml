@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-10T05:13:53.182Z</updated>
+  <updated>2026-06-10T05:46:27.167Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -79,9 +79,567 @@
     <category term="日常"></category>
   </entry>
   <entry>
-    <title>BJT的Ebers-Moll模型</title>
-    <link href="https://s701f.top/posts/bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/</id>
+    <title>固态电子学期末复习0-固态电子学课程导论</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A00-%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E8%AF%BE%E7%A8%8B%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A00-%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E8%AF%BE%E7%A8%8B%E5%AF%BC%E8%AE%BA/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>课程目标和内容框架</summary>
+    <content type="html"><![CDATA[<h1>课程概览</h1>
+<h2>基本信息</h2>
+<ul>
+<li><strong>授课教师：</strong> Xiulong Bao（包秀龙）</li>
+<li><strong>上课时间：</strong> 周一 13:30-15:05（第 1,3,5,7,9,11,13,15 周）；周五 13:30-15:05（第 1-15 周）</li>
+<li><strong>教室：</strong> 教学楼主楼 4-East102（周一）；4-West 414（周五）</li>
+</ul>
+<h2>学习目的</h2>
+<ul>
+<li><strong>理解基本电子器件工作原理：</strong> PN 二极管、BJT、MOSFET、光电二极管、太阳能电池、量子点等</li>
+<li><strong>理解器件在电路设计中的应用</strong></li>
+<li><strong>从系统级、晶体管级和物理级三个层次理解电路设计</strong></li>
+</ul>
+<h2>预备知识</h2>
+<ul>
+<li><strong>电磁场理论：</strong> 电荷、电场、电压、能量</li>
+<li><strong>量子力学：</strong> 原子模型、基本假设、Schrodinger 方程</li>
+<li><strong>固体物理：</strong> 晶体结构、能带</li>
+<li><strong>统计物理：</strong> Fermi-Dirac 统计、Fermi 能级</li>
+</ul>
+<h1>课程内容</h1>
+<h2>第 1 章：基础概念</h2>
+<ul>
+<li>Bloch 定理、Kronig-Penney 模型、能带</li>
+<li>导体、半导体和绝缘体的分类</li>
+</ul>
+<h2>第 2 章：载流子输运与 PN 结</h2>
+<ul>
+<li>电子和空穴、漂移和扩散电流、连续性方程</li>
+<li>PN 结静电特性与 I-V 特性、结电容与击穿</li>
+</ul>
+<h2>第 3 章：晶体管</h2>
+<ul>
+<li>BJT：结构、工作原理、特性</li>
+<li>MOSFET：结构、工作原理、特性</li>
+<li>应用：放大与开关</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习1-量子力学基础1-经典物理与量子革命</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A01-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A01-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>经典物理的局限与量子力学的诞生</summary>
+    <content type="html"><![CDATA[<h1>经典物理学框架</h1>
+<p>1900 年以前，物理学建立在两大支柱之上：</p>
+<ul>
+<li><strong>牛顿力学：</strong> 牛顿运动定律描述物质的运动</li>
+<li><strong>麦克斯韦电磁理论：</strong> 麦克斯韦方程组描述电磁辐射</li>
+</ul>
+<h2>牛顿三定律</h2>
+<ul>
+<li><strong>第一定律（惯性定律）：</strong> 物体在不受外力作用时保持静止或匀速直线运动状态</li>
+<li><strong>第二定律：</strong> F = ma（力等于质量乘以加速度）</li>
+<li><strong>第三定律：</strong> 作用力与反作用力大小相等、方向相反</li>
+</ul>
+<h1>黑体辐射问题</h1>
+<h2>紫外灾难</h2>
+<p>经典物理学在解释黑体辐射时遇到了严重困难。经典理论预测辐射能量在高频区域会趋于无穷大，这一结果被称为<strong>紫外灾难</strong>（Ultraviolet Catastrophe），与实验测量严重不符。</p>
+<h1>量子力学的诞生</h1>
+<h2>Max Planck（1858-1947）</h2>
+<p>量子力学可追溯至 <strong>1900 年</strong>，Planck 提出能量以离散的"量子"形式发射和吸收。</p>
+<ul>
+<li><strong>1918 年诺贝尔物理学奖</strong> 表彰其发现能量量子</li>
+<li>这标志着**"旧量子力学"**的开端</li>
+</ul>
+<h1>光电效应</h1>
+<h2>Einstein 的光电效应方程</h2>
+<p>Einstein 将 Planck 的量子假说扩展到光电效应，提出光由离散能量包（光子）组成。</p>
+<h1>原子模型</h1>
+<h2>Bohr 的行星模型</h2>
+<p>Bohr 提出电子在离散能级上绕核运动，用量子概念解释了原子稳定性和光谱线。</p>
+<h1>De Broglie 波粒二象性</h1>
+<h2>De Broglie 波长</h2>
+<p>$$\lambda = \frac{h}{p}$$</p>
+<p>其中 h 为 Planck 常数，p 为动量。物质粒子也表现出波动性。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习10-半导体中的漂移与扩散电流2</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A010-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A010-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>过剩载流子与连续性方程</summary>
+    <content type="html"><![CDATA[<h1>过剩载流子与连续性方程</h1>
+<h2>过剩载流子</h2>
+<p>掺杂（非本征）半导体平衡态下：</p>
+<ul>
+<li>N 型：n₀ &gt;&gt; p₀</li>
+<li>P 型：p₀ &gt;&gt; n₀</li>
+<li>过剩载流子对少子的影响远大于对多子的影响</li>
+</ul>
+<h2>计算示例</h2>
+<p>考虑 N 型 Si 样品，ND = 10¹⁵/cm³，T = 300 K，过剩载流子 Δn = Δp = 10¹³/cm³：</p>
+<p>300 K 热平衡时：</p>
+<ul>
+<li>n₀ = ND = 10¹⁵ /cm³</li>
+<li>p₀ = nᵢ² / n₀ = (1.5 × 10¹⁰)² / 10¹⁵ = 2.25 × 10⁵ /cm³</li>
+</ul>
+<p>加入过剩载流子后：</p>
+<ul>
+<li>n = n₀ + Δn</li>
+<li>p = p₀ + Δp</li>
+</ul>
+<h1>连续性方程</h1>
+<p>连续性方程描述载流子浓度随时间和位置的变化，包含产生、复合、漂移和扩散：</p>
+<p><strong>电子连续性方程：</strong></p>
+<p>$$\frac{\partial n}{\partial t} = \frac{1}{q}\frac{\partial J_n}{\partial x} + G_n - R_n$$</p>
+<p><strong>空穴连续性方程：</strong></p>
+<p>$$\frac{\partial p}{\partial t} = -\frac{1}{q}\frac{\partial J_p}{\partial x} + G_p - R_p$$</p>
+<p>其中 G 为产生率，R 为复合率。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习11-PN结的制备与基础</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A011-pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A011-pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>PN结的制备工艺与连续性方程</summary>
+    <content type="html"><![CDATA[<h1>复习：少子寿命</h1>
+<ul>
+<li>N 型材料：少子空穴寿命</li>
+<li>P 型材料：少子电子寿命</li>
+</ul>
+<h1>连续性方程与漂移-扩散方程</h1>
+<p><strong>电子连续性方程：</strong></p>
+<p>$$\frac{\partial n}{\partial t} = G_n - R_n + \frac{1}{q}\nabla \cdot J_n$$</p>
+<p><strong>空穴连续性方程：</strong></p>
+<p>$$\frac{\partial p}{\partial t} = G_p - R_p - \frac{1}{q}\nabla \cdot J_p$$</p>
+<p><strong>漂移-扩散方程：</strong></p>
+<p>$$J_n = q\mu_n n E + qD_n \nabla n$$</p>
+<p>$$J_p = q\mu_p p E - qD_p \nabla p$$</p>
+<h1>PN 结的制备</h1>
+<p>PN 结是在同一半导体单晶中，在相邻区域分别进行 P 型和 N 型掺杂而形成的。PN 结是分隔这两个区域的界面。</p>
+<h2>制备工艺</h2>
+<ol>
+<li>从硅晶圆开始（通常为 N 型掺杂 Si）</li>
+<li>在选定区域进行 P 型掺杂</li>
+<li>P 与 N 区域的边界即形成 PN 结</li>
+</ol>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习12-PN结的能带与平衡态</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A012-pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A012-pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>热平衡下的PN结能带图</summary>
+    <content type="html"><![CDATA[<h1>PN 结结构</h1>
+<p>PN 结中：</p>
+<ul>
+<li><strong>P 侧：</strong> 固定电离的负电荷原子（受主）。可移动的空穴在晶格中自由运动，其电荷与原子核平衡，使该区域整体呈电中性</li>
+<li><strong>N 侧：</strong> 固定电离的正电荷原子（施主）。可移动的电子与正原子核平衡，使该区域整体呈电中性</li>
+<li><strong>耗尽层：</strong> N 侧自由电子移向 P 侧并与空穴复合，留下固定带电原子，形成空间电荷区</li>
+</ul>
+<h1>热平衡（无电流）</h1>
+<p>热平衡、无外加偏压、无电流时：</p>
+<ul>
+<li>Fermi 能级在整个结构中必须恒定</li>
+<li>能带在界面处弯曲以对齐 Fermi 能级</li>
+<li>结两端形成内建电势（接触电势）</li>
+</ul>
+<h2>PN 结能带图绘制</h2>
+<p>热平衡下的 PN 结能带图绘制方法：</p>
+<ol>
+<li>将 P 侧和 N 侧的 Fermi 能级对齐至同一能量</li>
+<li>导带和价带在界面处弯曲</li>
+<li>形成阻止载流子进一步扩散的能垒</li>
+</ol>
+<h1>非平衡态</h1>
+<p>外加电压时，结处于非平衡态，电流可以流动：</p>
+<ul>
+<li><strong>正偏：</strong> 降低能垒，允许电流通过</li>
+<li><strong>反偏：</strong> 升高能垒，阻止电流通过</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习13-PN结的静电特性</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A013-pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A013-pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>接触电势、耗尽层与电场分布</summary>
+    <content type="html"><![CDATA[<h1>PN 结静电特性</h1>
+<h2>电场分布</h2>
+<p>耗尽层中的电场随位置变化：</p>
+<ul>
+<li>P 侧：电场由电离受主电荷决定</li>
+<li>N 侧：电场由电离施主电荷决定</li>
+</ul>
+<h2>电势（接触电势）</h2>
+<p>耗尽层上的电势分布：</p>
+<ul>
+<li>P 侧：电势随距结距离变化</li>
+<li>N 侧：电势随距结距离变化</li>
+<li>内建电势 V_bi 为耗尽层上的总电势差</li>
+</ul>
+<h1>计算示例</h1>
+<p>求理想硅 PN 结在 300 K 时的接触电势、耗尽层宽度和最大电场。</p>
+<p><strong>解：</strong></p>
+<ul>
+<li><strong>接触电势：</strong> V_bi = (kT/q) · ln(ND·NA/nᵢ²)</li>
+<li><strong>耗尽层宽度：</strong> W = P 侧耗尽宽度 + N 侧耗尽宽度</li>
+<li><strong>N 侧耗尽层延伸：</strong> 由掺杂浓度决定</li>
+<li><strong>最大电场：</strong> 位于冶金结面处</li>
+</ul>
+<h1>正偏</h1>
+<p>外加正偏压时（P 正 N 负）：</p>
+<ul>
+<li>耗尽层宽度减小</li>
+<li>大电流可通过结</li>
+<li>能垒降低</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习14-PN结的电流电压特性</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A014-pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A014-pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>正反向偏置与电流方程</summary>
+    <content type="html"><![CDATA[<h1>正偏</h1>
+<p>外加正偏压时（P 正、N 负）：</p>
+<ul>
+<li>耗尽层变窄</li>
+<li>大电流通过结</li>
+<li>能垒降低，多数载流子可跨越结</li>
+</ul>
+<h1>反偏</h1>
+<p>外加反偏压时（P 负、N 正）：</p>
+<ul>
+<li>耗尽层变宽</li>
+<li>极小电流流过（漏电流）</li>
+<li>能垒升高，阻止载流子流动</li>
+</ul>
+<h1>耗尽层宽度</h1>
+<ul>
+<li><strong>平衡态：</strong> W = W_p + W_n（由掺杂决定）</li>
+<li><strong>偏置下：</strong> W 随外加电压 V 变化</li>
+</ul>
+<p>$$W \propto \sqrt{V_{bi} - V}$$</p>
+<p>其中 V 正偏为正，反偏为负。</p>
+<h1>PN 结电流</h1>
+<h2>总电流密度</h2>
+<p>PN 结的总电流密度 J 为：</p>
+<p>$$J = J_s \left(e^{qV/kT} - 1\right)$$</p>
+<p>其中 J_s 为饱和电流（反向漏电流）。</p>
+<h2>分量</h2>
+<ul>
+<li><strong>空穴扩散电流</strong>（N 型材料中）：由空穴扩散长度 L_p 决定</li>
+<li><strong>电子扩散电流</strong>（P 型材料中）：由电子扩散长度 L_n 决定</li>
+</ul>
+<h2>扩散长度</h2>
+<ul>
+<li><strong>空穴扩散长度：</strong> L_p = √(D_p · τ_p)，D_p 为 Einstein 扩散系数</li>
+<li><strong>电子扩散长度：</strong> L_n = √(D_n · τ_n)，D_n 为 Einstein 扩散系数</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习15-PN结电容与击穿</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A015-pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A015-pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>势垒电容、扩散电容与反向击穿</summary>
+    <content type="html"><![CDATA[<h1>PN 结电容</h1>
+<p>PN 结根据偏置条件表现出两种电容。</p>
+<h2>势垒电容（耗尽层电容）C_j</h2>
+<p>结电容定义为：</p>
+<p>$$C_j = \frac{dQ}{dV}$$</p>
+<p>对于单边突变结：</p>
+<p>$$C_j \propto (V_{bi} - V)^{-1/2}$$</p>
+<p>线性缓变掺杂分布将指数从 1/2 变为 1/3。</p>
+<h2>扩散电容 C_diff</h2>
+<p>正偏下，扩散电容源于中性区存储的少子：</p>
+<p>$$C_{diff} \propto \frac{qI\tau}{kT}$$</p>
+<p>其中 τ 为载流子寿命，I 为正向电流。</p>
+<h2>比较</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>主导偏置</th>
+<th>物理来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>耗尽层电容</td>
+<td>反偏</td>
+<td>耗尽区电荷</td>
+</tr>
+<tr>
+<td>扩散电容</td>
+<td>正偏</td>
+<td>存储的少子</td>
+</tr>
+</tbody>
+</table>
+<h1>反向击穿</h1>
+<p>PN 结两端加很大负电压时发生反向击穿：</p>
+<ul>
+<li><strong>Zener 击穿</strong>（高掺杂、低电压）</li>
+<li><strong>雪崩击穿</strong>（低掺杂、高电压）</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习16-晶体管基础-MOSFET与BJT</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A016-%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A016-%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>MOS电容与晶体管分类</summary>
+    <content type="html"><![CDATA[<h1>学习目标</h1>
+<ul>
+<li>晶体管分类</li>
+<li>MOS 电容：积累、耗尽、反型</li>
+<li>MOSFET 结构</li>
+<li>MOSFET 工作：截止、线性（三极管）区、饱和区</li>
+<li>MOSFET 电流-电压特性</li>
+<li>BJT 工作：截止、正向有源、饱和</li>
+<li>BJT 电流-电压特性</li>
+</ul>
+<h1>晶体管类型与应用</h1>
+<p>晶体管是用于以下方面的半导体器件：</p>
+<ul>
+<li><strong>信号放大：</strong> 适当直流偏置下放大时变信号（电压或电流），即放大信号功率</li>
+<li><strong>开关：</strong> 在 ON/OFF 状态间切换，用于数字应用</li>
+</ul>
+<h2>分类</h2>
+<ul>
+<li><strong>MOSFET（金属-氧化物-半导体场效应晶体管）：</strong> 电压控制器件</li>
+<li><strong>BJT（双极型晶体管）：</strong> 电流控制器件</li>
+</ul>
+<h1>MOS 电容</h1>
+<p>MOS（金属-氧化物-半导体）电容是 MOSFET 的基本构建模块，由以下部分组成：</p>
+<ul>
+<li>金属栅极</li>
+<li>绝缘氧化层 (SiO₂)</li>
+<li>半导体衬底（P 型或 N 型）</li>
+</ul>
+<p>工作模式：</p>
+<ul>
+<li><strong>积累 (Accumulation)：</strong> 多数载流子聚集在氧化物-半导体界面</li>
+<li><strong>耗尽 (Depletion)：</strong> 多数载流子被驱离界面</li>
+<li><strong>反型 (Inversion)：</strong> 少子在界面处形成导电沟道</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习17-MOSFET的阈值与特性</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A017-mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A017-mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>阈值电压、线性区与饱和区</summary>
+    <content type="html"><![CDATA[<h1>MOS 电容与反型层</h1>
+<p>P 型衬底 MOS 电容：</p>
+<ul>
+<li><strong>阈值电压 (Vt)：</strong> 形成强反型层（沟道）所需的最小栅压</li>
+<li>耗尽电容 C_dep 取决于耗尽区宽度 W</li>
+<li>C_dep 受栅压控制，随 V_GS 增大而增大</li>
+</ul>
+<h1>MOSFET 阈值电压</h1>
+<p>阈值电压 Vt 是在源漏间形成导电沟道所需的最小栅源电压，取决于：</p>
+<ul>
+<li>氧化层厚度</li>
+<li>掺杂浓度</li>
+<li>栅与半导体间的功函数差</li>
+<li>固定氧化层电荷</li>
+</ul>
+<h1>NMOS MOSFET 的直流工作</h1>
+<p>NMOS 晶体管工作于三个区域：</p>
+<ol>
+<li><strong>截止区：</strong> V_GS &lt; Vt。无沟道，无漏极电流 (I_D = 0)</li>
+<li><strong>线性区（三极管区）：</strong> V_GS &gt; Vt 且 V_DS &lt; V_GS - Vt。沟道表现为电阻</li>
+<li><strong>饱和区：</strong> V_GS &gt; Vt 且 V_DS ≥ V_GS - Vt = V_DSAT。沟道在漏端夹断，漏极电流饱和</li>
+</ol>
+<h1>漏极电流方程</h1>
+<h2>线性区：</h2>
+<p>$$I_D = \mu_n C_{ox}\frac{W}{L}\left[(V_{GS} - V_t)V_{DS} - \frac{V_{DS}^2}{2}\right]$$</p>
+<h2>饱和区：</h2>
+<p>$$I_D = \frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS} - V_t)^2$$</p>
+<h2>沟道长度调制</h2>
+<p>沟道长度调制效应修正饱和区电流：</p>
+<p>$$I_D \approx I_D(1 + \lambda V_{DS})$$</p>
+<p>其中 λ 为沟道长度调制参数。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习18-CMOS技术</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A018-cmos%E6%8A%80%E6%9C%AF/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A018-cmos%E6%8A%80%E6%9C%AF/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>PMOS、CMOS反相器与数字逻辑</summary>
+    <content type="html"><![CDATA[<h1>MOSFET 电容</h1>
+<p>MOSFET 具有多种本征电容：</p>
+<ul>
+<li>栅-沟道电容</li>
+<li>栅-源交叠电容</li>
+<li>栅-漏交叠电容</li>
+<li>结电容（源/漏至衬底）</li>
+</ul>
+<p>这些电容影响 MOSFET 的高频性能。</p>
+<h1>P 沟道 MOSFET (PMOS) 的直流工作</h1>
+<p>PMOS 晶体管与 NMOS 类似但极性相反：</p>
+<ul>
+<li>源和漏为 P+ 区域</li>
+<li>衬底为 N 型</li>
+<li>负栅压形成沟道（空穴积累）</li>
+<li>V_SG &gt; |Vt| 时电流从源流向漏</li>
+</ul>
+<h1>CMOS（互补 MOS）</h1>
+<p>CMOS 技术在同一硅衬底上结合 N 沟道和 P 沟道 MOSFET。这是迄今为止最成功的集成电路 (IC) 技术。</p>
+<h2>CMOS 数字电路</h2>
+<p>数字电子学使用只有两个电平的二进制信号：</p>
+<ul>
+<li><strong>高电平 (1)：</strong> V_DD</li>
+<li><strong>低电平 (0)：</strong> GND (0 V)</li>
+</ul>
+<p>CMOS 反相器（非门）由一个 NMOS 和一个 PMOS 串联组成。输入为高时 NMOS 导通、PMOS 截止；输入为低时相反。这种配置静态功耗极低。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习19-双极型晶体管BJT基础</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A019-%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A019-%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>NPN结构与工作原理</summary>
+    <content type="html"><![CDATA[<h1>双极型晶体管 (BJT)</h1>
+<p>BJT 是另一种晶体管类型，具有以下特点：</p>
+<ul>
+<li>同时利用电子和空穴电流（故称"双极型"）</li>
+<li>与 MOSFET 一样是三端器件</li>
+<li>两端之间的电压控制第三端中流过的电流</li>
+<li>可用于放大（模拟电子学）或开关（数字电子学）</li>
+</ul>
+<h1>NPN BJT 结构</h1>
+<p>NPN BJT 由以下部分组成：</p>
+<ul>
+<li><strong>发射极 (E)：</strong> N 型区域，重掺杂</li>
+<li><strong>基区 (B)：</strong> P 型区域，薄且轻掺杂</li>
+<li><strong>集电极 (C)：</strong> N 型区域</li>
+</ul>
+<p>结构：N 型发射极 - P 型基区 - N 型集电极（三明治结构）</p>
+<h2>理想化结构</h2>
+<ul>
+<li>发射极和集电极为 N 型区域</li>
+<li>基区为两者之间的薄 P 型区域</li>
+<li>三个区域均制作金属接触</li>
+</ul>
+<h2>实际结构</h2>
+<p>实际 BJT 制造中：</p>
+<ul>
+<li>发射极和集电极位于基区两侧</li>
+<li>基区极薄以利于载流子输运</li>
+<li>各区域掺杂浓度不同以优化性能</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习2-量子力学基础2-波粒二象性与薛定谔方程</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>量子力学核心概念：不确定性原理、泡利不相容原理</summary>
+    <content type="html"><![CDATA[<h1>能量与动量的量子化</h1>
+<p>在微观系统中，能量和动量只能取离散值。这一量子化概念是量子力学的基石。</p>
+<h2>物质波：De Broglie 波</h2>
+<p>De Broglie 提出物质粒子具有与之相关联的波长：</p>
+<p>$$\lambda = \frac{h}{p}$$</p>
+<p>其中 h 为 Planck 常数，p 为动量。这一波动性解释了经典物理无法说明的现象。</p>
+<h2>波粒二象性</h2>
+<p>所有物质同时表现出粒子性和波动性，这是量子力学的基本原理。</p>
+<h1>Heisenberg 不确定性原理</h1>
+<p>不可能同时精确知道一个粒子的位置和动量：</p>
+<p>$$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$</p>
+<p>这是自然界的根本性质，而非测量技术的限制。</p>
+<h1>Pauli 不相容原理</h1>
+<p><strong>表述：</strong> 在同一原子中，没有两个电子可以具有完全相同的一组量子数 (n, l, m_l, m_s)。每个电子必须处于自己独特的量子态（单重态）。同一轨道中的两个电子必须具有相反（反平行）的自旋方向。</p>
+<p>该原理解释了元素周期表的结构和原子中的电子行为。</p>
+<h1>Schrödinger 方程</h1>
+<p>多粒子系统中的每个粒子都可以用一个复值波函数完全描述。</p>
+<p>含时 Schrödinger 方程：</p>
+<p>$$i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$$</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习20-BJT的Ebers-Moll模型</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A020-bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A020-bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/</id>
     <published>2026-06-10T00:00:00.000Z</published>
     <updated>2026-06-10T00:00:00.000Z</updated>
     <summary>Ebers-Moll模型与Early效应</summary>
@@ -136,134 +694,33 @@
     <category term="电子信息工程"></category>
   </entry>
   <entry>
-    <title>CMOS技术</title>
-    <link href="https://s701f.top/posts/cmos%E6%8A%80%E6%9C%AF/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/cmos%E6%8A%80%E6%9C%AF/</id>
+    <title>固态电子学期末复习3-量子力学基础3-薛定谔方程与无限深势阱</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A03-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A03-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/</id>
     <published>2026-06-10T00:00:00.000Z</published>
     <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>PMOS、CMOS反相器与数字逻辑</summary>
-    <content type="html"><![CDATA[<h1>MOSFET 电容</h1>
-<p>MOSFET 具有多种本征电容：</p>
+    <summary>薛定谔方程求解与E-k色散关系</summary>
+    <content type="html"><![CDATA[<h1>Schrödinger 波动方程</h1>
+<h2>一维自由粒子 (U = 0)</h2>
+<p>对于势能为零的自由粒子，一维 Schrödinger 方程描述平面波解。</p>
+<h2>无限深势阱</h2>
+<p>被限制在宽度为 d 的无限深势阱中的粒子只能占据离散的能级：</p>
+<p>$$E_n = \frac{n^2\pi^2\hbar^2}{2md^2}$$</p>
+<p>其中 n 为整数量子数 (n = 1, 2, 3, ...)。</p>
+<p>阱内波函数 (0 ≤ x ≤ d, U(x) = 0) 需满足边界条件：</p>
 <ul>
-<li>栅-沟道电容</li>
-<li>栅-源交叠电容</li>
-<li>栅-漏交叠电容</li>
-<li>结电容（源/漏至衬底）</li>
+<li>ψ(0) = 0</li>
+<li>ψ(d) = 0</li>
 </ul>
-<p>这些电容影响 MOSFET 的高频性能。</p>
-<h1>P 沟道 MOSFET (PMOS) 的直流工作</h1>
-<p>PMOS 晶体管与 NMOS 类似但极性相反：</p>
+<h2>E-k 色散图</h2>
+<p>能量-波矢 (E-k) 色散图展示了周期势阱中粒子的能量与波矢关系，对理解晶体中能带形成至关重要。</p>
+<h2>无限势阱求解示例</h2>
+<p>求解无限深势阱中粒子的 Schrödinger 方程：</p>
 <ul>
-<li>源和漏为 P+ 区域</li>
-<li>衬底为 N 型</li>
-<li>负栅压形成沟道（空穴积累）</li>
-<li>V_SG &gt; |Vt| 时电流从源流向漏</li>
-</ul>
-<h1>CMOS（互补 MOS）</h1>
-<p>CMOS 技术在同一硅衬底上结合 N 沟道和 P 沟道 MOSFET。这是迄今为止最成功的集成电路 (IC) 技术。</p>
-<h2>CMOS 数字电路</h2>
-<p>数字电子学使用只有两个电平的二进制信号：</p>
-<ul>
-<li><strong>高电平 (1)：</strong> V_DD</li>
-<li><strong>低电平 (0)：</strong> GND (0 V)</li>
-</ul>
-<p>CMOS 反相器（非门）由一个 NMOS 和一个 PMOS 串联组成。输入为高时 NMOS 导通、PMOS 截止；输入为低时相反。这种配置静态功耗极低。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>MOSFET的阈值与特性</title>
-    <link href="https://s701f.top/posts/mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>阈值电压、线性区与饱和区</summary>
-    <content type="html"><![CDATA[<h1>MOS 电容与反型层</h1>
-<p>P 型衬底 MOS 电容：</p>
-<ul>
-<li><strong>阈值电压 (Vt)：</strong> 形成强反型层（沟道）所需的最小栅压</li>
-<li>耗尽电容 C_dep 取决于耗尽区宽度 W</li>
-<li>C_dep 受栅压控制，随 V_GS 增大而增大</li>
-</ul>
-<h1>MOSFET 阈值电压</h1>
-<p>阈值电压 Vt 是在源漏间形成导电沟道所需的最小栅源电压，取决于：</p>
-<ul>
-<li>氧化层厚度</li>
-<li>掺杂浓度</li>
-<li>栅与半导体间的功函数差</li>
-<li>固定氧化层电荷</li>
-</ul>
-<h1>NMOS MOSFET 的直流工作</h1>
-<p>NMOS 晶体管工作于三个区域：</p>
-<ol>
-<li><strong>截止区：</strong> V_GS &lt; Vt。无沟道，无漏极电流 (I_D = 0)</li>
-<li><strong>线性区（三极管区）：</strong> V_GS &gt; Vt 且 V_DS &lt; V_GS - Vt。沟道表现为电阻</li>
-<li><strong>饱和区：</strong> V_GS &gt; Vt 且 V_DS ≥ V_GS - Vt = V_DSAT。沟道在漏端夹断，漏极电流饱和</li>
-</ol>
-<h1>漏极电流方程</h1>
-<h2>线性区：</h2>
-<p>$$I_D = \mu_n C_{ox}\frac{W}{L}\left[(V_{GS} - V_t)V_{DS} - \frac{V_{DS}^2}{2}\right]$$</p>
-<h2>饱和区：</h2>
-<p>$$I_D = \frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS} - V_t)^2$$</p>
-<h2>沟道长度调制</h2>
-<p>沟道长度调制效应修正饱和区电流：</p>
-<p>$$I_D \approx I_D(1 + \lambda V_{DS})$$</p>
-<p>其中 λ 为沟道长度调制参数。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>PN结电容与击穿</title>
-    <link href="https://s701f.top/posts/pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>势垒电容、扩散电容与反向击穿</summary>
-    <content type="html"><![CDATA[<h1>PN 结电容</h1>
-<p>PN 结根据偏置条件表现出两种电容。</p>
-<h2>势垒电容（耗尽层电容）C_j</h2>
-<p>结电容定义为：</p>
-<p>$$C_j = \frac{dQ}{dV}$$</p>
-<p>对于单边突变结：</p>
-<p>$$C_j \propto (V_{bi} - V)^{-1/2}$$</p>
-<p>线性缓变掺杂分布将指数从 1/2 变为 1/3。</p>
-<h2>扩散电容 C_diff</h2>
-<p>正偏下，扩散电容源于中性区存储的少子：</p>
-<p>$$C_{diff} \propto \frac{qI\tau}{kT}$$</p>
-<p>其中 τ 为载流子寿命，I 为正向电流。</p>
-<h2>比较</h2>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>主导偏置</th>
-<th>物理来源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>耗尽层电容</td>
-<td>反偏</td>
-<td>耗尽区电荷</td>
-</tr>
-<tr>
-<td>扩散电容</td>
-<td>正偏</td>
-<td>存储的少子</td>
-</tr>
-</tbody>
-</table>
-<h1>反向击穿</h1>
-<p>PN 结两端加很大负电压时发生反向击穿：</p>
-<ul>
-<li><strong>Zener 击穿</strong>（高掺杂、低电压）</li>
-<li><strong>雪崩击穿</strong>（低掺杂、高电压）</li>
+<li>在 0 ≤ x ≤ d 区域，U(x) = 0</li>
+<li>边界条件：波函数在阱壁处为零</li>
+<li>解产生驻波模式</li>
+<li>能量量子化：E 与 n² 成正比</li>
 </ul>
 ]]></content>
     <author>
@@ -272,33 +729,33 @@
     <category term="电子信息工程"></category>
   </entry>
   <entry>
-    <title>PN结的制备与基础</title>
-    <link href="https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/</id>
+    <title>固态电子学期末复习4-量子力学基础4-布洛赫定理与Kronig-Penney模型</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A04-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A04-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/</id>
     <published>2026-06-10T00:00:00.000Z</published>
     <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>PN结的制备工艺与连续性方程</summary>
-    <content type="html"><![CDATA[<h1>复习：少子寿命</h1>
+    <summary>周期势场中的电子行为与能带形成</summary>
+    <content type="html"><![CDATA[<h1>Bohr 氢原子模型</h1>
+<p>Bohr 模型描述电子在量子化能级上绕核运动，成功解释了氢原子的离散光谱线。</p>
+<p>关键特征：</p>
 <ul>
-<li>N 型材料：少子空穴寿命</li>
-<li>P 型材料：少子电子寿命</li>
+<li>电子占据离散（量子化）轨道</li>
+<li>电子在能级间跃迁时吸收或发射能量</li>
+<li>该模型是通向现代量子理论的关键一步</li>
 </ul>
-<h1>连续性方程与漂移-扩散方程</h1>
-<p><strong>电子连续性方程：</strong></p>
-<p>$$\frac{\partial n}{\partial t} = G_n - R_n + \frac{1}{q}\nabla \cdot J_n$$</p>
-<p><strong>空穴连续性方程：</strong></p>
-<p>$$\frac{\partial p}{\partial t} = G_p - R_p - \frac{1}{q}\nabla \cdot J_p$$</p>
-<p><strong>漂移-扩散方程：</strong></p>
-<p>$$J_n = q\mu_n n E + qD_n \nabla n$$</p>
-<p>$$J_p = q\mu_p p E - qD_p \nabla p$$</p>
-<h1>PN 结的制备</h1>
-<p>PN 结是在同一半导体单晶中，在相邻区域分别进行 P 型和 N 型掺杂而形成的。PN 结是分隔这两个区域的界面。</p>
-<h2>制备工艺</h2>
-<ol>
-<li>从硅晶圆开始（通常为 N 型掺杂 Si）</li>
-<li>在选定区域进行 P 型掺杂</li>
-<li>P 与 N 区域的边界即形成 PN 结</li>
-</ol>
+<h1>Bloch 定理</h1>
+<p>对于一维周期势 U(x+d) = U(x)，Bloch 定理指出：</p>
+<p>$$\Psi(x) = u(x)e^{ikx}$$</p>
+<p>其中：</p>
+<ul>
+<li>u(x) 为原胞波函数，与 U(x) 具有相同周期性</li>
+<li>k 为波矢</li>
+</ul>
+<p>该定理是理解晶体中电子行为的基础。</p>
+<h1>Kronig-Penney 模型</h1>
+<p>Kronig-Penney 模型利用有限势阱问题近似晶体中的周期势。</p>
+<p><strong>目标：</strong> 求解 Kronig-Penney 势下的 Schrödinger 方程，证明晶格中<strong>能带</strong>的存在。</p>
+<p><strong>方法：</strong> 质量为 m、能量为 E 的电子受到周期势 U(x) 的作用。求解 Schrödinger 方程揭示只有特定能量范围（能带）是允许的，其他范围（带隙）被禁止。</p>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -306,413 +763,9 @@
     <category term="电子信息工程"></category>
   </entry>
   <entry>
-    <title>PN结的电流电压特性</title>
-    <link href="https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>正反向偏置与电流方程</summary>
-    <content type="html"><![CDATA[<h1>正偏</h1>
-<p>外加正偏压时（P 正、N 负）：</p>
-<ul>
-<li>耗尽层变窄</li>
-<li>大电流通过结</li>
-<li>能垒降低，多数载流子可跨越结</li>
-</ul>
-<h1>反偏</h1>
-<p>外加反偏压时（P 负、N 正）：</p>
-<ul>
-<li>耗尽层变宽</li>
-<li>极小电流流过（漏电流）</li>
-<li>能垒升高，阻止载流子流动</li>
-</ul>
-<h1>耗尽层宽度</h1>
-<ul>
-<li><strong>平衡态：</strong> W = W_p + W_n（由掺杂决定）</li>
-<li><strong>偏置下：</strong> W 随外加电压 V 变化</li>
-</ul>
-<p>$$W \propto \sqrt{V_{bi} - V}$$</p>
-<p>其中 V 正偏为正，反偏为负。</p>
-<h1>PN 结电流</h1>
-<h2>总电流密度</h2>
-<p>PN 结的总电流密度 J 为：</p>
-<p>$$J = J_s \left(e^{qV/kT} - 1\right)$$</p>
-<p>其中 J_s 为饱和电流（反向漏电流）。</p>
-<h2>分量</h2>
-<ul>
-<li><strong>空穴扩散电流</strong>（N 型材料中）：由空穴扩散长度 L_p 决定</li>
-<li><strong>电子扩散电流</strong>（P 型材料中）：由电子扩散长度 L_n 决定</li>
-</ul>
-<h2>扩散长度</h2>
-<ul>
-<li><strong>空穴扩散长度：</strong> L_p = √(D_p · τ_p)，D_p 为 Einstein 扩散系数</li>
-<li><strong>电子扩散长度：</strong> L_n = √(D_n · τ_n)，D_n 为 Einstein 扩散系数</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>PN结的能带与平衡态</title>
-    <link href="https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>热平衡下的PN结能带图</summary>
-    <content type="html"><![CDATA[<h1>PN 结结构</h1>
-<p>PN 结中：</p>
-<ul>
-<li><strong>P 侧：</strong> 固定电离的负电荷原子（受主）。可移动的空穴在晶格中自由运动，其电荷与原子核平衡，使该区域整体呈电中性</li>
-<li><strong>N 侧：</strong> 固定电离的正电荷原子（施主）。可移动的电子与正原子核平衡，使该区域整体呈电中性</li>
-<li><strong>耗尽层：</strong> N 侧自由电子移向 P 侧并与空穴复合，留下固定带电原子，形成空间电荷区</li>
-</ul>
-<h1>热平衡（无电流）</h1>
-<p>热平衡、无外加偏压、无电流时：</p>
-<ul>
-<li>Fermi 能级在整个结构中必须恒定</li>
-<li>能带在界面处弯曲以对齐 Fermi 能级</li>
-<li>结两端形成内建电势（接触电势）</li>
-</ul>
-<h2>PN 结能带图绘制</h2>
-<p>热平衡下的 PN 结能带图绘制方法：</p>
-<ol>
-<li>将 P 侧和 N 侧的 Fermi 能级对齐至同一能量</li>
-<li>导带和价带在界面处弯曲</li>
-<li>形成阻止载流子进一步扩散的能垒</li>
-</ol>
-<h1>非平衡态</h1>
-<p>外加电压时，结处于非平衡态，电流可以流动：</p>
-<ul>
-<li><strong>正偏：</strong> 降低能垒，允许电流通过</li>
-<li><strong>反偏：</strong> 升高能垒，阻止电流通过</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>PN结的静电特性</title>
-    <link href="https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>接触电势、耗尽层与电场分布</summary>
-    <content type="html"><![CDATA[<h1>PN 结静电特性</h1>
-<h2>电场分布</h2>
-<p>耗尽层中的电场随位置变化：</p>
-<ul>
-<li>P 侧：电场由电离受主电荷决定</li>
-<li>N 侧：电场由电离施主电荷决定</li>
-</ul>
-<h2>电势（接触电势）</h2>
-<p>耗尽层上的电势分布：</p>
-<ul>
-<li>P 侧：电势随距结距离变化</li>
-<li>N 侧：电势随距结距离变化</li>
-<li>内建电势 V_bi 为耗尽层上的总电势差</li>
-</ul>
-<h1>计算示例</h1>
-<p>求理想硅 PN 结在 300 K 时的接触电势、耗尽层宽度和最大电场。</p>
-<p><strong>解：</strong></p>
-<ul>
-<li><strong>接触电势：</strong> V_bi = (kT/q) · ln(ND·NA/nᵢ²)</li>
-<li><strong>耗尽层宽度：</strong> W = P 侧耗尽宽度 + N 侧耗尽宽度</li>
-<li><strong>N 侧耗尽层延伸：</strong> 由掺杂浓度决定</li>
-<li><strong>最大电场：</strong> 位于冶金结面处</li>
-</ul>
-<h1>正偏</h1>
-<p>外加正偏压时（P 正 N 负）：</p>
-<ul>
-<li>耗尽层宽度减小</li>
-<li>大电流可通过结</li>
-<li>能垒降低</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>半导体中的漂移与扩散电流1</title>
-    <link href="https://s701f.top/posts/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>能带与载流子输运基础</summary>
-    <content type="html"><![CDATA[<h1>掺杂半导体的能带</h1>
-<ul>
-<li><strong>N 型：</strong> 施主能级靠近导带；Fermi 能级向导带方向升高</li>
-<li><strong>P 型：</strong> 受主能级靠近价带；Fermi 能级向价带方向降低</li>
-</ul>
-<h1>掺杂半导体的电导率</h1>
-<p>N 型材料：电导率由电子主导；P 型材料：电导率由空穴主导。</p>
-<h1>漂移电流与扩散电流</h1>
-<h2>低-中电场下的漂移电流</h2>
-<p>低至中等电场下，漂移速度与电场 E 成正比，服从恒定温度下的欧姆定律：</p>
-<p>$$J_{drift} = q(n\mu_n + p\mu_p)E$$</p>
-<h2>高电场下的漂移电流</h2>
-<p>高电场下，漂移速度趋于饱和值，称为<strong>散射限制速度</strong>或<strong>饱和速度</strong>：</p>
-<p>$$v_{n,p}^{sat} \approx 10^7 \text{ cm/s}$$</p>
-<p>这对电子和空穴都适用，是半导体的普遍特性。</p>
-<h2>扩散电流</h2>
-<p>扩散电流源于载流子浓度梯度：</p>
-<p>$$J_{diff}^{electron} = qD_n\frac{dn}{dx}$$</p>
-<p>$$J_{diff}^{hole} = -qD_p\frac{dp}{dx}$$</p>
-<p>其中 D_n 和 D_p 为扩散系数。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>半导体中的漂移与扩散电流2</title>
-    <link href="https://s701f.top/posts/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>过剩载流子与连续性方程</summary>
-    <content type="html"><![CDATA[<h1>过剩载流子与连续性方程</h1>
-<h2>过剩载流子</h2>
-<p>掺杂（非本征）半导体平衡态下：</p>
-<ul>
-<li>N 型：n₀ &gt;&gt; p₀</li>
-<li>P 型：p₀ &gt;&gt; n₀</li>
-<li>过剩载流子对少子的影响远大于对多子的影响</li>
-</ul>
-<h2>计算示例</h2>
-<p>考虑 N 型 Si 样品，ND = 10¹⁵/cm³，T = 300 K，过剩载流子 Δn = Δp = 10¹³/cm³：</p>
-<p>300 K 热平衡时：</p>
-<ul>
-<li>n₀ = ND = 10¹⁵ /cm³</li>
-<li>p₀ = nᵢ² / n₀ = (1.5 × 10¹⁰)² / 10¹⁵ = 2.25 × 10⁵ /cm³</li>
-</ul>
-<p>加入过剩载流子后：</p>
-<ul>
-<li>n = n₀ + Δn</li>
-<li>p = p₀ + Δp</li>
-</ul>
-<h1>连续性方程</h1>
-<p>连续性方程描述载流子浓度随时间和位置的变化，包含产生、复合、漂移和扩散：</p>
-<p><strong>电子连续性方程：</strong></p>
-<p>$$\frac{\partial n}{\partial t} = \frac{1}{q}\frac{\partial J_n}{\partial x} + G_n - R_n$$</p>
-<p><strong>空穴连续性方程：</strong></p>
-<p>$$\frac{\partial p}{\partial t} = -\frac{1}{q}\frac{\partial J_p}{\partial x} + G_p - R_p$$</p>
-<p>其中 G 为产生率，R 为复合率。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>双极型晶体管BJT基础</title>
-    <link href="https://s701f.top/posts/%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>NPN结构与工作原理</summary>
-    <content type="html"><![CDATA[<h1>双极型晶体管 (BJT)</h1>
-<p>BJT 是另一种晶体管类型，具有以下特点：</p>
-<ul>
-<li>同时利用电子和空穴电流（故称"双极型"）</li>
-<li>与 MOSFET 一样是三端器件</li>
-<li>两端之间的电压控制第三端中流过的电流</li>
-<li>可用于放大（模拟电子学）或开关（数字电子学）</li>
-</ul>
-<h1>NPN BJT 结构</h1>
-<p>NPN BJT 由以下部分组成：</p>
-<ul>
-<li><strong>发射极 (E)：</strong> N 型区域，重掺杂</li>
-<li><strong>基区 (B)：</strong> P 型区域，薄且轻掺杂</li>
-<li><strong>集电极 (C)：</strong> N 型区域</li>
-</ul>
-<p>结构：N 型发射极 - P 型基区 - N 型集电极（三明治结构）</p>
-<h2>理想化结构</h2>
-<ul>
-<li>发射极和集电极为 N 型区域</li>
-<li>基区为两者之间的薄 P 型区域</li>
-<li>三个区域均制作金属接触</li>
-</ul>
-<h2>实际结构</h2>
-<p>实际 BJT 制造中：</p>
-<ul>
-<li>发射极和集电极位于基区两侧</li>
-<li>基区极薄以利于载流子输运</li>
-<li>各区域掺杂浓度不同以优化性能</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>固态电子学课程导论</title>
-    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E8%AF%BE%E7%A8%8B%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E8%AF%BE%E7%A8%8B%E5%AF%BC%E8%AE%BA/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>课程目标和内容框架</summary>
-    <content type="html"><![CDATA[<h1>课程概览</h1>
-<h2>基本信息</h2>
-<ul>
-<li><strong>授课教师：</strong> Xiulong Bao（包秀龙）</li>
-<li><strong>上课时间：</strong> 周一 13:30-15:05（第 1,3,5,7,9,11,13,15 周）；周五 13:30-15:05（第 1-15 周）</li>
-<li><strong>教室：</strong> 教学楼主楼 4-East102（周一）；4-West 414（周五）</li>
-</ul>
-<h2>学习目的</h2>
-<ul>
-<li><strong>理解基本电子器件工作原理：</strong> PN 二极管、BJT、MOSFET、光电二极管、太阳能电池、量子点等</li>
-<li><strong>理解器件在电路设计中的应用</strong></li>
-<li><strong>从系统级、晶体管级和物理级三个层次理解电路设计</strong></li>
-</ul>
-<h2>预备知识</h2>
-<ul>
-<li><strong>电磁场理论：</strong> 电荷、电场、电压、能量</li>
-<li><strong>量子力学：</strong> 原子模型、基本假设、Schrodinger 方程</li>
-<li><strong>固体物理：</strong> 晶体结构、能带</li>
-<li><strong>统计物理：</strong> Fermi-Dirac 统计、Fermi 能级</li>
-</ul>
-<h1>课程内容</h1>
-<h2>第 1 章：基础概念</h2>
-<ul>
-<li>Bloch 定理、Kronig-Penney 模型、能带</li>
-<li>导体、半导体和绝缘体的分类</li>
-</ul>
-<h2>第 2 章：载流子输运与 PN 结</h2>
-<ul>
-<li>电子和空穴、漂移和扩散电流、连续性方程</li>
-<li>PN 结静电特性与 I-V 特性、结电容与击穿</li>
-</ul>
-<h2>第 3 章：晶体管</h2>
-<ul>
-<li>BJT：结构、工作原理、特性</li>
-<li>MOSFET：结构、工作原理、特性</li>
-<li>应用：放大与开关</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>掺杂半导体</title>
-    <link href="https://s701f.top/posts/%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>N型和P型半导体的掺杂原理</summary>
-    <content type="html"><![CDATA[<h1>掺杂（非本征）半导体的导电</h1>
-<h2>N 型半导体（施主杂质）</h2>
-<p>施主杂质原子向导带提供电子：</p>
-<ul>
-<li>带隙中出现附加能级，位于导带底附近</li>
-<li><strong>冻结效应 (Freeze-out)：</strong> 低温时，施主提供的电子占据附加能级</li>
-<li>温度升高，电子获得热能并跃迁至导带</li>
-<li>不产生价带空穴</li>
-</ul>
-<h2>P 型半导体（受主杂质）</h2>
-<p>受主杂质引入靠近价带顶的附加能级：</p>
-<ul>
-<li>受主捕获价带中的电子，从而产生空穴</li>
-<li>增强空穴导电能力</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>晶体管基础-MOSFET与BJT</title>
-    <link href="https://s701f.top/posts/%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>MOS电容与晶体管分类</summary>
-    <content type="html"><![CDATA[<h1>学习目标</h1>
-<ul>
-<li>晶体管分类</li>
-<li>MOS 电容：积累、耗尽、反型</li>
-<li>MOSFET 结构</li>
-<li>MOSFET 工作：截止、线性（三极管）区、饱和区</li>
-<li>MOSFET 电流-电压特性</li>
-<li>BJT 工作：截止、正向有源、饱和</li>
-<li>BJT 电流-电压特性</li>
-</ul>
-<h1>晶体管类型与应用</h1>
-<p>晶体管是用于以下方面的半导体器件：</p>
-<ul>
-<li><strong>信号放大：</strong> 适当直流偏置下放大时变信号（电压或电流），即放大信号功率</li>
-<li><strong>开关：</strong> 在 ON/OFF 状态间切换，用于数字应用</li>
-</ul>
-<h2>分类</h2>
-<ul>
-<li><strong>MOSFET（金属-氧化物-半导体场效应晶体管）：</strong> 电压控制器件</li>
-<li><strong>BJT（双极型晶体管）：</strong> 电流控制器件</li>
-</ul>
-<h1>MOS 电容</h1>
-<p>MOS（金属-氧化物-半导体）电容是 MOSFET 的基本构建模块，由以下部分组成：</p>
-<ul>
-<li>金属栅极</li>
-<li>绝缘氧化层 (SiO₂)</li>
-<li>半导体衬底（P 型或 N 型）</li>
-</ul>
-<p>工作模式：</p>
-<ul>
-<li><strong>积累 (Accumulation)：</strong> 多数载流子聚集在氧化物-半导体界面</li>
-<li><strong>耗尽 (Depletion)：</strong> 多数载流子被驱离界面</li>
-<li><strong>反型 (Inversion)：</strong> 少子在界面处形成导电沟道</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>纯半导体的导电特性</title>
-    <link href="https://s701f.top/posts/%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>电流密度、态密度与费米-狄拉克分布</summary>
-    <content type="html"><![CDATA[<h1>电流与电流密度</h1>
-<p>电流密度 J 是单位面积流过的电流，与载流子浓度和漂移速度相关：</p>
-<p>$$J = qnv$$</p>
-<p>其中 q 为电荷量，n 为载流子浓度，v 为漂移速度。</p>
-<h1>漂移速度与电子迁移率</h1>
-<p>外加电场 E 使载流子获得漂移速度：</p>
-<p>$$v_d = \mu E$$</p>
-<p>电导率 σ 为：</p>
-<p>$$\sigma = qn\mu$$</p>
-<h1>态密度函数 S(E)</h1>
-<p>态密度描述单位能量、单位体积内的可用电子态数。三维自由电子的态密度：</p>
-<p>$$S(E) = C \cdot E^{1/2}$$</p>
-<p>其中 C 为常数。</p>
-<h1>Fermi-Dirac 分布 f(E)</h1>
-<p>温度 T 时能级 E 被占据的概率：</p>
-<p>$$f(E) = \frac{1}{1 + e^{(E - E_f)/kT}}$$</p>
-<p>导带中电子总数通过对 S(E)·f(E) 在能量上进行积分得到。</p>
-<h2>计算示例</h2>
-<p>对于 Fermi 能为 7.0 eV 的铜，0 K 时自由电子浓度可通过 S(E) = C·E^(1/2) 和 f(E)（0 K 时为阶跃函数）计算。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>能带理论与固体分类</title>
-    <link href="https://s701f.top/posts/%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/</id>
+    <title>固态电子学期末复习5-能带理论与固体分类</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A05-%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A05-%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/</id>
     <published>2026-06-10T00:00:00.000Z</published>
     <updated>2026-06-10T00:00:00.000Z</updated>
     <summary>导体-半导体-绝缘体的能带理论解释</summary>
@@ -764,155 +817,9 @@
     <category term="电子信息工程"></category>
   </entry>
   <entry>
-    <title>量子力学基础1-经典物理与量子革命</title>
-    <link href="https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>经典物理的局限与量子力学的诞生</summary>
-    <content type="html"><![CDATA[<h1>经典物理学框架</h1>
-<p>1900 年以前，物理学建立在两大支柱之上：</p>
-<ul>
-<li><strong>牛顿力学：</strong> 牛顿运动定律描述物质的运动</li>
-<li><strong>麦克斯韦电磁理论：</strong> 麦克斯韦方程组描述电磁辐射</li>
-</ul>
-<h2>牛顿三定律</h2>
-<ul>
-<li><strong>第一定律（惯性定律）：</strong> 物体在不受外力作用时保持静止或匀速直线运动状态</li>
-<li><strong>第二定律：</strong> F = ma（力等于质量乘以加速度）</li>
-<li><strong>第三定律：</strong> 作用力与反作用力大小相等、方向相反</li>
-</ul>
-<h1>黑体辐射问题</h1>
-<h2>紫外灾难</h2>
-<p>经典物理学在解释黑体辐射时遇到了严重困难。经典理论预测辐射能量在高频区域会趋于无穷大，这一结果被称为<strong>紫外灾难</strong>（Ultraviolet Catastrophe），与实验测量严重不符。</p>
-<h1>量子力学的诞生</h1>
-<h2>Max Planck（1858-1947）</h2>
-<p>量子力学可追溯至 <strong>1900 年</strong>，Planck 提出能量以离散的"量子"形式发射和吸收。</p>
-<ul>
-<li><strong>1918 年诺贝尔物理学奖</strong> 表彰其发现能量量子</li>
-<li>这标志着**"旧量子力学"**的开端</li>
-</ul>
-<h1>光电效应</h1>
-<h2>Einstein 的光电效应方程</h2>
-<p>Einstein 将 Planck 的量子假说扩展到光电效应，提出光由离散能量包（光子）组成。</p>
-<h1>原子模型</h1>
-<h2>Bohr 的行星模型</h2>
-<p>Bohr 提出电子在离散能级上绕核运动，用量子概念解释了原子稳定性和光谱线。</p>
-<h1>De Broglie 波粒二象性</h1>
-<h2>De Broglie 波长</h2>
-<p>$$\lambda = \frac{h}{p}$$</p>
-<p>其中 h 为 Planck 常数，p 为动量。物质粒子也表现出波动性。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>量子力学基础2-波粒二象性与薛定谔方程</title>
-    <link href="https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>量子力学核心概念：不确定性原理、泡利不相容原理</summary>
-    <content type="html"><![CDATA[<h1>能量与动量的量子化</h1>
-<p>在微观系统中，能量和动量只能取离散值。这一量子化概念是量子力学的基石。</p>
-<h2>物质波：De Broglie 波</h2>
-<p>De Broglie 提出物质粒子具有与之相关联的波长：</p>
-<p>$$\lambda = \frac{h}{p}$$</p>
-<p>其中 h 为 Planck 常数，p 为动量。这一波动性解释了经典物理无法说明的现象。</p>
-<h2>波粒二象性</h2>
-<p>所有物质同时表现出粒子性和波动性，这是量子力学的基本原理。</p>
-<h1>Heisenberg 不确定性原理</h1>
-<p>不可能同时精确知道一个粒子的位置和动量：</p>
-<p>$$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$</p>
-<p>这是自然界的根本性质，而非测量技术的限制。</p>
-<h1>Pauli 不相容原理</h1>
-<p><strong>表述：</strong> 在同一原子中，没有两个电子可以具有完全相同的一组量子数 (n, l, m_l, m_s)。每个电子必须处于自己独特的量子态（单重态）。同一轨道中的两个电子必须具有相反（反平行）的自旋方向。</p>
-<p>该原理解释了元素周期表的结构和原子中的电子行为。</p>
-<h1>Schrödinger 方程</h1>
-<p>多粒子系统中的每个粒子都可以用一个复值波函数完全描述。</p>
-<p>含时 Schrödinger 方程：</p>
-<p>$$i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$$</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>量子力学基础3-薛定谔方程与无限深势阱</title>
-    <link href="https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>薛定谔方程求解与E-k色散关系</summary>
-    <content type="html"><![CDATA[<h1>Schrödinger 波动方程</h1>
-<h2>一维自由粒子 (U = 0)</h2>
-<p>对于势能为零的自由粒子，一维 Schrödinger 方程描述平面波解。</p>
-<h2>无限深势阱</h2>
-<p>被限制在宽度为 d 的无限深势阱中的粒子只能占据离散的能级：</p>
-<p>$$E_n = \frac{n^2\pi^2\hbar^2}{2md^2}$$</p>
-<p>其中 n 为整数量子数 (n = 1, 2, 3, ...)。</p>
-<p>阱内波函数 (0 ≤ x ≤ d, U(x) = 0) 需满足边界条件：</p>
-<ul>
-<li>ψ(0) = 0</li>
-<li>ψ(d) = 0</li>
-</ul>
-<h2>E-k 色散图</h2>
-<p>能量-波矢 (E-k) 色散图展示了周期势阱中粒子的能量与波矢关系，对理解晶体中能带形成至关重要。</p>
-<h2>无限势阱求解示例</h2>
-<p>求解无限深势阱中粒子的 Schrödinger 方程：</p>
-<ul>
-<li>在 0 ≤ x ≤ d 区域，U(x) = 0</li>
-<li>边界条件：波函数在阱壁处为零</li>
-<li>解产生驻波模式</li>
-<li>能量量子化：E 与 n² 成正比</li>
-</ul>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>量子力学基础4-布洛赫定理与Kronig-Penney模型</title>
-    <link href="https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/</id>
-    <published>2026-06-10T00:00:00.000Z</published>
-    <updated>2026-06-10T00:00:00.000Z</updated>
-    <summary>周期势场中的电子行为与能带形成</summary>
-    <content type="html"><![CDATA[<h1>Bohr 氢原子模型</h1>
-<p>Bohr 模型描述电子在量子化能级上绕核运动，成功解释了氢原子的离散光谱线。</p>
-<p>关键特征：</p>
-<ul>
-<li>电子占据离散（量子化）轨道</li>
-<li>电子在能级间跃迁时吸收或发射能量</li>
-<li>该模型是通向现代量子理论的关键一步</li>
-</ul>
-<h1>Bloch 定理</h1>
-<p>对于一维周期势 U(x+d) = U(x)，Bloch 定理指出：</p>
-<p>$$\Psi(x) = u(x)e^{ikx}$$</p>
-<p>其中：</p>
-<ul>
-<li>u(x) 为原胞波函数，与 U(x) 具有相同周期性</li>
-<li>k 为波矢</li>
-</ul>
-<p>该定理是理解晶体中电子行为的基础。</p>
-<h1>Kronig-Penney 模型</h1>
-<p>Kronig-Penney 模型利用有限势阱问题近似晶体中的周期势。</p>
-<p><strong>目标：</strong> 求解 Kronig-Penney 势下的 Schrödinger 方程，证明晶格中<strong>能带</strong>的存在。</p>
-<p><strong>方法：</strong> 质量为 m、能量为 E 的电子受到周期势 U(x) 的作用。求解 Schrödinger 方程揭示只有特定能量范围（能带）是允许的，其他范围（带隙）被禁止。</p>
-]]></content>
-    <author>
-      <name>五红酱自动机！</name>
-    </author>
-    <category term="电子信息工程"></category>
-  </entry>
-  <entry>
-    <title>金属电子模型与德鲁德理论</title>
-    <link href="https://s701f.top/posts/%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/" rel="alternate" type="text/html"/>
-    <id>https://s701f.top/posts/%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/</id>
+    <title>固态电子学期末复习6-金属电子模型与德鲁德理论</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A06-%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A06-%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/</id>
     <published>2026-06-10T00:00:00.000Z</published>
     <updated>2026-06-10T00:00:00.000Z</updated>
     <summary>Drude模型、热能与电子迁移率</summary>
@@ -951,6 +858,99 @@
 <p>其中 τ 为两次碰撞间的平均自由时间。</p>
 <h2>稳态与瞬态解</h2>
 <p>Drude 模型为外加电场下的电子运动提供稳态和瞬态两种解。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习7-纯半导体的导电特性</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A07-%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A07-%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>电流密度、态密度与费米-狄拉克分布</summary>
+    <content type="html"><![CDATA[<h1>电流与电流密度</h1>
+<p>电流密度 J 是单位面积流过的电流，与载流子浓度和漂移速度相关：</p>
+<p>$$J = qnv$$</p>
+<p>其中 q 为电荷量，n 为载流子浓度，v 为漂移速度。</p>
+<h1>漂移速度与电子迁移率</h1>
+<p>外加电场 E 使载流子获得漂移速度：</p>
+<p>$$v_d = \mu E$$</p>
+<p>电导率 σ 为：</p>
+<p>$$\sigma = qn\mu$$</p>
+<h1>态密度函数 S(E)</h1>
+<p>态密度描述单位能量、单位体积内的可用电子态数。三维自由电子的态密度：</p>
+<p>$$S(E) = C \cdot E^{1/2}$$</p>
+<p>其中 C 为常数。</p>
+<h1>Fermi-Dirac 分布 f(E)</h1>
+<p>温度 T 时能级 E 被占据的概率：</p>
+<p>$$f(E) = \frac{1}{1 + e^{(E - E_f)/kT}}$$</p>
+<p>导带中电子总数通过对 S(E)·f(E) 在能量上进行积分得到。</p>
+<h2>计算示例</h2>
+<p>对于 Fermi 能为 7.0 eV 的铜，0 K 时自由电子浓度可通过 S(E) = C·E^(1/2) 和 f(E)（0 K 时为阶跃函数）计算。</p>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习8-掺杂半导体</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A08-%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A08-%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>N型和P型半导体的掺杂原理</summary>
+    <content type="html"><![CDATA[<h1>掺杂（非本征）半导体的导电</h1>
+<h2>N 型半导体（施主杂质）</h2>
+<p>施主杂质原子向导带提供电子：</p>
+<ul>
+<li>带隙中出现附加能级，位于导带底附近</li>
+<li><strong>冻结效应 (Freeze-out)：</strong> 低温时，施主提供的电子占据附加能级</li>
+<li>温度升高，电子获得热能并跃迁至导带</li>
+<li>不产生价带空穴</li>
+</ul>
+<h2>P 型半导体（受主杂质）</h2>
+<p>受主杂质引入靠近价带顶的附加能级：</p>
+<ul>
+<li>受主捕获价带中的电子，从而产生空穴</li>
+<li>增强空穴导电能力</li>
+</ul>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
+  </entry>
+  <entry>
+    <title>固态电子学期末复习9-半导体中的漂移与扩散电流1</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A09-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A09-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/</id>
+    <published>2026-06-10T00:00:00.000Z</published>
+    <updated>2026-06-10T00:00:00.000Z</updated>
+    <summary>能带与载流子输运基础</summary>
+    <content type="html"><![CDATA[<h1>掺杂半导体的能带</h1>
+<ul>
+<li><strong>N 型：</strong> 施主能级靠近导带；Fermi 能级向导带方向升高</li>
+<li><strong>P 型：</strong> 受主能级靠近价带；Fermi 能级向价带方向降低</li>
+</ul>
+<h1>掺杂半导体的电导率</h1>
+<p>N 型材料：电导率由电子主导；P 型材料：电导率由空穴主导。</p>
+<h1>漂移电流与扩散电流</h1>
+<h2>低-中电场下的漂移电流</h2>
+<p>低至中等电场下，漂移速度与电场 E 成正比，服从恒定温度下的欧姆定律：</p>
+<p>$$J_{drift} = q(n\mu_n + p\mu_p)E$$</p>
+<h2>高电场下的漂移电流</h2>
+<p>高电场下，漂移速度趋于饱和值，称为<strong>散射限制速度</strong>或<strong>饱和速度</strong>：</p>
+<p>$$v_{n,p}^{sat} \approx 10^7 \text{ cm/s}$$</p>
+<p>这对电子和空穴都适用，是半导体的普遍特性。</p>
+<h2>扩散电流</h2>
+<p>扩散电流源于载流子浓度梯度：</p>
+<p>$$J_{diff}^{electron} = qD_n\frac{dn}{dx}$$</p>
+<p>$$J_{diff}^{hole} = -qD_p\frac{dp}{dx}$$</p>
+<p>其中 D_n 和 D_p 为扩散系数。</p>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
