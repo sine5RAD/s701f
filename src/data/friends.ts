@@ -28,6 +28,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://www.maincand.top/",
 		tags: ["Friend", "Blog"],
 	},
+	{
+		id: 3,
+		title: "HongLiu的小站",
+		imgurl: "https://hongliu.icu/image/avator_1.jpg",
+		desc: "做自己所爱的事，爱自己所做的事。",
+		siteurl: "https://hongliu.icu",
+		tags: ["Blog"],
+	},
 ];
 
 // 获取所有友情链接数据
