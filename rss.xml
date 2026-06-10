@@ -93,6 +93,39 @@
 &lt;li&gt;MOSFET：结构、工作原理、特性&lt;/li&gt;
 &lt;li&gt;应用：放大与开关&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例 1.2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 一个质子被 1000 V 电压加速，求它获得的能量（单位：eV）。&lt;/p&gt;
+&lt;p&gt;已知电子电荷 qe = 1.6 × 10^-19 C，电子静止质量 m0 = 9.11 × 10^-31 kg。&lt;/p&gt;
+&lt;p&gt;1 eV 定义为 1 个电子通过 1 V 电势差获得的能量。&lt;/p&gt;
+&lt;p&gt;因此质子获得的能量为 1000 eV。&lt;/p&gt;
+&lt;p&gt;(ii) 一个自由空间中的电子具有 3 eV 的能量。设其势能为零，求其速度与动量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;利用能量守恒：&lt;/p&gt;
+&lt;p&gt;$$E = \frac{1}{2}mv^2 = 3 \text{ eV} = 3 \times 1.6 \times 10^{-19} \text{ J}$$&lt;/p&gt;
+&lt;p&gt;$$v = \sqrt{\frac{2E}{m}}$$&lt;/p&gt;
+&lt;p&gt;动量 p = mv&lt;/p&gt;
+&lt;h2&gt;例题 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例 1.3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 若 8 μA 的电流均匀流过 100 μm × 4 mm 的矩形截面，求电流密度（单位：A/m² 和 A/cm²）。&lt;/p&gt;
+&lt;p&gt;(ii) 一个电子在 100 nm 距离内被均匀电场 200 kV/cm 加速，求其获得的能量（单位：eV）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 电流密度 J = I / A&lt;/p&gt;
+&lt;p&gt;(ii) 电场均匀时，E = V/d，因此电压 V = E × d&lt;/p&gt;
+&lt;p&gt;电子获得的能量 = q × V（eV）学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;课程从几个层次理解电路设计？
+&lt;strong&gt;答案：&lt;/strong&gt; 系统级、晶体管级、物理级，共 3 个层次&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;固态电子学需要哪些预备知识？
+&lt;strong&gt;答案：&lt;/strong&gt; 电磁场理论、量子力学、固体物理、统计物理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习1-量子力学基础1-经典物理与量子革命</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A01-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A01-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%801-%E7%BB%8F%E5%85%B8%E7%89%A9%E7%90%86%E4%B8%8E%E9%87%8F%E5%AD%90%E9%9D%A9%E5%91%BD/</guid><description>经典物理的局限与量子力学的诞生</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;经典物理学框架&lt;/h1&gt;
 &lt;p&gt;1900 年以前，物理学建立在两大支柱之上：&lt;/p&gt;
 &lt;ul&gt;
@@ -125,6 +158,46 @@
 &lt;h2&gt;De Broglie 波长&lt;/h2&gt;
 &lt;p&gt;$$\lambda = \frac{h}{p}$$&lt;/p&gt;
 &lt;p&gt;其中 h 为 Planck 常数，p 为动量。物质粒子也表现出波动性。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例 2.1 - Einstein 光电效应方程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;光电子发射中，入射光子的能量用于克服功函数和提供电子动能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 2.2 - Bohr 原子模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bohr 提出角动量 L 被量子化为离散值：&lt;/p&gt;
+&lt;p&gt;$$L = n\hbar = \frac{nh}{2\pi}$$&lt;/p&gt;
+&lt;p&gt;其中 n 为量子数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 2.3 - 氢原子光谱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bohr 模型成功解释了氢原子的离散光谱线。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例 2.4 - De Broglie 波与不确定性原理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(1) 一个电子在边长为 1 cm 的立方晶体内自由运动。由于热能，它沿立方体任一轴的平均速度为 10^7 cm/s。求其沿各轴速度分量的不确定度。&lt;/p&gt;
+&lt;p&gt;(2) 设电子以 10^5 m/s 的速度在一维空间中运动，求其 de Broglie 波长。&lt;/p&gt;
+&lt;p&gt;(3) 一辆质量为 1000 kg 的汽车以 50 km/h 的速度行驶，求其 de Broglie 波长。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(1) 根据 Heisenberg 不确定性原理：&lt;/p&gt;
+&lt;p&gt;$$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$&lt;/p&gt;
+&lt;p&gt;速度不确定度：&lt;/p&gt;
+&lt;p&gt;$$\Delta v \geq \frac{\hbar}{2m\Delta x}$$&lt;/p&gt;
+&lt;p&gt;(2) De Broglie 波长：&lt;/p&gt;
+&lt;p&gt;$$\lambda = \frac{h}{p} = \frac{h}{mv}$$&lt;/p&gt;
+&lt;p&gt;(3) 同样使用 de Broglie 公式：&lt;/p&gt;
+&lt;p&gt;v = 50 km/h ≈ 13.9 m/s&lt;/p&gt;
+&lt;p&gt;$$\lambda = \frac{h}{mv}$$学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;紫外灾难描述的是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 经典理论预测黑体辐射在高频能量趋于无穷大&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Planck 在哪一年提出能量量子化？
+&lt;strong&gt;答案：&lt;/strong&gt; 1900 年&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;De Broglie 波长公式是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; λ = h/p&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习10-半导体中的漂移与扩散电流2</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A010-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A010-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%812/</guid><description>过剩载流子与连续性方程</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;过剩载流子与连续性方程&lt;/h1&gt;
 &lt;h2&gt;过剩载流子&lt;/h2&gt;
 &lt;p&gt;掺杂（非本征）半导体平衡态下：&lt;/p&gt;
@@ -152,6 +225,23 @@
 &lt;p&gt;&lt;strong&gt;空穴连续性方程：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;$$\frac{\partial p}{\partial t} = -\frac{1}{q}\frac{\partial J_p}{\partial x} + G_p - R_p$$&lt;/p&gt;
 &lt;p&gt;其中 G 为产生率，R 为复合率。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;过剩载流子对什么影响更大？
+&lt;strong&gt;答案：&lt;/strong&gt; 少子（minority carriers）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连续性方程包含哪些过程？
+&lt;strong&gt;答案：&lt;/strong&gt; 产生、复合、漂移和扩散&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习11-PN结的制备与基础</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A011-pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A011-pn%E7%BB%93%E7%9A%84%E5%88%B6%E5%A4%87%E4%B8%8E%E5%9F%BA%E7%A1%80/</guid><description>PN结的制备工艺与连续性方程</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;复习：少子寿命&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;N 型材料：少子空穴寿命&lt;/li&gt;
@@ -172,6 +262,23 @@
 &lt;li&gt;从硅晶圆开始（通常为 N 型掺杂 Si）&lt;/li&gt;
 &lt;li&gt;在选定区域进行 P 型掺杂&lt;/li&gt;
 &lt;li&gt;P 与 N 区域的边界即形成 PN 结&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;PN 结如何形成？
+&lt;strong&gt;答案：&lt;/strong&gt; 同一单晶中相邻区域分别进行 P 型和 N 型掺杂&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电子漂移-扩散方程包含哪两项？
+&lt;strong&gt;答案：&lt;/strong&gt; 漂移项和扩散项&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习12-PN结的能带与平衡态</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A012-pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A012-pn%E7%BB%93%E7%9A%84%E8%83%BD%E5%B8%A6%E4%B8%8E%E5%B9%B3%E8%A1%A1%E6%80%81/</guid><description>热平衡下的PN结能带图</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;PN 结结构&lt;/h1&gt;
 &lt;p&gt;PN 结中：&lt;/p&gt;
@@ -200,6 +307,39 @@
 &lt;li&gt;&lt;strong&gt;正偏：&lt;/strong&gt; 降低能垒，允许电流通过&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;反偏：&lt;/strong&gt; 升高能垒，阻止电流通过&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：PN 结接触电势与耗尽层计算&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;求以下理想硅 PN 结在 300 K 时的接触电势、耗尽层宽度和最大电场。&lt;/p&gt;
+&lt;p&gt;P 侧掺杂：10^18 /cm³，N 侧掺杂：2 × 10^14 /cm³&lt;/p&gt;
+&lt;p&gt;计算：
+(i) 平衡接触电势
+(ii) 零偏时耗尽层宽度
+(iii) 6 V 反偏时的耗尽层宽度
+(iv) 0.5 V 正偏时的耗尽层宽度&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 接触电势：&lt;/p&gt;
+&lt;p&gt;$$V_{bi} = \frac{kT}{q} \ln\left(\frac{N_A N_D}{n_i^2}\right)$$&lt;/p&gt;
+&lt;p&gt;(ii) 零偏耗尽层宽度：&lt;/p&gt;
+&lt;p&gt;$$W = \sqrt{\frac{2\epsilon_s}{q}\left(\frac{1}{N_A}+\frac{1}{N_D}\right)V_{bi}}$$&lt;/p&gt;
+&lt;p&gt;(iii) 反偏时：W ∝ √(V_bi + V_R)&lt;/p&gt;
+&lt;p&gt;(iv) 正偏时：W ∝ √(V_bi - V_F)学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;热平衡下 PN 结有净电流吗？
+&lt;strong&gt;答案：&lt;/strong&gt; 没有&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;耗尽层中存在什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 固定电离原子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;热平衡下什么必须恒定？
+&lt;strong&gt;答案：&lt;/strong&gt; Fermi 能级&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习13-PN结的静电特性</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A013-pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A013-pn%E7%BB%93%E7%9A%84%E9%9D%99%E7%94%B5%E7%89%B9%E6%80%A7/</guid><description>接触电势、耗尽层与电场分布</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;PN 结静电特性&lt;/h1&gt;
 &lt;h2&gt;电场分布&lt;/h2&gt;
 &lt;p&gt;耗尽层中的电场随位置变化：&lt;/p&gt;
@@ -230,6 +370,26 @@
 &lt;li&gt;大电流可通过结&lt;/li&gt;
 &lt;li&gt;能垒降低&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：PN 结静电特性计算&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（同 12-PN 结例题，求接触电势、耗尽层、最大电场）学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;接触电势 V_bi 取决于什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 掺杂浓度和温度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正偏下耗尽层如何变化？
+&lt;strong&gt;答案：&lt;/strong&gt; 变窄&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最大电场位于何处？
+&lt;strong&gt;答案：&lt;/strong&gt; 冶金结面处&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习14-PN结的电流电压特性</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A014-pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A014-pn%E7%BB%93%E7%9A%84%E7%94%B5%E6%B5%81%E7%94%B5%E5%8E%8B%E7%89%B9%E6%80%A7/</guid><description>正反向偏置与电流方程</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;正偏&lt;/h1&gt;
 &lt;p&gt;外加正偏压时（P 正、N 负）：&lt;/p&gt;
 &lt;ul&gt;
@@ -266,6 +426,36 @@
 &lt;li&gt;&lt;strong&gt;空穴扩散长度：&lt;/strong&gt; L_p = √(D_p · τ_p)，D_p 为 Einstein 扩散系数&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;电子扩散长度：&lt;/strong&gt; L_n = √(D_n · τ_n)，D_n 为 Einstein 扩散系数&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：单边 PN 结的饱和电流&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;某长基区&quot;单边&quot;硅 PN 结，NA = 10^18 /cm³，ND = 10^14 /cm³（P+N 结）。求饱和电流 Is 的表达式。&lt;/p&gt;
+&lt;p&gt;单边 P+N 结极不对称（NA &amp;gt;&amp;gt; ND），因此耗尽层主要向 N 侧延伸。&lt;/p&gt;
+&lt;p&gt;已知施主浓度 10^14 /cm³，横截面积 10^-4 cm²，少子空穴寿命 τp = 0.6 μs，室温 300 K 工作。&lt;/p&gt;
+&lt;p&gt;计算饱和电流和 0.7 V 正偏下的电流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;空穴扩散长度：&lt;/p&gt;
+&lt;p&gt;$$L_p = \sqrt{D_p \tau_p}$$&lt;/p&gt;
+&lt;p&gt;反向饱和电流：&lt;/p&gt;
+&lt;p&gt;$$I_S = A \cdot q \cdot \frac{D_p}{L_p} \cdot \frac{n_i^2}{N_D}$$&lt;/p&gt;
+&lt;p&gt;0.7 V 正偏下的电流：&lt;/p&gt;
+&lt;p&gt;$$I = I_S \left(e^{qV/kT} - 1\right)$$学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;正偏时 PN 结电流如何随电压变化？
+&lt;strong&gt;答案：&lt;/strong&gt; 呈指数增长&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;饱和电流 J_s 在什么偏置下流动？
+&lt;strong&gt;答案：&lt;/strong&gt; 反偏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;耗尽层宽度与电压的关系？
+&lt;strong&gt;答案：&lt;/strong&gt; W ∝ √(V_bi - V)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习15-PN结电容与击穿</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A015-pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A015-pn%E7%BB%93%E7%94%B5%E5%AE%B9%E4%B8%8E%E5%87%BB%E7%A9%BF/</guid><description>势垒电容、扩散电容与反向击穿</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;PN 结电容&lt;/h1&gt;
 &lt;p&gt;PN 结根据偏置条件表现出两种电容。&lt;/p&gt;
 &lt;h2&gt;势垒电容（耗尽层电容）C_j&lt;/h2&gt;
@@ -306,6 +496,30 @@
 &lt;li&gt;&lt;strong&gt;Zener 击穿&lt;/strong&gt;（高掺杂、低电压）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;雪崩击穿&lt;/strong&gt;（低掺杂、高电压）&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：雪崩击穿&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当耗尽层中电场很大时，从 P 侧进入的电子可能被加速到足够高的动能，与晶格发生电离碰撞。&lt;/p&gt;
+&lt;p&gt;在高电场中，原始载流子和碰撞产生的载流子都有足够能量产生新的电子-空穴对，从而引发雪崩击穿。&lt;/p&gt;
+&lt;p&gt;通过改变掺杂浓度，可以制造具有特定击穿电压的二极管，击穿电压可从不到 1 V 到几百伏。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;齐纳二极管&lt;/strong&gt;通常用作电路中的稳压器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;隧道二极管&lt;/strong&gt;是重掺杂的 PN 结，其电流随电压增加而减小，可用作超高速开关（开关时间约纳秒甚至皮秒级）和微波振荡器（约 10 GHz）。学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;耗尽层电容在什么偏置下主导？
+&lt;strong&gt;答案：&lt;/strong&gt; 反偏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩散电容来源于什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 存储的少子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出两种反向击穿机制
+&lt;strong&gt;答案：&lt;/strong&gt; Zener 击穿和雪崩击穿&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习16-晶体管基础-MOSFET与BJT</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A016-%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A016-%E6%99%B6%E4%BD%93%E7%AE%A1%E5%9F%BA%E7%A1%80-mosfet%E4%B8%8Ebjt/</guid><description>MOS电容与晶体管分类</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;学习目标&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;晶体管分类&lt;/li&gt;
@@ -340,6 +554,27 @@
 &lt;li&gt;&lt;strong&gt;耗尽 (Depletion)：&lt;/strong&gt; 多数载流子被驱离界面&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;反型 (Inversion)：&lt;/strong&gt; 少子在界面处形成导电沟道&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;晶体管的两种主要应用？
+&lt;strong&gt;答案：&lt;/strong&gt; 放大和开关&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MOSFET 是什么控制器件？
+&lt;strong&gt;答案：&lt;/strong&gt; 电压控制器件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MOS 电容的反型模式产生什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 少子导电沟道&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习17-MOSFET的阈值与特性</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A017-mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A017-mosfet%E7%9A%84%E9%98%88%E5%80%BC%E4%B8%8E%E7%89%B9%E6%80%A7/</guid><description>阈值电压、线性区与饱和区</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;MOS 电容与反型层&lt;/h1&gt;
 &lt;p&gt;P 型衬底 MOS 电容：&lt;/p&gt;
 &lt;ul&gt;
@@ -371,6 +606,27 @@
 &lt;p&gt;沟道长度调制效应修正饱和区电流：&lt;/p&gt;
 &lt;p&gt;$$I_D \approx I_D(1 + \lambda V_{DS})$$&lt;/p&gt;
 &lt;p&gt;其中 λ 为沟道长度调制参数。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;NMOS 截止区时 I_D 是多少？
+&lt;strong&gt;答案：&lt;/strong&gt; I_D = 0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V_DSAT 的定义？
+&lt;strong&gt;答案：&lt;/strong&gt; V_DSAT = V_GS - V_t&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沟道长度调制对饱和电流有何影响？
+&lt;strong&gt;答案：&lt;/strong&gt; 增加因子 (1+λV_DS)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习18-CMOS技术</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A018-cmos%E6%8A%80%E6%9C%AF/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A018-cmos%E6%8A%80%E6%9C%AF/</guid><description>PMOS、CMOS反相器与数字逻辑</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;MOSFET 电容&lt;/h1&gt;
 &lt;p&gt;MOSFET 具有多种本征电容：&lt;/p&gt;
 &lt;ul&gt;
@@ -397,6 +653,26 @@
 &lt;li&gt;&lt;strong&gt;低电平 (0)：&lt;/strong&gt; GND (0 V)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CMOS 反相器（非门）由一个 NMOS 和一个 PMOS 串联组成。输入为高时 NMOS 导通、PMOS 截止；输入为低时相反。这种配置静态功耗极低。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：CMOS 尺寸比例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;硅中空穴迁移率约为电子迁移率的 1/3。因此为使 PMOS 和 NMOS 具有相同的驱动能力，PMOS 的宽度需要约为 NMOS 的 3 倍。学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;CMOS 结合了哪两种晶体管？
+&lt;strong&gt;答案：&lt;/strong&gt; NMOS 和 PMOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PMOS 的衬底是什么类型？
+&lt;strong&gt;答案：&lt;/strong&gt; N 型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CMOS 反相器静态功耗如何？
+&lt;strong&gt;答案：&lt;/strong&gt; 极低&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习19-双极型晶体管BJT基础</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A019-%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A019-%E5%8F%8C%E6%9E%81%E5%9E%8B%E6%99%B6%E4%BD%93%E7%AE%A1bjt%E5%9F%BA%E7%A1%80/</guid><description>NPN结构与工作原理</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;双极型晶体管 (BJT)&lt;/h1&gt;
 &lt;p&gt;BJT 是另一种晶体管类型，具有以下特点：&lt;/p&gt;
 &lt;ul&gt;
@@ -426,6 +702,27 @@
 &lt;li&gt;基区极薄以利于载流子输运&lt;/li&gt;
 &lt;li&gt;各区域掺杂浓度不同以优化性能&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;BJT 为何称为[双极型]？
+&lt;strong&gt;答案：&lt;/strong&gt; 同时利用电子和空穴电流&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NPN BJT 中基区是什么类型？
+&lt;strong&gt;答案：&lt;/strong&gt; P 型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BJT 是什么控制器件？
+&lt;strong&gt;答案：&lt;/strong&gt; 电流控制器件（基极电流控制集电极电流）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习2-量子力学基础2-波粒二象性与薛定谔方程</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A02-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%802-%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7%E4%B8%8E%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</guid><description>量子力学核心概念：不确定性原理、泡利不相容原理</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;能量与动量的量子化&lt;/h1&gt;
 &lt;p&gt;在微观系统中，能量和动量只能取离散值。这一量子化概念是量子力学的基石。&lt;/p&gt;
 &lt;h2&gt;物质波：De Broglie 波&lt;/h2&gt;
@@ -445,6 +742,36 @@
 &lt;p&gt;多粒子系统中的每个粒子都可以用一个复值波函数完全描述。&lt;/p&gt;
 &lt;p&gt;含时 Schrödinger 方程：&lt;/p&gt;
 &lt;p&gt;$$i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$$&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;example) is&lt;/p&gt;
+&lt;p&gt;minima/maxima of ψ:&lt;/p&gt;
+&lt;p&gt;at x = d/4 and 3d/4 if n=2&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution (2): the particle is most likely to be found at:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution (3): the particle is most likely to be found at:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;zeros of ψ:&lt;/p&gt;
+&lt;p&gt;at x = 0, d/2 and if n=2)&lt;/p&gt;
+&lt;p&gt;Quantumechanical tuneling&lt;/p&gt;
+&lt;p&gt;Thexistence of the wave-function in a clasicaly-forbiden&lt;/p&gt;
+&lt;p&gt;region opens up the posibility of a particle penetrating or&lt;/p&gt;
+&lt;p&gt;“tuneling” through an energy barier&lt;/p&gt;
+&lt;p&gt;This efect is particularly comon when we deal within&lt;/p&gt;
+&lt;p&gt;energy bariers. It provides the phenomenological basis&lt;/p&gt;
+&lt;p&gt;for the tunel diodes and plays an important role in the&lt;/p&gt;
+&lt;p&gt;behaviour of other solid-state devices.&lt;/p&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Pauli 不相容原理的内容是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 同一原子中没有两个电子可具有相同量子数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不确定性原理是测量技术的限制吗？
+&lt;strong&gt;答案：&lt;/strong&gt; 不是，是自然界的基本性质&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习20-BJT的Ebers-Moll模型</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A020-bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A020-bjt%E7%9A%84ebers-moll%E6%A8%A1%E5%9E%8B/</guid><description>Ebers-Moll模型与Early效应</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;BJT 各模式下的载流子分布&lt;/h1&gt;
 &lt;h2&gt;正向有源模式 (NPN)&lt;/h2&gt;
 &lt;ul&gt;
@@ -489,6 +816,27 @@
 &lt;li&gt;基极电流减小，导致 I_C 随 V_CE 略有增大&lt;/li&gt;
 &lt;li&gt;结果：输出特性在有源区具有有限斜率，外推线汇聚于&lt;strong&gt;Early 电压 V_A&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;NPN 正向有源模式下 EB 结和 CB 结的偏置？
+&lt;strong&gt;答案：&lt;/strong&gt; EB 结正偏，CB 结反偏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;共发射极电流增益 β 的定义？
+&lt;strong&gt;答案：&lt;/strong&gt; β = I_C / I_B&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Early 效应的物理原因是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; V_CE 增大使集电结耗尽区展宽，减小中性基区宽度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习3-量子力学基础3-薛定谔方程与无限深势阱</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A03-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A03-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%803-%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%97%A0%E9%99%90%E6%B7%B1%E5%8A%BF%E9%98%B1/</guid><description>薛定谔方程求解与E-k色散关系</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Schrödinger 波动方程&lt;/h1&gt;
 &lt;h2&gt;一维自由粒子 (U = 0)&lt;/h2&gt;
 &lt;p&gt;对于势能为零的自由粒子，一维 Schrödinger 方程描述平面波解。&lt;/p&gt;
@@ -511,6 +859,44 @@
 &lt;li&gt;解产生驻波模式&lt;/li&gt;
 &lt;li&gt;能量量子化：E 与 n² 成正比&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;example) is&lt;/p&gt;
+&lt;p&gt;minima/maxima of ψ:&lt;/p&gt;
+&lt;p&gt;at x = d/4 and 3d/4 if n=2&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution (2): the particle is most likely to be found at:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution (3): the particle is most likely to be found at:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;zeros of ψ:&lt;/p&gt;
+&lt;p&gt;at x = 0, d/2 and if n=2)&lt;/p&gt;
+&lt;p&gt;Quantumechanical tuneling&lt;/p&gt;
+&lt;p&gt;Thexistence of the wave-function in a clasicaly-forbiden&lt;/p&gt;
+&lt;p&gt;region opens up the posibility of a particle penetrating or&lt;/p&gt;
+&lt;p&gt;“tuneling” through an energy barier&lt;/p&gt;
+&lt;p&gt;This efect is particularly comon when we deal within&lt;/p&gt;
+&lt;p&gt;energy bariers. It provides the phenomenological basis&lt;/p&gt;
+&lt;p&gt;for the tunel diodes and plays an important role in the&lt;/p&gt;
+&lt;p&gt;behaviour of other solid-state devices.&lt;/p&gt;
+&lt;p&gt;Discrete Energy Levels in Atoms&lt;/p&gt;
+&lt;p&gt;The Bohr Model of the Hydrogen Atom&lt;/p&gt;
+&lt;p&gt;=  -&lt;/p&gt;
+&lt;p&gt;n = 1:&lt;/p&gt;
+&lt;p&gt;Rydberg energy.&lt;/p&gt;
+&lt;p&gt;Explanation of Hydrogen Spectrum Explanation of Hydrogen Spectrum&lt;/p&gt;
+&lt;p&gt;E = ℏ&lt;/p&gt;
+&lt;p&gt;Hydrogen Spectrum&lt;/p&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;无限深势阱中粒子的能量如何量子化？
+&lt;strong&gt;答案：&lt;/strong&gt; E_n ∝ n²&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无限深势阱的边界条件是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 波函数在阱壁处为零：ψ(0)=ψ(d)=0&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习4-量子力学基础4-布洛赫定理与Kronig-Penney模型</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A04-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A04-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%804-%E5%B8%83%E6%B4%9B%E8%B5%AB%E5%AE%9A%E7%90%86%E4%B8%8Ekronig-penney%E6%A8%A1%E5%9E%8B/</guid><description>周期势场中的电子行为与能带形成</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Bohr 氢原子模型&lt;/h1&gt;
 &lt;p&gt;Bohr 模型描述电子在量子化能级上绕核运动，成功解释了氢原子的离散光谱线。&lt;/p&gt;
 &lt;p&gt;关键特征：&lt;/p&gt;
@@ -532,6 +918,24 @@
 &lt;p&gt;Kronig-Penney 模型利用有限势阱问题近似晶体中的周期势。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 求解 Kronig-Penney 势下的 Schrödinger 方程，证明晶格中&lt;strong&gt;能带&lt;/strong&gt;的存在。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;方法：&lt;/strong&gt; 质量为 m、能量为 E 的电子受到周期势 U(x) 的作用。求解 Schrödinger 方程揭示只有特定能量范围（能带）是允许的，其他范围（带隙）被禁止。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h1&gt;学习自测&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bloch 定理适用于什么条件？
+&lt;strong&gt;答案：&lt;/strong&gt; 周期势场&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kronig-Penney 模型证明了什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 晶格中能带的存在&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;写出 1D 周期系统的 Bloch 定理形式
+&lt;strong&gt;答案：&lt;/strong&gt; Ψ(x) = u(x)e^(ikx)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习5-能带理论与固体分类</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A05-%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A05-%E8%83%BD%E5%B8%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%9B%BA%E4%BD%93%E5%88%86%E7%B1%BB/</guid><description>导体-半导体-绝缘体的能带理论解释</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Bloch 定理与晶体周期性&lt;/h1&gt;
 &lt;p&gt;对于周期势 U(x+d) = U(x)，波函数具有 Bloch 形式：&lt;/p&gt;
 &lt;p&gt;$$\Psi(x) = u(x)e^{ikx}$$&lt;/p&gt;
@@ -573,6 +977,50 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：E-k 能带结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;某半导体具有以下 E-k 能带结构：&lt;/p&gt;
+&lt;p&gt;$$E(k) = \alpha k^2 \quad \text{(导带)}$$
+$$E(k) = \beta k^2 + \gamma \quad \text{(价带)}$$&lt;/p&gt;
+&lt;p&gt;常数：α = 9.25 × 10^-40 J·m²，β = 2.2 × 10^-39 J·m²，γ = 1 × 10^10 m^-1，δ = 2.4 × 10^-19 J&lt;/p&gt;
+&lt;p&gt;绘制能带结构，求带隙能量，并估算导带底和价带顶附近电子的有效质量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;两个函数均为抛物线。&lt;/p&gt;
+&lt;p&gt;价带顶：EVB,max = 0（在 k = 0 处）&lt;/p&gt;
+&lt;p&gt;导带底：ECB,min = δ = 1.5 eV（在 k = γ 处）&lt;/p&gt;
+&lt;p&gt;带隙：Eg = δ = 1.5 eV&lt;/p&gt;
+&lt;p&gt;有效质量：&lt;/p&gt;
+&lt;p&gt;导带底：m*_e = ℏ² / (2α)&lt;/p&gt;
+&lt;p&gt;价带顶：m*_h = ℏ² / (2|β|)&lt;/p&gt;
+&lt;h2&gt;例题 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：晶体结构 - 原胞中的原子数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;求以下晶格中每个原胞的原子数：
+(a) 面心立方 (FCC)
+(b) 体心立方 (BCC)
+(c) 金刚石晶格&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;假设每个原子为硬球，与其最近邻原子表面接触。&lt;/p&gt;
+&lt;p&gt;(a) FCC：每个原胞有 4 个原子
+(b) BCC：每个原胞有 2 个原子
+(c) 金刚石：每个原胞有 8 个原子&lt;/p&gt;
+&lt;p&gt;并计算每种晶格的原子堆积因子（原胞体积中被原子占据的百分比）。学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;能带隙（Bandgap）的定义是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 分隔价带顶与导带底的禁带区域&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;半导体的带隙大约是多少？
+&lt;strong&gt;答案：&lt;/strong&gt; ~1 eV&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fermi 能级的定义是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 占据概率为 1/2 的能级&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习6-金属电子模型与德鲁德理论</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A06-%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A06-%E9%87%91%E5%B1%9E%E7%94%B5%E5%AD%90%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%BE%B7%E9%B2%81%E5%BE%B7%E7%90%86%E8%AE%BA/</guid><description>Drude模型、热能与电子迁移率</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Drude 电流模型&lt;/h1&gt;
 &lt;p&gt;Drude 模型将电子视为经典粒子，在晶格中自由运动并偶尔与离子碰撞，以此描述金属中的电传导。&lt;/p&gt;
 &lt;h1&gt;热能&lt;/h1&gt;
@@ -608,6 +1056,56 @@
 &lt;p&gt;其中 τ 为两次碰撞间的平均自由时间。&lt;/p&gt;
 &lt;h2&gt;稳态与瞬态解&lt;/h2&gt;
 &lt;p&gt;Drude 模型为外加电场下的电子运动提供稳态和瞬态两种解。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：电子迁移率计算&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;已知金属导带中电子的平均自由碰撞时间为 4 × 10^-14 s，计算电子迁移率（单位：cm²/(V·s)）。若施加 2 mV/cm 的电场，电子平均需要多长时间漂移 6 cm？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;电子迁移率：&lt;/p&gt;
+&lt;p&gt;$$\mu_e = \frac{e\tau}{m_e}$$&lt;/p&gt;
+&lt;p&gt;漂移速度：&lt;/p&gt;
+&lt;p&gt;$$v_d = \mu_e E$$&lt;/p&gt;
+&lt;p&gt;漂移时间：t = L / v_d&lt;/p&gt;
+&lt;h2&gt;例题 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：铜的导电特性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 铜 (Cu) 有 8 × 10^28 个自由电子/m³。已知 300 K 时电导率 σ = 5.8 × 10^7 S/m，求电子迁移率（单位：cm²/(V·s)）。&lt;/p&gt;
+&lt;p&gt;(ii) 设 1 mm 直径的铜导线承载 10 mA 电流，电子平均需要多长时间沿 10 cm 长的导线漂移？&lt;/p&gt;
+&lt;p&gt;(iii) 求该段导线的电阻和压降。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 电导率与迁移率的关系：σ = nqμ&lt;/p&gt;
+&lt;p&gt;$$\mu_e = \frac{\sigma}{nq}$$&lt;/p&gt;
+&lt;p&gt;(ii) 漂移时间：先求漂移速度 v_d = J/(nq)，再求 t = L/v_d&lt;/p&gt;
+&lt;p&gt;其中电流密度 J = I/A&lt;/p&gt;
+&lt;p&gt;(iii) 电阻：R = ρL/A = L/(σA)&lt;/p&gt;
+&lt;p&gt;电压降：V = IR&lt;/p&gt;
+&lt;h2&gt;例题 3&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：Fermi 能级与电子浓度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设铜的 Fermi 能为 7.0 eV，求 0 K 时铜导带中自由电子的浓度。&lt;/p&gt;
+&lt;p&gt;某金属导带的态密度函数为 S(E)ΔE = C·E^(1/2)·dE，其中 C = 8 × 10^21 /(eV^(3/2)·cm³)，E 从导带底开始测量。若 0.1 cm³ 的金属样品温度为 0 K，计算当 Fermi 能分别为 (i) 3.5 eV、(ii) 5.5 eV、(iii) 8.0 eV 时，在 E1 = 4.0 eV 到 E2 = 6.0 eV 能量范围内的电子数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;导带中电子总数（单位体积）：&lt;/p&gt;
+&lt;p&gt;$$n = \int S(E) \cdot f(E) dE$$&lt;/p&gt;
+&lt;p&gt;0 K 时，f(E) 为阶跃函数。&lt;/p&gt;
+&lt;p&gt;Case (i): Ef = 3.5 eV，E1 和 E2 均 &amp;gt; Ef，n = 0&lt;/p&gt;
+&lt;p&gt;Case (ii): Ef = 5.5 eV，E1 &amp;lt; Ef &amp;lt; E2，电子数从 E1 到 Ef 积分&lt;/p&gt;
+&lt;p&gt;Case (iii): Ef = 8.0 eV，E1 和 E2 均 &amp;lt; Ef，电子数从 E1 到 E2 积分&lt;/p&gt;
+&lt;p&gt;总电子数 = n × 样品体积学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;300 K 时 kT 的值是多少？
+&lt;strong&gt;答案：&lt;/strong&gt; 0.0259 eV&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电子迁移率 μ_e 的公式是什么？
+&lt;strong&gt;答案：&lt;/strong&gt; μ_e = eτ/m&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Drude 模型将电子视为什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 经典粒子&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习7-纯半导体的导电特性</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A07-%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A07-%E7%BA%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%9A%84%E5%AF%BC%E7%94%B5%E7%89%B9%E6%80%A7/</guid><description>电流密度、态密度与费米-狄拉克分布</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;电流与电流密度&lt;/h1&gt;
 &lt;p&gt;电流密度 J 是单位面积流过的电流，与载流子浓度和漂移速度相关：&lt;/p&gt;
 &lt;p&gt;$$J = qnv$$&lt;/p&gt;
@@ -627,6 +1125,48 @@
 &lt;p&gt;导带中电子总数通过对 S(E)·f(E) 在能量上进行积分得到。&lt;/p&gt;
 &lt;h2&gt;计算示例&lt;/h2&gt;
 &lt;p&gt;对于 Fermi 能为 7.0 eV 的铜，0 K 时自由电子浓度可通过 S(E) = C·E^(1/2) 和 f(E)（0 K 时为阶跃函数）计算。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例 2 - Fermi 能级与电子分布&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;导带电子浓度：在 0 K 时，能量范围 E1 到 E2 内的电子数为：&lt;/p&gt;
+&lt;p&gt;$$n = \int_{E1}^{E2} S(E) \cdot f(E) dE$$&lt;/p&gt;
+&lt;p&gt;Case (i): Ef = 3.5 eV，E1 和 E2 均 &amp;gt; Ef → n = 0&lt;/p&gt;
+&lt;p&gt;Case (ii): Ef = 5.5 eV，E1 &amp;lt; Ef &amp;lt; E2，用 Ef 替换 E2&lt;/p&gt;
+&lt;p&gt;Case (iii): Ef = 8.0 eV，E1 和 E2 均 &amp;lt; Ef&lt;/p&gt;
+&lt;h2&gt;例题 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：本征锗的电阻率&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 纯锗 (Ge) 的带隙为 0.66 eV，300 K 时本征载流子浓度为 2.4 × 10^13 /cm³。若电子和空穴迁移率分别为 3900 cm²/(V·s) 和 1900 cm²/(V·s)，求本征电阻率（单位：Ω·cm）。&lt;/p&gt;
+&lt;p&gt;(ii) 一根直径为 1 cm、长度为 8 cm 的圆柱形纯锗棒，两端施加 2 V 电压，求流过的电流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 本征电导率：&lt;/p&gt;
+&lt;p&gt;$$\sigma_i = n_i q (\mu_n + \mu_p)$$&lt;/p&gt;
+&lt;p&gt;电阻率 ρ = 1/σ&lt;/p&gt;
+&lt;p&gt;(ii) 电阻：R = ρL/A&lt;/p&gt;
+&lt;p&gt;电流：I = V/R（欧姆定律）&lt;/p&gt;
+&lt;h2&gt;例题 3&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：硅的本征能级位置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;硅在 300 K 时的本征载流子浓度 ni = 1.5 × 10^10 /cm³。&lt;/p&gt;
+&lt;p&gt;已知硅中电子有效质量与空穴有效质量之比为 1.94，带隙能量为 1.1 eV，求纯硅中 Fermi 能偏离能带中心的位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本征 Fermi 能级相对于带隙中心的偏移量为：&lt;/p&gt;
+&lt;p&gt;$$E_i - E_{midgap} = \frac{3}{4}kT \ln\left(\frac{m_h^&lt;em&gt;}{m_e^&lt;/em&gt;}\right)$$&lt;/p&gt;
+&lt;p&gt;代入 m_h*/m_e* = 1.94，T = 300 K 即可求得。学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;三维态密度函数 S(E) 与能量的关系？
+&lt;strong&gt;答案：&lt;/strong&gt; S(E) ∝ E^(1/2)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电导率 σ 的公式？
+&lt;strong&gt;答案：&lt;/strong&gt; σ = qnμ&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;0 K 时 Fermi-Dirac 分布是什么形式？
+&lt;strong&gt;答案：&lt;/strong&gt; 阶跃函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习8-掺杂半导体</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A08-%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A08-%E6%8E%BA%E6%9D%82%E5%8D%8A%E5%AF%BC%E4%BD%93/</guid><description>N型和P型半导体的掺杂原理</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;掺杂（非本征）半导体的导电&lt;/h1&gt;
 &lt;h2&gt;N 型半导体（施主杂质）&lt;/h2&gt;
 &lt;p&gt;施主杂质原子向导带提供电子：&lt;/p&gt;
@@ -642,6 +1182,31 @@
 &lt;li&gt;受主捕获价带中的电子，从而产生空穴&lt;/li&gt;
 &lt;li&gt;增强空穴导电能力&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例 2：掺杂硅的载流子浓度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i) 硅样品掺杂浓度为 10^15 /cm³ 的施主杂质。求 300 K 时的电子和空穴浓度。&lt;/p&gt;
+&lt;p&gt;已知硅在 300 K 时的本征载流子浓度 ni = 1.5 × 10^10 /cm³。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;N 型半导体中，n ≈ ND = 10^15 /cm³&lt;/p&gt;
+&lt;p&gt;空穴浓度：&lt;/p&gt;
+&lt;p&gt;$$p = \frac{n_i^2}{n} = \frac{(1.5 \times 10^{10})^2}{10^{15}} = 2.25 \times 10^5 \text{ /cm}^3$$学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;N 型掺杂中施主杂质提供什么？
+&lt;strong&gt;答案：&lt;/strong&gt; 向导带提供电子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;低温下施主电子的状态？
+&lt;strong&gt;答案：&lt;/strong&gt; 冻结（Freeze-out）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;P 型掺杂的受主能级位于何处？
+&lt;strong&gt;答案：&lt;/strong&gt; 价带顶附近&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>固态电子学期末复习9-半导体中的漂移与扩散电流1</title><link>https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A09-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E6%80%81%E7%94%B5%E5%AD%90%E5%AD%A6%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A09-%E5%8D%8A%E5%AF%BC%E4%BD%93%E4%B8%AD%E7%9A%84%E6%BC%82%E7%A7%BB%E4%B8%8E%E6%89%A9%E6%95%A3%E7%94%B5%E6%B5%811/</guid><description>能带与载流子输运基础</description><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;掺杂半导体的能带&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;N 型：&lt;/strong&gt; 施主能级靠近导带；Fermi 能级向导带方向升高&lt;/li&gt;
@@ -662,6 +1227,33 @@
 &lt;p&gt;$$J_{diff}^{electron} = qD_n\frac{dn}{dx}$$&lt;/p&gt;
 &lt;p&gt;$$J_{diff}^{hole} = -qD_p\frac{dp}{dx}$$&lt;/p&gt;
 &lt;p&gt;其中 D_n 和 D_p 为扩散系数。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;h1&gt;例题与解析&lt;/h1&gt;
+&lt;h2&gt;例题 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：漂移速度与电场&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;低至中等电场下，漂移速度正比于电场 E，服从欧姆定律。&lt;/p&gt;
+&lt;p&gt;高电场下载流子漂移速度趋于饱和，饱和速度约为 10^7 cm/s。&lt;/p&gt;
+&lt;h2&gt;例题 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;例：电导率计算&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;N 型和 P 型掺杂半导体的电导率：&lt;/p&gt;
+&lt;p&gt;N 型：σ ≈ qμ_n n₀&lt;/p&gt;
+&lt;p&gt;P 型：σ ≈ qμ_p p₀&lt;/p&gt;
+&lt;p&gt;对于掺杂半导体，电导率由多数载流子主导。学习自测&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;漂移电流由什么引起？
+&lt;strong&gt;答案：&lt;/strong&gt; 外加电场&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高电场下载流子漂移速度会怎样？
+&lt;strong&gt;答案：&lt;/strong&gt; 趋于饱和，约 10⁷ cm/s&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩散电流由什么引起？
+&lt;strong&gt;答案：&lt;/strong&gt; 载流子浓度梯度&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>kruskal最小生成树</title><link>https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><description>老师课上讲的是kruskal...我prim白学了</description><pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天看ppt，才发现老师讲的是kruskal算法...&lt;/p&gt;
 &lt;h1&gt;介绍&lt;/h1&gt;

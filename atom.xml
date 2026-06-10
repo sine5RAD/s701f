@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-10T05:46:27.167Z</updated>
+  <updated>2026-06-10T07:35:26.886Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -122,6 +122,39 @@
 <li>MOSFET：结构、工作原理、特性</li>
 <li>应用：放大与开关</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例 1.2</strong></p>
+<p>(i) 一个质子被 1000 V 电压加速，求它获得的能量（单位：eV）。</p>
+<p>已知电子电荷 qe = 1.6 × 10^-19 C，电子静止质量 m0 = 9.11 × 10^-31 kg。</p>
+<p>1 eV 定义为 1 个电子通过 1 V 电势差获得的能量。</p>
+<p>因此质子获得的能量为 1000 eV。</p>
+<p>(ii) 一个自由空间中的电子具有 3 eV 的能量。设其势能为零，求其速度与动量。</p>
+<p><strong>解：</strong></p>
+<p>利用能量守恒：</p>
+<p>$$E = \frac{1}{2}mv^2 = 3 \text{ eV} = 3 \times 1.6 \times 10^{-19} \text{ J}$$</p>
+<p>$$v = \sqrt{\frac{2E}{m}}$$</p>
+<p>动量 p = mv</p>
+<h2>例题 2</h2>
+<p><strong>例 1.3</strong></p>
+<p>(i) 若 8 μA 的电流均匀流过 100 μm × 4 mm 的矩形截面，求电流密度（单位：A/m² 和 A/cm²）。</p>
+<p>(ii) 一个电子在 100 nm 距离内被均匀电场 200 kV/cm 加速，求其获得的能量（单位：eV）。</p>
+<p><strong>解：</strong></p>
+<p>(i) 电流密度 J = I / A</p>
+<p>(ii) 电场均匀时，E = V/d，因此电压 V = E × d</p>
+<p>电子获得的能量 = q × V（eV）学习自测</p>
+<ol>
+<li>
+<p>课程从几个层次理解电路设计？
+<strong>答案：</strong> 系统级、晶体管级、物理级，共 3 个层次</p>
+</li>
+<li>
+<p>固态电子学需要哪些预备知识？
+<strong>答案：</strong> 电磁场理论、量子力学、固体物理、统计物理</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -167,6 +200,46 @@
 <h2>De Broglie 波长</h2>
 <p>$$\lambda = \frac{h}{p}$$</p>
 <p>其中 h 为 Planck 常数，p 为动量。物质粒子也表现出波动性。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例 2.1 - Einstein 光电效应方程</strong></p>
+<p>光电子发射中，入射光子的能量用于克服功函数和提供电子动能。</p>
+<p><strong>例 2.2 - Bohr 原子模型</strong></p>
+<p>Bohr 提出角动量 L 被量子化为离散值：</p>
+<p>$$L = n\hbar = \frac{nh}{2\pi}$$</p>
+<p>其中 n 为量子数。</p>
+<p><strong>例 2.3 - 氢原子光谱</strong></p>
+<p>Bohr 模型成功解释了氢原子的离散光谱线。</p>
+<p><strong>例 2.4 - De Broglie 波与不确定性原理</strong></p>
+<p>(1) 一个电子在边长为 1 cm 的立方晶体内自由运动。由于热能，它沿立方体任一轴的平均速度为 10^7 cm/s。求其沿各轴速度分量的不确定度。</p>
+<p>(2) 设电子以 10^5 m/s 的速度在一维空间中运动，求其 de Broglie 波长。</p>
+<p>(3) 一辆质量为 1000 kg 的汽车以 50 km/h 的速度行驶，求其 de Broglie 波长。</p>
+<p><strong>解：</strong></p>
+<p>(1) 根据 Heisenberg 不确定性原理：</p>
+<p>$$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$</p>
+<p>速度不确定度：</p>
+<p>$$\Delta v \geq \frac{\hbar}{2m\Delta x}$$</p>
+<p>(2) De Broglie 波长：</p>
+<p>$$\lambda = \frac{h}{p} = \frac{h}{mv}$$</p>
+<p>(3) 同样使用 de Broglie 公式：</p>
+<p>v = 50 km/h ≈ 13.9 m/s</p>
+<p>$$\lambda = \frac{h}{mv}$$学习自测</p>
+<ol>
+<li>
+<p>紫外灾难描述的是什么？
+<strong>答案：</strong> 经典理论预测黑体辐射在高频能量趋于无穷大</p>
+</li>
+<li>
+<p>Planck 在哪一年提出能量量子化？
+<strong>答案：</strong> 1900 年</p>
+</li>
+<li>
+<p>De Broglie 波长公式是什么？
+<strong>答案：</strong> λ = h/p</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -207,6 +280,23 @@
 <p><strong>空穴连续性方程：</strong></p>
 <p>$$\frac{\partial p}{\partial t} = -\frac{1}{q}\frac{\partial J_p}{\partial x} + G_p - R_p$$</p>
 <p>其中 G 为产生率，R 为复合率。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>过剩载流子对什么影响更大？
+<strong>答案：</strong> 少子（minority carriers）</p>
+</li>
+<li>
+<p>连续性方程包含哪些过程？
+<strong>答案：</strong> 产生、复合、漂移和扩散</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -240,6 +330,23 @@
 <li>从硅晶圆开始（通常为 N 型掺杂 Si）</li>
 <li>在选定区域进行 P 型掺杂</li>
 <li>P 与 N 区域的边界即形成 PN 结</li>
+</ol>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>PN 结如何形成？
+<strong>答案：</strong> 同一单晶中相邻区域分别进行 P 型和 N 型掺杂</p>
+</li>
+<li>
+<p>电子漂移-扩散方程包含哪两项？
+<strong>答案：</strong> 漂移项和扩散项</p>
+</li>
 </ol>
 ]]></content>
     <author>
@@ -281,6 +388,39 @@
 <li><strong>正偏：</strong> 降低能垒，允许电流通过</li>
 <li><strong>反偏：</strong> 升高能垒，阻止电流通过</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：PN 结接触电势与耗尽层计算</strong></p>
+<p>求以下理想硅 PN 结在 300 K 时的接触电势、耗尽层宽度和最大电场。</p>
+<p>P 侧掺杂：10^18 /cm³，N 侧掺杂：2 × 10^14 /cm³</p>
+<p>计算：
+(i) 平衡接触电势
+(ii) 零偏时耗尽层宽度
+(iii) 6 V 反偏时的耗尽层宽度
+(iv) 0.5 V 正偏时的耗尽层宽度</p>
+<p><strong>解：</strong></p>
+<p>(i) 接触电势：</p>
+<p>$$V_{bi} = \frac{kT}{q} \ln\left(\frac{N_A N_D}{n_i^2}\right)$$</p>
+<p>(ii) 零偏耗尽层宽度：</p>
+<p>$$W = \sqrt{\frac{2\epsilon_s}{q}\left(\frac{1}{N_A}+\frac{1}{N_D}\right)V_{bi}}$$</p>
+<p>(iii) 反偏时：W ∝ √(V_bi + V_R)</p>
+<p>(iv) 正偏时：W ∝ √(V_bi - V_F)学习自测</p>
+<ol>
+<li>
+<p>热平衡下 PN 结有净电流吗？
+<strong>答案：</strong> 没有</p>
+</li>
+<li>
+<p>耗尽层中存在什么？
+<strong>答案：</strong> 固定电离原子</p>
+</li>
+<li>
+<p>热平衡下什么必须恒定？
+<strong>答案：</strong> Fermi 能级</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -324,6 +464,26 @@
 <li>大电流可通过结</li>
 <li>能垒降低</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：PN 结静电特性计算</strong></p>
+<p>（同 12-PN 结例题，求接触电势、耗尽层、最大电场）学习自测</p>
+<ol>
+<li>
+<p>接触电势 V_bi 取决于什么？
+<strong>答案：</strong> 掺杂浓度和温度</p>
+</li>
+<li>
+<p>正偏下耗尽层如何变化？
+<strong>答案：</strong> 变窄</p>
+</li>
+<li>
+<p>最大电场位于何处？
+<strong>答案：</strong> 冶金结面处</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -373,6 +533,36 @@
 <li><strong>空穴扩散长度：</strong> L_p = √(D_p · τ_p)，D_p 为 Einstein 扩散系数</li>
 <li><strong>电子扩散长度：</strong> L_n = √(D_n · τ_n)，D_n 为 Einstein 扩散系数</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：单边 PN 结的饱和电流</strong></p>
+<p>某长基区"单边"硅 PN 结，NA = 10^18 /cm³，ND = 10^14 /cm³（P+N 结）。求饱和电流 Is 的表达式。</p>
+<p>单边 P+N 结极不对称（NA &gt;&gt; ND），因此耗尽层主要向 N 侧延伸。</p>
+<p>已知施主浓度 10^14 /cm³，横截面积 10^-4 cm²，少子空穴寿命 τp = 0.6 μs，室温 300 K 工作。</p>
+<p>计算饱和电流和 0.7 V 正偏下的电流。</p>
+<p><strong>解：</strong></p>
+<p>空穴扩散长度：</p>
+<p>$$L_p = \sqrt{D_p \tau_p}$$</p>
+<p>反向饱和电流：</p>
+<p>$$I_S = A \cdot q \cdot \frac{D_p}{L_p} \cdot \frac{n_i^2}{N_D}$$</p>
+<p>0.7 V 正偏下的电流：</p>
+<p>$$I = I_S \left(e^{qV/kT} - 1\right)$$学习自测</p>
+<ol>
+<li>
+<p>正偏时 PN 结电流如何随电压变化？
+<strong>答案：</strong> 呈指数增长</p>
+</li>
+<li>
+<p>饱和电流 J_s 在什么偏置下流动？
+<strong>答案：</strong> 反偏</p>
+</li>
+<li>
+<p>耗尽层宽度与电压的关系？
+<strong>答案：</strong> W ∝ √(V_bi - V)</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -426,6 +616,30 @@
 <li><strong>Zener 击穿</strong>（高掺杂、低电压）</li>
 <li><strong>雪崩击穿</strong>（低掺杂、高电压）</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：雪崩击穿</strong></p>
+<p>当耗尽层中电场很大时，从 P 侧进入的电子可能被加速到足够高的动能，与晶格发生电离碰撞。</p>
+<p>在高电场中，原始载流子和碰撞产生的载流子都有足够能量产生新的电子-空穴对，从而引发雪崩击穿。</p>
+<p>通过改变掺杂浓度，可以制造具有特定击穿电压的二极管，击穿电压可从不到 1 V 到几百伏。</p>
+<p><strong>齐纳二极管</strong>通常用作电路中的稳压器。</p>
+<p><strong>隧道二极管</strong>是重掺杂的 PN 结，其电流随电压增加而减小，可用作超高速开关（开关时间约纳秒甚至皮秒级）和微波振荡器（约 10 GHz）。学习自测</p>
+<ol>
+<li>
+<p>耗尽层电容在什么偏置下主导？
+<strong>答案：</strong> 反偏</p>
+</li>
+<li>
+<p>扩散电容来源于什么？
+<strong>答案：</strong> 存储的少子</p>
+</li>
+<li>
+<p>列出两种反向击穿机制
+<strong>答案：</strong> Zener 击穿和雪崩击穿</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -473,6 +687,27 @@
 <li><strong>耗尽 (Depletion)：</strong> 多数载流子被驱离界面</li>
 <li><strong>反型 (Inversion)：</strong> 少子在界面处形成导电沟道</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>晶体管的两种主要应用？
+<strong>答案：</strong> 放大和开关</p>
+</li>
+<li>
+<p>MOSFET 是什么控制器件？
+<strong>答案：</strong> 电压控制器件</p>
+</li>
+<li>
+<p>MOS 电容的反型模式产生什么？
+<strong>答案：</strong> 少子导电沟道</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -517,6 +752,27 @@
 <p>沟道长度调制效应修正饱和区电流：</p>
 <p>$$I_D \approx I_D(1 + \lambda V_{DS})$$</p>
 <p>其中 λ 为沟道长度调制参数。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>NMOS 截止区时 I_D 是多少？
+<strong>答案：</strong> I_D = 0</p>
+</li>
+<li>
+<p>V_DSAT 的定义？
+<strong>答案：</strong> V_DSAT = V_GS - V_t</p>
+</li>
+<li>
+<p>沟道长度调制对饱和电流有何影响？
+<strong>答案：</strong> 增加因子 (1+λV_DS)</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -556,6 +812,26 @@
 <li><strong>低电平 (0)：</strong> GND (0 V)</li>
 </ul>
 <p>CMOS 反相器（非门）由一个 NMOS 和一个 PMOS 串联组成。输入为高时 NMOS 导通、PMOS 截止；输入为低时相反。这种配置静态功耗极低。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：CMOS 尺寸比例</strong></p>
+<p>硅中空穴迁移率约为电子迁移率的 1/3。因此为使 PMOS 和 NMOS 具有相同的驱动能力，PMOS 的宽度需要约为 NMOS 的 3 倍。学习自测</p>
+<ol>
+<li>
+<p>CMOS 结合了哪两种晶体管？
+<strong>答案：</strong> NMOS 和 PMOS</p>
+</li>
+<li>
+<p>PMOS 的衬底是什么类型？
+<strong>答案：</strong> N 型</p>
+</li>
+<li>
+<p>CMOS 反相器静态功耗如何？
+<strong>答案：</strong> 极低</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -598,6 +874,27 @@
 <li>基区极薄以利于载流子输运</li>
 <li>各区域掺杂浓度不同以优化性能</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>BJT 为何称为[双极型]？
+<strong>答案：</strong> 同时利用电子和空穴电流</p>
+</li>
+<li>
+<p>NPN BJT 中基区是什么类型？
+<strong>答案：</strong> P 型</p>
+</li>
+<li>
+<p>BJT 是什么控制器件？
+<strong>答案：</strong> 电流控制器件（基极电流控制集电极电流）</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -630,6 +927,36 @@
 <p>多粒子系统中的每个粒子都可以用一个复值波函数完全描述。</p>
 <p>含时 Schrödinger 方程：</p>
 <p>$$i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$$</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p>example) is</p>
+<p>minima/maxima of ψ:</p>
+<p>at x = d/4 and 3d/4 if n=2</p>
+<p><strong>Solution (2): the particle is most likely to be found at:</strong></p>
+<p><strong>Solution (3): the particle is most likely to be found at:</strong></p>
+<p>zeros of ψ:</p>
+<p>at x = 0, d/2 and if n=2)</p>
+<p>Quantumechanical tuneling</p>
+<p>Thexistence of the wave-function in a clasicaly-forbiden</p>
+<p>region opens up the posibility of a particle penetrating or</p>
+<p>“tuneling” through an energy barier</p>
+<p>This efect is particularly comon when we deal within</p>
+<p>energy bariers. It provides the phenomenological basis</p>
+<p>for the tunel diodes and plays an important role in the</p>
+<p>behaviour of other solid-state devices.</p>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>Pauli 不相容原理的内容是什么？
+<strong>答案：</strong> 同一原子中没有两个电子可具有相同量子数</p>
+</li>
+<li>
+<p>不确定性原理是测量技术的限制吗？
+<strong>答案：</strong> 不是，是自然界的基本性质</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -687,6 +1014,27 @@
 <li>基极电流减小，导致 I_C 随 V_CE 略有增大</li>
 <li>结果：输出特性在有源区具有有限斜率，外推线汇聚于<strong>Early 电压 V_A</strong></li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<blockquote>
+<p>原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。</p>
+</blockquote>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>NPN 正向有源模式下 EB 结和 CB 结的偏置？
+<strong>答案：</strong> EB 结正偏，CB 结反偏</p>
+</li>
+<li>
+<p>共发射极电流增益 β 的定义？
+<strong>答案：</strong> β = I_C / I_B</p>
+</li>
+<li>
+<p>Early 效应的物理原因是什么？
+<strong>答案：</strong> V_CE 增大使集电结耗尽区展宽，减小中性基区宽度</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -722,6 +1070,44 @@
 <li>解产生驻波模式</li>
 <li>能量量子化：E 与 n² 成正比</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p>example) is</p>
+<p>minima/maxima of ψ:</p>
+<p>at x = d/4 and 3d/4 if n=2</p>
+<p><strong>Solution (2): the particle is most likely to be found at:</strong></p>
+<p><strong>Solution (3): the particle is most likely to be found at:</strong></p>
+<p>zeros of ψ:</p>
+<p>at x = 0, d/2 and if n=2)</p>
+<p>Quantumechanical tuneling</p>
+<p>Thexistence of the wave-function in a clasicaly-forbiden</p>
+<p>region opens up the posibility of a particle penetrating or</p>
+<p>“tuneling” through an energy barier</p>
+<p>This efect is particularly comon when we deal within</p>
+<p>energy bariers. It provides the phenomenological basis</p>
+<p>for the tunel diodes and plays an important role in the</p>
+<p>behaviour of other solid-state devices.</p>
+<p>Discrete Energy Levels in Atoms</p>
+<p>The Bohr Model of the Hydrogen Atom</p>
+<p>=  -</p>
+<p>n = 1:</p>
+<p>Rydberg energy.</p>
+<p>Explanation of Hydrogen Spectrum Explanation of Hydrogen Spectrum</p>
+<p>E = ℏ</p>
+<p>Hydrogen Spectrum</p>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>无限深势阱中粒子的能量如何量子化？
+<strong>答案：</strong> E_n ∝ n²</p>
+</li>
+<li>
+<p>无限深势阱的边界条件是什么？
+<strong>答案：</strong> 波函数在阱壁处为零：ψ(0)=ψ(d)=0</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -756,6 +1142,24 @@
 <p>Kronig-Penney 模型利用有限势阱问题近似晶体中的周期势。</p>
 <p><strong>目标：</strong> 求解 Kronig-Penney 势下的 Schrödinger 方程，证明晶格中<strong>能带</strong>的存在。</p>
 <p><strong>方法：</strong> 质量为 m、能量为 E 的电子受到周期势 U(x) 的作用。求解 Schrödinger 方程揭示只有特定能量范围（能带）是允许的，其他范围（带隙）被禁止。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h1>学习自测</h1>
+<ol>
+<li>
+<p>Bloch 定理适用于什么条件？
+<strong>答案：</strong> 周期势场</p>
+</li>
+<li>
+<p>Kronig-Penney 模型证明了什么？
+<strong>答案：</strong> 晶格中能带的存在</p>
+</li>
+<li>
+<p>写出 1D 周期系统的 Bloch 定理形式
+<strong>答案：</strong> Ψ(x) = u(x)e^(ikx)</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -810,6 +1214,50 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：E-k 能带结构</strong></p>
+<p>某半导体具有以下 E-k 能带结构：</p>
+<p>$$E(k) = \alpha k^2 \quad \text{(导带)}$$
+$$E(k) = \beta k^2 + \gamma \quad \text{(价带)}$$</p>
+<p>常数：α = 9.25 × 10^-40 J·m²，β = 2.2 × 10^-39 J·m²，γ = 1 × 10^10 m^-1，δ = 2.4 × 10^-19 J</p>
+<p>绘制能带结构，求带隙能量，并估算导带底和价带顶附近电子的有效质量。</p>
+<p><strong>解：</strong></p>
+<p>两个函数均为抛物线。</p>
+<p>价带顶：EVB,max = 0（在 k = 0 处）</p>
+<p>导带底：ECB,min = δ = 1.5 eV（在 k = γ 处）</p>
+<p>带隙：Eg = δ = 1.5 eV</p>
+<p>有效质量：</p>
+<p>导带底：m*_e = ℏ² / (2α)</p>
+<p>价带顶：m*_h = ℏ² / (2|β|)</p>
+<h2>例题 2</h2>
+<p><strong>例：晶体结构 - 原胞中的原子数</strong></p>
+<p>求以下晶格中每个原胞的原子数：
+(a) 面心立方 (FCC)
+(b) 体心立方 (BCC)
+(c) 金刚石晶格</p>
+<p><strong>解：</strong></p>
+<p>假设每个原子为硬球，与其最近邻原子表面接触。</p>
+<p>(a) FCC：每个原胞有 4 个原子
+(b) BCC：每个原胞有 2 个原子
+(c) 金刚石：每个原胞有 8 个原子</p>
+<p>并计算每种晶格的原子堆积因子（原胞体积中被原子占据的百分比）。学习自测</p>
+<ol>
+<li>
+<p>能带隙（Bandgap）的定义是什么？
+<strong>答案：</strong> 分隔价带顶与导带底的禁带区域</p>
+</li>
+<li>
+<p>半导体的带隙大约是多少？
+<strong>答案：</strong> ~1 eV</p>
+</li>
+<li>
+<p>Fermi 能级的定义是什么？
+<strong>答案：</strong> 占据概率为 1/2 的能级</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -858,6 +1306,56 @@
 <p>其中 τ 为两次碰撞间的平均自由时间。</p>
 <h2>稳态与瞬态解</h2>
 <p>Drude 模型为外加电场下的电子运动提供稳态和瞬态两种解。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：电子迁移率计算</strong></p>
+<p>已知金属导带中电子的平均自由碰撞时间为 4 × 10^-14 s，计算电子迁移率（单位：cm²/(V·s)）。若施加 2 mV/cm 的电场，电子平均需要多长时间漂移 6 cm？</p>
+<p><strong>解：</strong></p>
+<p>电子迁移率：</p>
+<p>$$\mu_e = \frac{e\tau}{m_e}$$</p>
+<p>漂移速度：</p>
+<p>$$v_d = \mu_e E$$</p>
+<p>漂移时间：t = L / v_d</p>
+<h2>例题 2</h2>
+<p><strong>例：铜的导电特性</strong></p>
+<p>(i) 铜 (Cu) 有 8 × 10^28 个自由电子/m³。已知 300 K 时电导率 σ = 5.8 × 10^7 S/m，求电子迁移率（单位：cm²/(V·s)）。</p>
+<p>(ii) 设 1 mm 直径的铜导线承载 10 mA 电流，电子平均需要多长时间沿 10 cm 长的导线漂移？</p>
+<p>(iii) 求该段导线的电阻和压降。</p>
+<p><strong>解：</strong></p>
+<p>(i) 电导率与迁移率的关系：σ = nqμ</p>
+<p>$$\mu_e = \frac{\sigma}{nq}$$</p>
+<p>(ii) 漂移时间：先求漂移速度 v_d = J/(nq)，再求 t = L/v_d</p>
+<p>其中电流密度 J = I/A</p>
+<p>(iii) 电阻：R = ρL/A = L/(σA)</p>
+<p>电压降：V = IR</p>
+<h2>例题 3</h2>
+<p><strong>例：Fermi 能级与电子浓度</strong></p>
+<p>设铜的 Fermi 能为 7.0 eV，求 0 K 时铜导带中自由电子的浓度。</p>
+<p>某金属导带的态密度函数为 S(E)ΔE = C·E^(1/2)·dE，其中 C = 8 × 10^21 /(eV^(3/2)·cm³)，E 从导带底开始测量。若 0.1 cm³ 的金属样品温度为 0 K，计算当 Fermi 能分别为 (i) 3.5 eV、(ii) 5.5 eV、(iii) 8.0 eV 时，在 E1 = 4.0 eV 到 E2 = 6.0 eV 能量范围内的电子数。</p>
+<p><strong>解：</strong></p>
+<p>导带中电子总数（单位体积）：</p>
+<p>$$n = \int S(E) \cdot f(E) dE$$</p>
+<p>0 K 时，f(E) 为阶跃函数。</p>
+<p>Case (i): Ef = 3.5 eV，E1 和 E2 均 &gt; Ef，n = 0</p>
+<p>Case (ii): Ef = 5.5 eV，E1 &lt; Ef &lt; E2，电子数从 E1 到 Ef 积分</p>
+<p>Case (iii): Ef = 8.0 eV，E1 和 E2 均 &lt; Ef，电子数从 E1 到 E2 积分</p>
+<p>总电子数 = n × 样品体积学习自测</p>
+<ol>
+<li>
+<p>300 K 时 kT 的值是多少？
+<strong>答案：</strong> 0.0259 eV</p>
+</li>
+<li>
+<p>电子迁移率 μ_e 的公式是什么？
+<strong>答案：</strong> μ_e = eτ/m</p>
+</li>
+<li>
+<p>Drude 模型将电子视为什么？
+<strong>答案：</strong> 经典粒子</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -890,6 +1388,48 @@
 <p>导带中电子总数通过对 S(E)·f(E) 在能量上进行积分得到。</p>
 <h2>计算示例</h2>
 <p>对于 Fermi 能为 7.0 eV 的铜，0 K 时自由电子浓度可通过 S(E) = C·E^(1/2) 和 f(E)（0 K 时为阶跃函数）计算。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例 2 - Fermi 能级与电子分布</strong></p>
+<p>导带电子浓度：在 0 K 时，能量范围 E1 到 E2 内的电子数为：</p>
+<p>$$n = \int_{E1}^{E2} S(E) \cdot f(E) dE$$</p>
+<p>Case (i): Ef = 3.5 eV，E1 和 E2 均 &gt; Ef → n = 0</p>
+<p>Case (ii): Ef = 5.5 eV，E1 &lt; Ef &lt; E2，用 Ef 替换 E2</p>
+<p>Case (iii): Ef = 8.0 eV，E1 和 E2 均 &lt; Ef</p>
+<h2>例题 2</h2>
+<p><strong>例：本征锗的电阻率</strong></p>
+<p>(i) 纯锗 (Ge) 的带隙为 0.66 eV，300 K 时本征载流子浓度为 2.4 × 10^13 /cm³。若电子和空穴迁移率分别为 3900 cm²/(V·s) 和 1900 cm²/(V·s)，求本征电阻率（单位：Ω·cm）。</p>
+<p>(ii) 一根直径为 1 cm、长度为 8 cm 的圆柱形纯锗棒，两端施加 2 V 电压，求流过的电流。</p>
+<p><strong>解：</strong></p>
+<p>(i) 本征电导率：</p>
+<p>$$\sigma_i = n_i q (\mu_n + \mu_p)$$</p>
+<p>电阻率 ρ = 1/σ</p>
+<p>(ii) 电阻：R = ρL/A</p>
+<p>电流：I = V/R（欧姆定律）</p>
+<h2>例题 3</h2>
+<p><strong>例：硅的本征能级位置</strong></p>
+<p>硅在 300 K 时的本征载流子浓度 ni = 1.5 × 10^10 /cm³。</p>
+<p>已知硅中电子有效质量与空穴有效质量之比为 1.94，带隙能量为 1.1 eV，求纯硅中 Fermi 能偏离能带中心的位置。</p>
+<p><strong>解：</strong></p>
+<p>本征 Fermi 能级相对于带隙中心的偏移量为：</p>
+<p>$$E_i - E_{midgap} = \frac{3}{4}kT \ln\left(\frac{m_h^<em>}{m_e^</em>}\right)$$</p>
+<p>代入 m_h*/m_e* = 1.94，T = 300 K 即可求得。学习自测</p>
+<ol>
+<li>
+<p>三维态密度函数 S(E) 与能量的关系？
+<strong>答案：</strong> S(E) ∝ E^(1/2)</p>
+</li>
+<li>
+<p>电导率 σ 的公式？
+<strong>答案：</strong> σ = qnμ</p>
+</li>
+<li>
+<p>0 K 时 Fermi-Dirac 分布是什么形式？
+<strong>答案：</strong> 阶跃函数</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -918,6 +1458,31 @@
 <li>受主捕获价带中的电子，从而产生空穴</li>
 <li>增强空穴导电能力</li>
 </ul>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例 2：掺杂硅的载流子浓度</strong></p>
+<p>(i) 硅样品掺杂浓度为 10^15 /cm³ 的施主杂质。求 300 K 时的电子和空穴浓度。</p>
+<p>已知硅在 300 K 时的本征载流子浓度 ni = 1.5 × 10^10 /cm³。</p>
+<p><strong>解：</strong></p>
+<p>N 型半导体中，n ≈ ND = 10^15 /cm³</p>
+<p>空穴浓度：</p>
+<p>$$p = \frac{n_i^2}{n} = \frac{(1.5 \times 10^{10})^2}{10^{15}} = 2.25 \times 10^5 \text{ /cm}^3$$学习自测</p>
+<ol>
+<li>
+<p>N 型掺杂中施主杂质提供什么？
+<strong>答案：</strong> 向导带提供电子</p>
+</li>
+<li>
+<p>低温下施主电子的状态？
+<strong>答案：</strong> 冻结（Freeze-out）</p>
+</li>
+<li>
+<p>P 型掺杂的受主能级位于何处？
+<strong>答案：</strong> 价带顶附近</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
@@ -951,6 +1516,33 @@
 <p>$$J_{diff}^{electron} = qD_n\frac{dn}{dx}$$</p>
 <p>$$J_{diff}^{hole} = -qD_p\frac{dp}{dx}$$</p>
 <p>其中 D_n 和 D_p 为扩散系数。</p>
+<hr />
+<hr />
+<h1>例题与解析</h1>
+<h2>例题 1</h2>
+<p><strong>例：漂移速度与电场</strong></p>
+<p>低至中等电场下，漂移速度正比于电场 E，服从欧姆定律。</p>
+<p>高电场下载流子漂移速度趋于饱和，饱和速度约为 10^7 cm/s。</p>
+<h2>例题 2</h2>
+<p><strong>例：电导率计算</strong></p>
+<p>N 型和 P 型掺杂半导体的电导率：</p>
+<p>N 型：σ ≈ qμ_n n₀</p>
+<p>P 型：σ ≈ qμ_p p₀</p>
+<p>对于掺杂半导体，电导率由多数载流子主导。学习自测</p>
+<ol>
+<li>
+<p>漂移电流由什么引起？
+<strong>答案：</strong> 外加电场</p>
+</li>
+<li>
+<p>高电场下载流子漂移速度会怎样？
+<strong>答案：</strong> 趋于饱和，约 10⁷ cm/s</p>
+</li>
+<li>
+<p>扩散电流由什么引起？
+<strong>答案：</strong> 载流子浓度梯度</p>
+</li>
+</ol>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
