@@ -37,3 +37,66 @@ $$E_n = \frac{n^2\pi^2\hbar^2}{2md^2}$$
 - 边界条件：波函数在阱壁处为零
 - 解产生驻波模式
 - 能量量子化：E 与 n² 成正比
+
+---
+
+
+---
+
+# 例题与解析
+
+## 例题 1
+
+example) is
+
+minima/maxima of ψ:
+
+at x = d/4 and 3d/4 if n=2
+
+**Solution (2): the particle is most likely to be found at:**
+
+**Solution (3): the particle is most likely to be found at:**
+
+zeros of ψ:
+
+at x = 0, d/2 and if n=2)
+
+Quantumechanical tuneling
+
+Thexistence of the wave-function in a clasicaly-forbiden
+
+region opens up the posibility of a particle penetrating or
+
+“tuneling” through an energy barier
+
+This efect is particularly comon when we deal within
+
+energy bariers. It provides the phenomenological basis
+
+for the tunel diodes and plays an important role in the
+
+behaviour of other solid-state devices.
+
+Discrete Energy Levels in Atoms
+
+The Bohr Model of the Hydrogen Atom
+
+=  -
+
+n = 1:
+
+Rydberg energy.
+
+Explanation of Hydrogen Spectrum Explanation of Hydrogen Spectrum
+
+E = ℏ
+
+Hydrogen Spectrum
+
+# 学习自测
+
+1. 无限深势阱中粒子的能量如何量子化？
+   **答案：** E_n ∝ n²
+
+2. 无限深势阱的边界条件是什么？
+   **答案：** 波函数在阱壁处为零：ψ(0)=ψ(d)=0

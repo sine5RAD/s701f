@@ -45,3 +45,50 @@ $$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$$
 含时 Schrödinger 方程：
 
 $$i\hbar\frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$$
+
+---
+
+
+---
+
+# 例题与解析
+
+## 例题 1
+
+example) is
+
+minima/maxima of ψ:
+
+at x = d/4 and 3d/4 if n=2
+
+**Solution (2): the particle is most likely to be found at:**
+
+**Solution (3): the particle is most likely to be found at:**
+
+zeros of ψ:
+
+at x = 0, d/2 and if n=2)
+
+Quantumechanical tuneling
+
+Thexistence of the wave-function in a clasicaly-forbiden
+
+region opens up the posibility of a particle penetrating or
+
+“tuneling” through an energy barier
+
+This efect is particularly comon when we deal within
+
+energy bariers. It provides the phenomenological basis
+
+for the tunel diodes and plays an important role in the
+
+behaviour of other solid-state devices.
+
+# 学习自测
+
+1. Pauli 不相容原理的内容是什么？
+   **答案：** 同一原子中没有两个电子可具有相同量子数
+
+2. 不确定性原理是测量技术的限制吗？
+   **答案：** 不是，是自然界的基本性质

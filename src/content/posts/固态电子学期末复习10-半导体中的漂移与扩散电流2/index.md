@@ -42,3 +42,20 @@ $$\frac{\partial n}{\partial t} = \frac{1}{q}\frac{\partial J_n}{\partial x} + G
 $$\frac{\partial p}{\partial t} = -\frac{1}{q}\frac{\partial J_p}{\partial x} + G_p - R_p$$
 
 其中 G 为产生率，R 为复合率。
+
+---
+
+
+---
+
+# 例题与解析
+
+> 原课件中的例题以公式和图示形式呈现，文字内容较为零散，无法完整提取。请对照原 PDF 文件查看完整的例题与解析。
+
+# 学习自测
+
+1. 过剩载流子对什么影响更大？
+   **答案：** 少子（minority carriers）
+
+2. 连续性方程包含哪些过程？
+   **答案：** 产生、复合、漂移和扩散
