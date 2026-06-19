@@ -56,6 +56,577 @@
 &lt;p&gt;好玩爱玩&lt;/p&gt;
 &lt;h2&gt;吃饭&lt;/h2&gt;
 &lt;p&gt;很内向，吃饱了也不说，一直吃&lt;/p&gt;
+</content:encoded></item><item><title>固体电子学样卷解析</title><link>https://s701f.top/posts/%E5%9B%BA%E4%BD%93%E7%94%B5%E5%AD%90%E5%AD%A6%E6%A0%B7%E5%8D%B7%E8%A7%A3%E6%9E%90/</link><guid isPermaLink="true">https://s701f.top/posts/%E5%9B%BA%E4%BD%93%E7%94%B5%E5%AD%90%E5%AD%A6%E6%A0%B7%E5%8D%B7%E8%A7%A3%E6%9E%90/</guid><description>下周考试，所以让AI写了个样卷解析www</description><pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Solid State Electronics 期末试卷详细解析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;EEEN2004J Solid State Electronics — Semester 2 Final Examination&lt;/strong&gt;
+科目协调人：Xiulong Bao | 考试时间：120 分钟&lt;/p&gt;
+&lt;p&gt;本文档为样卷完整解析，包含每道题的详细计算步骤、公式推导和概念解释。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#question-1&quot;&gt;Question 1&lt;/a&gt; — Q1A &amp;amp; Q1B&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#question-2&quot;&gt;Question 2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#q2a-%E7%AA%81%E5%8F%98-np-%E7%BB%93&quot;&gt;Q2A. 突变 N+P 结&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#q2b-%E5%8D%95%E8%BE%B9-pn-%E7%BB%93&quot;&gt;Q2B. 单边 P+N 结&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#question-3&quot;&gt;Question 3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#q3a-%E7%90%86%E6%83%B3-mos-%E7%94%B5%E5%AE%B9%E5%99%A8%E8%83%BD%E5%B8%A6%E5%9B%BE&quot;&gt;Q3A. MOS 能带图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#q3b-mosfet-%E5%8F%82%E6%95%B0%E8%AE%A1%E7%AE%97&quot;&gt;Q3B. MOSFET 参数&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#question-4&quot;&gt;Question 4&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#q4a-pnp-bjt-%E8%83%BD%E5%B8%A6%E5%9B%BE&quot;&gt;Q4A. PNP BJT 能带图&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#q4b-early-%E6%95%88%E5%BA%94&quot;&gt;Q4B. Early 效应&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E9%99%84%E5%BD%95%E6%89%80%E7%94%A8%E5%B8%B8%E6%95%B0%E4%B8%8E%E5%85%AC%E5%BC%8F%E7%B4%A2%E5%BC%95&quot;&gt;附录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Question 1 (15%) — 半导体基础&lt;/h2&gt;
+&lt;h3&gt;Q1A. Si 掺杂硼（p 型）&lt;/h3&gt;
+&lt;p&gt;硼是第三族元素，掺入 Si 中充当&lt;strong&gt;受主&lt;/strong&gt;（acceptor）。掺杂浓度 $N_A = 2 \times 10^{17},\text{cm}^{-3}$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 空穴浓度（多数载流子）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$p \approx N_A = \mathbf{2.000 \times 10^{17}},\text{cm}^{-3}$$&lt;/p&gt;
+&lt;p&gt;室温下杂质完全电离，空穴浓度近似等于受主浓度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 电子浓度（少数载流子）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$n = \frac{n_i^2}{p} = \frac{(1.5\times10^{10})^2}{2\times10^{17}} = \mathbf{1.125 \times 10^{3}},\text{cm}^{-3}$$&lt;/p&gt;
+&lt;p&gt;利用质量作用定律 $n \cdot p = n_i^2$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 费米能级位置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;相对本征费米能级 $E_i$：&lt;/p&gt;
+&lt;p&gt;$$E_f - E_i = -kT \ln\frac{N_A}{n_i} = -0.026 \times \ln\frac{2\times10^{17}}{1.5\times10^{10}} = -0.026 \times 16.405 = -\mathbf{0.4266},\text{eV}$$&lt;/p&gt;
+&lt;p&gt;$E_f$ 在 $E_i$ &lt;strong&gt;下方 0.4266 eV&lt;/strong&gt;，靠近价带顶 $E_v$，确认是 p 型半导体。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 简化能带图&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Ec ────────────────
+                       |  Eg = 1.1 eV
+    Ei ────────────────   (Ef 上方 0.4266 eV)
+    Ef ─*──────────────
+    Ev ────────────────
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;$E_c - E_f = 0.55 + 0.4266 = 0.9766,\text{eV}$&lt;/li&gt;
+&lt;li&gt;$E_f - E_v = 0.55 - 0.4266 = 0.1234,\text{eV}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$E_f$ 靠近 $E_v$ 而远离 $E_c$，表明空穴是多数载流子。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Q1B. 掺杂 Si 棒的电阻&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;已知参数&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;数值&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;长度 $L$&lt;/td&gt;
+&lt;td&gt;$1,\text{mm} = 0.1,\text{cm}$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;截面积 $A$&lt;/td&gt;
+&lt;td&gt;$10,\mu\text{m}^2 = 10^{-7},\text{cm}^2$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;磷掺杂 $N_D$&lt;/td&gt;
+&lt;td&gt;$3\times10^{17},\text{cm}^{-3}$&lt;/td&gt;
+&lt;td&gt;施主，n 型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$\mu_n$&lt;/td&gt;
+&lt;td&gt;$700,\text{cm}^2/(\text{V}\cdot\text{s})$&lt;/td&gt;
+&lt;td&gt;题中给定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;1. 电导率&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;n 型半导体中 $n \approx N_D$：&lt;/p&gt;
+&lt;p&gt;$$\sigma = q\mu_n n \approx q\mu_n N_D = 1.6\times10^{-19} \times 700 \times 3\times10^{17} = \mathbf{33.6},(\Omega\cdot\text{cm})^{-1}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 电阻率&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$\rho = \frac{1}{\sigma} = \mathbf{0.02976},\Omega\cdot\text{cm}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 电阻&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$R = \rho\frac{L}{A} = 0.02976 \times \frac{0.1}{10^{-7}} = \mathbf{2.976 \times 10^{4}},\Omega = \mathbf{29.76},\text{k}\Omega$$&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Question 2 (35%) — PN 结&lt;/h2&gt;
+&lt;h3&gt;Q2A. 突变 N+P 结&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;已知参数&lt;/strong&gt;：$N_A = 10^{15},\text{cm}^{-3}$（P 侧），$N_D = 10^{17},\text{cm}^{-3}$（N+ 侧），$T = 300,\text{K}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 接触电势（内建电势）$V_0$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$V_0 = \frac{kT}{q}\ln\frac{N_A N_D}{n_i^2} = 0.026 \times \ln\frac{10^{15}\times10^{17}}{(1.5\times10^{10})^2}$$&lt;/p&gt;
+&lt;p&gt;$$\frac{N_A N_D}{n_i^2} = \frac{10^{32}}{2.25\times10^{20}} = 4.444\times10^{11}$$&lt;/p&gt;
+&lt;p&gt;$$V_0 = 0.026 \times \ln(4.444\times10^{11}) = 0.026 \times 26.82 = \mathbf{0.6973},\text{V}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 热平衡下耗尽层宽度 $W$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$\varepsilon_s = \varepsilon_{r,Si},\varepsilon_0 = 11.8 \times 8.85\times10^{-14} = 1.0443\times10^{-12},\text{F/cm}$$&lt;/p&gt;
+&lt;p&gt;$$\frac{1}{N_A}+\frac{1}{N_D} = 10^{-15} + 10^{-17} = 1.01\times10^{-15},\text{cm}^3$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+W &amp;amp;= \sqrt{\frac{2\varepsilon_s V_0}{q}!\left(\frac{1}{N_A}+\frac{1}{N_D}\right)} \
+&amp;amp;= \sqrt{9.099\times10^{6} \times 1.01\times10^{-15}} \
+&amp;amp;= \sqrt{9.19\times10^{-9}} \
+&amp;amp;= \mathbf{9.59\times10^{-5}},\text{cm} \
+&amp;amp;= \mathbf{0.96},\mu\text{m}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;由于 $N_D \gg N_A$，耗尽区主要向P 侧扩展：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;P 侧：$x_p \approx 0.96,\mu\text{m}$&lt;/li&gt;
+&lt;li&gt;N+ 侧：$x_n \approx 0.0095,\mu\text{m} \ll x_p$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 零偏耗尽电容（$5\mu\text{m}\times5\mu\text{m}$ 结面积）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$A = 25,\mu\text{m}^2 = 2.5\times10^{-7},\text{cm}^2$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+C_{j0} &amp;amp;= \frac{\varepsilon_s A}{W} = \frac{1.0443\times10^{-12}\times2.5\times10^{-7}}{9.59\times10^{-5}} \
+&amp;amp;= \mathbf{2.72\times10^{-15}},\text{F} \
+&amp;amp;= \mathbf{2.72},\text{fF}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 平衡能带图&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;P-side (NA = 1e15)            N-side (ND = 1e17)
+       Ec                                Ec
+   ──────────\                      /──────────
+              \                    /
+               \__________________/
+   ──────────  /                  \  ──────────
+       Ef     /                    \     Ef
+   ──────────/                      \──────────
+       Ev                                Ev
+
+        &amp;lt;──── 耗尽区 ────&amp;gt;
+        |&amp;lt;── W = 0.96 μm ──&amp;gt;|
+            qV0 = 0.6973 eV
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Q2B. 单边 P+N 结&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;已知参数&lt;/strong&gt;：$A = 10^{-4},\text{cm}^2$，N 侧 $N_D = 10^{15},\text{cm}^{-3}$，$\tau_p = 0.4,\mu\text{s}$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 P+N 结，N 侧轻掺杂，电流由 N 侧少数载流子（空穴）的扩散主导。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;1. 反向饱和电流 $I_s$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公式：$I = qA(D_p p_{n0}/L_p)(e^{qV/kT}-1)$&lt;/p&gt;
+&lt;p&gt;$$p_{n0} = \frac{n_i^2}{N_D} = \frac{(1.5\times10^{10})^2}{10^{15}} = 2.25\times10^{5},\text{cm}^{-3}$$&lt;/p&gt;
+&lt;p&gt;$$D_p = \frac{kT}{q}\mu_p = 0.026 \times 450 = 11.7,\text{cm}^2/\text{s}$$&lt;/p&gt;
+&lt;p&gt;$$L_p = \sqrt{D_p\tau_p} = \sqrt{11.7 \times 0.4\times10^{-6}} = 2.163\times10^{-3},\text{cm}$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+I_s &amp;amp;= qA\frac{D_p p_{n0}}{L_p} \
+&amp;amp;= 1.6\times10^{-19} \times 10^{-4} \times \frac{11.7 \times 2.25\times10^{5}}{2.163\times10^{-3}} \
+&amp;amp;= \mathbf{1.95\times10^{-14}},\text{A} = \mathbf{0.02},\text{pA}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 正向偏压 $V = 0.4,\text{V}$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$\frac{qV}{kT} = \frac{0.4}{0.026} = 15.385,\quad e^{15.385}=4.81\times10^{6}$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+I_f &amp;amp;= I_s(e^{qV/kT}-1) = 1.95\times10^{-14} \times 4.81\times10^{6} \
+&amp;amp;= \mathbf{9.35\times10^{-8}},\text{A} = \mathbf{93.5},\text{nA}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 反向偏压 $V = -4,\text{V}$&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$\frac{qV}{kT} = \frac{-4}{0.026} = -153.85,\quad e^{-153.85} \approx 0$$&lt;/p&gt;
+&lt;p&gt;$$I_r = I_s(e^{-153.85}-1) \approx -I_s = \mathbf{-1.95\times10^{-14}},\text{A}$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 $4,\text{V}$ 反向偏压下，电流已完全饱和，值为 $-I_s$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Question 3 (35%) — MOS 电容器与 MOSFET&lt;/h2&gt;
+&lt;h3&gt;Q3A. 理想 MOS 电容器能带图&lt;/h3&gt;
+&lt;p&gt;条件：p 型硅衬底，$V_{GS} &amp;lt; 0$（栅极接负压）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;金属        氧化层           p 型硅
+───       ─────────        ──────────────
+  E_Fm ──────────
+                            Ec ────────────
+                        \  Ei ────────────  界面处
+                         \ Ef ────────────  向上弯曲
+                          \Ev ────────────
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$V_{GS} &amp;lt; 0$ 时 MOS 结构工作在&lt;strong&gt;积累模式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;栅极负电压吸引空穴（p-Si 多数载流子）到 Si/SiO2 界面&lt;/li&gt;
+&lt;li&gt;能带在界面处&lt;strong&gt;向上弯曲&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;界面空穴浓度 &amp;gt; 体内空穴浓度（积累）&lt;/li&gt;
+&lt;li&gt;无耗尽层——积累的空穴层完全屏蔽电场&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Q3B. MOSFET 参数计算&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;已知参数&lt;/strong&gt;：$N_A = 2\times10^{15},\text{cm}^{-3}$，$t_{ox}=12,\text{nm}$，$\varepsilon_{r,s}=11.8$，$\varepsilon_{r,ox}=3.9$，$W/L=90$，$\mu_n=1100,\text{cm}^2/(\text{V}\cdot\text{s})$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 总能带弯曲与阈值电压&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;费米势：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\phi_F &amp;amp;= \frac{kT}{q}\ln\frac{N_A}{n_i} = 0.026 \times \ln\frac{2\times10^{15}}{1.5\times10^{10}} \
+&amp;amp;= 0.026 \times 11.80 = \mathbf{0.3068},\text{V}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;强反型起始：$\psi_s = 2\phi_F = \mathbf{0.6136},\text{V}$&lt;/p&gt;
+&lt;p&gt;最大耗尽宽度：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+W_{dep,\max} &amp;amp;= \sqrt{\frac{4\varepsilon_s\phi_F}{qN_A}} \
+&amp;amp;= \sqrt{\frac{4\times1.0443\times10^{-12}\times0.3068}{1.6\times10^{-19}\times2\times10^{15}}} \
+&amp;amp;= \sqrt{4.005\times10^{-9}} \
+&amp;amp;= \mathbf{6.33\times10^{-5}},\text{cm} = \mathbf{0.633},\mu\text{m}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;最大耗尽电荷密度：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+Q_{dep,\max} &amp;amp;= qN_A W_{dep,\max} = 1.6\times10^{-19}\times2\times10^{15}\times6.33\times10^{-5} \
+&amp;amp;= \mathbf{2.03\times10^{-8}},\text{C/cm}^2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;单位面积氧化层电容：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+C_{ox} &amp;amp;= \frac{\varepsilon_{ox}}{t_{ox}} = \frac{3.9\times8.85\times10^{-14}}{12\times10^{-7}} \
+&amp;amp;= \mathbf{2.876\times10^{-7}},\text{F/cm}^2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;氧化层压降：&lt;/p&gt;
+&lt;p&gt;$$V_{ox} = \frac{Q_{dep,\max}}{C_{ox}} = \frac{2.03\times10^{-8}}{2.876\times10^{-7}} = \mathbf{0.0704},\text{V}$$&lt;/p&gt;
+&lt;p&gt;阈值电压（理想 MOS，$V_{FB}=0$）：&lt;/p&gt;
+&lt;p&gt;$$V_T = V_{FB} + 2\phi_F + V_{ox} = 0 + 0.6136 + 0.0704 = \mathbf{0.684},\text{V}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 工作模式与漏极电流&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定 $V_G=2\text{V}$，$V_D=0.5\text{V}$：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;比较项&lt;/th&gt;
+&lt;th&gt;数值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$V_{GS}$&lt;/td&gt;
+&lt;td&gt;$2.0,\text{V}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$V_{DS}$&lt;/td&gt;
+&lt;td&gt;$0.5,\text{V}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$V_{GS}-V_T$&lt;/td&gt;
+&lt;td&gt;$2.0 - 0.684 = 1.316,\text{V}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;比较&lt;/td&gt;
+&lt;td&gt;$0.5 &amp;lt; 1.316$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;$\because V_{DS}=0.5,\text{V} &amp;lt; V_{GS}-V_T=1.316,\text{V}$&lt;/p&gt;
+&lt;p&gt;$\therefore$ &lt;strong&gt;MOSFET 工作在三极管（线性）区&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;漏极电流：&lt;/p&gt;
+&lt;p&gt;$$I_D = \mu_n C_{ox}\frac{W}{L}!\left[(V_{GS}-V_T)V_{DS}-\frac{V_{DS}^2}{2}\right]$$&lt;/p&gt;
+&lt;p&gt;$$= 1100 \times 2.876\times10^{-7} \times 90 \times \left[1.316\times0.5 - \frac{0.5^2}{2}\right]$$&lt;/p&gt;
+&lt;p&gt;$$= 1100 \times 2.876\times10^{-7} \times 90 \times 0.533$$&lt;/p&gt;
+&lt;p&gt;$$= \mathbf{1.52\times10^{-2}},\text{A} = \mathbf{15.2},\text{mA}$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关于 $\lambda$ 的说明&lt;/strong&gt;：沟道长度调制参数 $\lambda = 0.1,\text{V}^{-1}$ 通常仅在饱和区起作用，三极管区一般不适用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Question 4 (15%) — BJT&lt;/h2&gt;
+&lt;h3&gt;Q4A. PNP BJT 能带图&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. 热平衡态&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  发射极 (P+)         基极 (N)       集电极 (P)
+  ────────────    ────────────    ────────────
+      Ec              Ec              Ec
+  ────────────    ────\  /────    ────────────
+      Ei              Ei \/           Ei
+  ────────────    ────/\────    ────────────
+  Ef ────────────  Ef ─────────   Ef ─────────
+      Ev              Ev              Ev
+  ────────────    ────/  \────    ────────────
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;热平衡下 $E_f$ 处处相等&lt;/li&gt;
+&lt;li&gt;E-B 结和 B-C 结均存在内建势垒和耗尽区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 正向有源模式&lt;/strong&gt;（$V_{EB}&amp;gt;0$，$V_{CB}&amp;lt;0$）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  发射极 (P+)         基极 (N)         集电极 (P)
+
+  Ec ─────────    Ec ──/\──────    Ec ───────\───
+  Ei ─────────    Ei ──────────    Ei ────────────
+  Ef ────────     Ef ──────────    Ef ────────────
+  Ev ─────────    Ev ──\/──────    Ev ───────/───
+
+    E-B 正偏         窄基区扩散        B-C 反偏
+    势垒降低         空穴扩散输运      势垒升高
+    空穴注入                            空穴被扫入
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;工作机理&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步骤&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;① 发射&lt;/td&gt;
+&lt;td&gt;$V_{EB}&amp;gt;0$ 使 E-B 结正偏，势垒降低，空穴从发射极注入基区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;② 扩散&lt;/td&gt;
+&lt;td&gt;空穴在窄基区中靠浓度梯度扩散&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;③ 收集&lt;/td&gt;
+&lt;td&gt;$V_{CB}&amp;lt;0$ 使 B-C 结反偏，空穴被强电场扫入集电极&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;④ 电流&lt;/td&gt;
+&lt;td&gt;$I_E = I_B + I_C$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Q4B. Early 效应&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：Early 效应（基区宽度调制效应）指 BJT 在正向有源区工作时，$I_C$ 随 $V_{CE}$ 增大而增大的现象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理机制&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  N+ 发射极         P 基区          N- 集电极
+ ┌─────────────┬──────────────┬──────────────────┐
+ │             │  ##########  │                  │
+ │             │  ##########  │  B-C 耗尽区     │
+ │             │  有效基区    │  ←─────────→     │
+ │  注入电子   │  宽度 W_B    │  随 V_CB ↑ 展宽 │
+ └─────────────┴──────────────┴──────────────────┘
+                   ↑ W_B ↓ 当 V_CB ↑
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;正向有源模式，B-C 结反偏&lt;/li&gt;
+&lt;li&gt;增大 $V_{CB}$（即 $V_{CE}$）→ B-C 结耗尽区&lt;strong&gt;加宽&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;耗尽区向基区扩展 → 有效中性基区宽度 $W_B$ &lt;strong&gt;减小&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;少子浓度梯度增大 → $I_C$ &lt;strong&gt;增大&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;定量描述&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;$$I_C = I_S e^{V_{BE}/V_T}\left(1 + \frac{V_{CE}}{V_A}\right)$$&lt;/p&gt;
+&lt;p&gt;其中 $V_A$ 为 &lt;strong&gt;Early 电压&lt;/strong&gt;，典型值 50–100 V。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后果&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;后果&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;有限输出电阻&lt;/td&gt;
+&lt;td&gt;$r_o = \dfrac{V_A + V_{CE}}{I_C} \approx \dfrac{V_A}{I_C}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$I_C$-$V_{CE}$ 特性斜率&lt;/td&gt;
+&lt;td&gt;输出特性曲线在饱和区有正斜率&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;基区越窄，效应越显著&lt;/td&gt;
+&lt;td&gt;现代 BJT 需考虑 Early 效应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h2&gt;附录：所用常数与公式索引&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;物理常数&lt;/strong&gt;（试卷末页提供）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;常数&lt;/th&gt;
+&lt;th&gt;符号&lt;/th&gt;
+&lt;th&gt;数值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;玻尔兹曼常数&lt;/td&gt;
+&lt;td&gt;$k$&lt;/td&gt;
+&lt;td&gt;$1.3807\times10^{-23},\text{J/K}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电子电荷&lt;/td&gt;
+&lt;td&gt;$q$&lt;/td&gt;
+&lt;td&gt;$1.60\times10^{-19},\text{C}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;真空介电常数&lt;/td&gt;
+&lt;td&gt;$\varepsilon_0$&lt;/td&gt;
+&lt;td&gt;$8.85\times10^{-14},\text{F/cm}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;室温热电压&lt;/td&gt;
+&lt;td&gt;$kT/q$&lt;/td&gt;
+&lt;td&gt;$0.026,\text{V}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Si 相对介电常数&lt;/td&gt;
+&lt;td&gt;$\varepsilon_{r,Si}$&lt;/td&gt;
+&lt;td&gt;11.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Si 本征载流子浓度&lt;/td&gt;
+&lt;td&gt;$n_i$&lt;/td&gt;
+&lt;td&gt;$1.5\times10^{10},\text{cm}^{-3}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Si 电子迁移率&lt;/td&gt;
+&lt;td&gt;$\mu_n$&lt;/td&gt;
+&lt;td&gt;$1300,\text{cm}^2/(\text{V}\cdot\text{s})$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Si 空穴迁移率&lt;/td&gt;
+&lt;td&gt;$\mu_p$&lt;/td&gt;
+&lt;td&gt;$450,\text{cm}^2/(\text{V}\cdot\text{s})$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;核心公式索引&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;公式&lt;/th&gt;
+&lt;th&gt;应用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;$p = N_A$，$n = n_i^2/p$&lt;/td&gt;
+&lt;td&gt;Q1A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$\sigma = q\mu n$，$R = \rho L/A$&lt;/td&gt;
+&lt;td&gt;Q1B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$V_0 = (kT/q)\ln(N_A N_D/n_i^2)$&lt;/td&gt;
+&lt;td&gt;Q2A(i)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$W = \sqrt{2\varepsilon_s V_0/q\cdot(1/N_A+1/N_D)}$&lt;/td&gt;
+&lt;td&gt;Q2A(ii)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$C_{j0} = \varepsilon_s A/W$&lt;/td&gt;
+&lt;td&gt;Q2A(iii)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$I_s = qA(D_p p_{n0}/L_p)$&lt;/td&gt;
+&lt;td&gt;Q2B(i)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$I = I_s(e^{qV/kT}-1)$&lt;/td&gt;
+&lt;td&gt;Q2B(ii)(iii)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$\phi_F = (kT/q)\ln(N_A/n_i)$，$V_T = 2\phi_F + Q_{dep,\max}/C_{ox}$&lt;/td&gt;
+&lt;td&gt;Q3B(i)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$I_D = \mu_n C_{ox}(W/L)[(V_{GS}-V_T)V_{DS}-V_{DS}^2/2]$（三极管区）&lt;/td&gt;
+&lt;td&gt;Q3B(ii)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$I_C = I_S e^{V_{BE}/V_T}(1+V_{CE}/V_A)$（Early 效应）&lt;/td&gt;
+&lt;td&gt;Q4B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;制作说明&lt;/strong&gt;：本文档基于样卷 PDF 自动提取题目内容后生成解析，所有数值计算均经过 Python 验算。
+解析中的能带图均为 ASCII 示意，实际答题时需在答题纸上画出带有正确曲率和间距的能带图。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+</content:encoded></item><item><title>stm32学习记录1</title><link>https://s701f.top/posts/stm32%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</link><guid isPermaLink="true">https://s701f.top/posts/stm32%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</guid><pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;反正以后做毕设的时候也要学，不如现在学...&amp;lt;br&amp;gt;
+依然只记录老师不教的内容&lt;/p&gt;
+&lt;h1&gt;记录&lt;/h1&gt;
+&lt;h2&gt;在VSCode中烧录KeilV5以上版本的程序&lt;/h2&gt;
+&lt;p&gt;在扩展商店里面安装Keil Assistant扩展，然后在设置里面设置Keil路径即可&lt;/p&gt;
+&lt;h2&gt;选择GPIO的方式&lt;/h2&gt;
+&lt;p&gt;江协科技的视频里面，点亮板子自带的LED需要C13端口&amp;lt;br&amp;gt;
+但很显然我贪便宜，买了正点原子的&amp;lt;br&amp;gt;
+查阅资料表明，这块最小系统板的LED是A8端口&amp;lt;br&amp;gt;
+&lt;img src=&quot;%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90LED.png&quot; alt=&quot;LED位置&quot; /&gt;
+所以代码改成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);// 开启总线时钟
+GPIO_InitTypeDef GPIO_InitStructure;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;// 标准推挽输出（那么问题来了，什么是推挽输出）
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;// 选择引脚8
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;// 选择速度50MHz（为什么要选择50MHz）
+GPIO_Init(GPIOA, &amp;amp;GPIO_InitStructure);// 初始化GPIOA的引脚8
+GPIO_SetBits(GPIOA, GPIO_Pin_8);// 点亮LED
+//GPIO_ResetBits(GPIOA, GPIO_Pin_8); // 熄灭LED
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;什么是推挽输出？&lt;/h2&gt;
+&lt;p&gt;必应了一下，看不懂&amp;lt;br&amp;gt;
+本着不懂原理也能用的精神，这个问题转化为了“为什么要用推挽输出”&lt;/p&gt;
+&lt;h2&gt;为什么要用推挽输出？&lt;/h2&gt;
+&lt;p&gt;我们需要输出电流驱动LED负载，只有推挽输出能做到。开漏输出需要上拉电阻到VDD&lt;/p&gt;
+&lt;h2&gt;为什么选择速度50MHz？&lt;/h2&gt;
+&lt;p&gt;首先，GPIO_Speed说明了这个GPIO口信号最高翻转频率&amp;lt;br&amp;gt;
+这个数值越高，信号的上升沿和下降沿时间就越短，波形更接近方波&amp;lt;br&amp;gt;
+当然我们只是控制一个LED，2MHz完全够用&amp;lt;br&amp;gt;
+那么就引出了下一个问题&lt;/p&gt;
+&lt;h2&gt;如何选择合适的速度？&lt;/h2&gt;
+&lt;p&gt;从波形角度来看，速度越高越好。&amp;lt;br&amp;gt;
+但是高速信号有几个问题。首先是能耗高，其次是信号边沿可能发生振铃，造成误判（振铃是指上升沿过冲，比方说最大输出电压是3.3V，过冲的时候输出变为3.9V；以及下降沿下冲，比方说低电平本来是0，下冲的时候输出变为负值了）甚至损坏IO口或电路，最后是电磁干扰（EMI）高频信号可能会干扰其它电路&amp;lt;br&amp;gt;
+所以对于普通输入输出或者长走线我们一般只需要2MHz或者10MHz&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;h2&gt;流水灯踩坑记录&lt;/h2&gt;
+&lt;p&gt;GPIO_Init那些东西太麻烦了，对于每一个引脚都要执行相同的操作，咱要把逻辑抽离出来，写成函数（智将）&amp;lt;br&amp;gt;
+咱真是面向对象高手啊&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GPIO_InitTypeDef registPin(GPIOMode_TypeDef mode, GPIOSpeed_TypeDef speed, const char* pinName)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode = mode;
+	GPIO_InitStructure.GPIO_Speed = speed;
+	GPIO_InitStructure.GPIO_Pin = 1 &amp;lt;&amp;lt; atoi(pinName + 1);
+	switch (pinName[0])
+	{
+		case &apos;A&apos;:
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+			GPIO_Init(GPIOA, &amp;amp;GPIO_InitStructure);
+			break;
+		case &apos;B&apos;:
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+			GPIO_Init(GPIOB, &amp;amp;GPIO_InitStructure);
+			break;
+		case &apos;C&apos;:
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+			GPIO_Init(GPIOC, &amp;amp;GPIO_InitStructure);
+			break;
+		case &apos;D&apos;:
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+			GPIO_Init(GPIOD, &amp;amp;GPIO_InitStructure);
+			break;
+		case &apos;E&apos;:
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);
+			GPIO_Init(GPIOE, &amp;amp;GPIO_InitStructure);
+			break;
+		default:
+			break;
+	}
+
+	return GPIO_InitStructure;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后继续看视频&amp;lt;br&amp;gt;
+诶我去怎么还能按位与的&amp;lt;br&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GPIO_InitTypeDef GPIO_InitStructure;
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+GPIO_Init(GPIOA, &amp;amp;GPIO_InitStructure);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解决&lt;/p&gt;
 </content:encoded></item><item><title>kruskal最小生成树</title><link>https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link><guid isPermaLink="true">https://s701f.top/posts/kruskal%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid><description>老师课上讲的是kruskal...我prim白学了</description><pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;前言&lt;/h1&gt;
 &lt;p&gt;今天看ppt，才发现老师讲的是kruskal算法...&lt;/p&gt;
 &lt;h1&gt;介绍&lt;/h1&gt;
