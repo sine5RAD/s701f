@@ -443,3 +443,159 @@ $$I_C = I_S e^{V_{BE}/V_T}\left(1 + \frac{V_{CE}}{V_A}\right)$$
 
 ---
 
+# Solid State Electronics 备考公式清单
+
+> 试卷末页**未提供**但在答题中必须使用的公式，按题目编号排列。
+> 试卷已给出的公式（接触势、阈值电压、PN结饱和电流）不再重复列出。
+
+---
+
+## 目录
+
+- [通用常数与单位换算](#通用常数与单位换算)
+- [Q1 半导体基础](#q1-半导体基础)
+- [Q2 PN结](#q2-pn结)
+- [Q3 MOS 电容器与MOSFET](#q3-mos-电容器与mosfet)
+- [Q4 BJT](#q4-bjt)
+
+---
+
+## 通用常数与单位换算
+
+试卷给出的常数部分以 SI 制（m, F/m）为标准，但计算中常用 cm 制：
+
+| 换算 | 公式 |
+|:---|:---|
+| 长度 | $\text{m} = 100\ \text{cm}$ |
+| 介电常数 | $\varepsilon_0 = 8.85\times10^{-12}\ \text{F/m} = 8.85\times10^{-14}\ \text{F/cm}$ |
+| 面积 | $\mu\text{m}^2 = 10^{-8}\ \text{cm}^2$ |
+| 热电压 | $\dfrac{kT}{q} = 0.026\ \text{V}$ |
+
+---
+
+## Q1 半导体基础
+
+### 质量作用定律
+
+$n \cdot p = n_i^2$
+
+### 多子近似（完全电离，室温）
+
+- p 型： $\approx N_A$ $， = n_i^2 / N_A$
+- n 型： $\approx N_D$ $， = n_i^2 / N_D$
+
+### 费米能级位置
+
+$E_f - E_i = \pm kT\ln\frac{N}{n_i}$
+
+（$+$ 号对应 n 型，$-$ 号对应 p 型）
+
+### 电导率与电阻
+
+$\sigma = q(\mu_n n + \mu_p p) \approx q\mu_{\text{majority}} N_{\text{doping}}$
+
+$\rho = \frac{1}{\sigma}$
+
+$R = \rho\frac{L}{A}$
+
+---
+
+## Q2 PN结
+
+### 爱因斯坦关系
+
+$D_n = \frac{kT}{q}\mu_n,\qquad D_p = \frac{kT}{q}\mu_p$
+
+### 扩散长度
+
+$L_n = \sqrt{D_n\tau_n},\qquad L_p = \sqrt{D_p\tau_p}$
+
+### 少子平衡浓度（单边结）
+
+对于 P+N 结，N 侧少子（空穴）：${n0} = \dfrac{n_i^2}{N_D}$
+对于 N+P 结，P 侧少子（电子）：${p0} = \dfrac{n_i^2}{N_A}$
+
+### 耗尽电容（平行板电容模型）
+
+$C_j = \frac{\varepsilon_s A}{W}$
+
+其中 $\varepsilon_s = \varepsilon_{r,Si}\cdot\varepsilon_0$，$ 为耗尽层宽度。
+
+### 介电常数
+
+$\varepsilon_s = \varepsilon_{r,Si}\cdot\varepsilon_0 = 11.8 \times 8.85\times10^{-14} = 1.0443\times10^{-12}\ \text{F/cm}$
+
+---
+
+## Q3 MOS 电容器与 MOSFET
+
+### 费米势
+
+$\phi_F = \frac{kT}{q}\ln\frac{N_A}{n_i}$
+
+### 单位面积氧化层电容
+
+$C_{ox} = \frac{\varepsilon_{ox}}{t_{ox}} = \frac{\varepsilon_{r,ox}\varepsilon_0}{t_{ox}}$
+
+SiO2 相对介电常数：$\varepsilon_{r,ox} = 3.9$
+
+### 耗尽层宽度（MOS 单边，p 衬底）
+
+$W_{dep} = \sqrt{\frac{2\varepsilon_s\psi_s}{qN_A}}$
+
+其中 $\psi_s$ 为表面势。
+
+### 最大耗尽宽度（强反型起始点）
+
+$\psi_s(\text{th}) = 2\phi_F$
+
+$W_{dep,\max} = \sqrt{\frac{4\varepsilon_s\phi_F}{qN_A}}$
+
+### 最大耗尽电荷密度
+
+$Q_{dep,\max} = qN_A W_{dep,\max}$
+
+### 阈值电压（完整形式，含平带电压）
+
+$V_T = V_{FB} + 2\phi_F + \frac{Q_{dep,\max}}{C_{ox}}$
+
+理想 MOS：${FB}=0$
+
+### 漏极电流
+
+**三极管（线性）区**（${DS} < V_{GS} - V_T$）：
+
+$I_D = \mu_n C_{ox}\frac{W}{L}\left[(V_{GS}-V_T)V_{DS} - \frac{V_{DS}^2}{2}\right]$
+
+**饱和区**（$V_{DS} \geq V_{GS} - V_T$）：
+$I_D = \frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS}-V_T)^2(1 + \lambda V_{DS})$
+
+---
+
+## Q4 BJT
+
+### 考虑 Early 效应的集电极电流
+
+$I_C = I_S e^{V_{BE}/V_T}\left(1 + \frac{V_{CE}}{V_A}\right)$
+
+其中 $ 为 Early 电压（典型值 50–100 V）， = kT/q = 0.026\ \text{V}$。
+
+### 输出电阻
+
+$r_o = \frac{V_A + V_{CE}}{I_C} \approx \frac{V_A}{I_C}$
+
+---
+
+## 常见陷阱提示
+
+| 陷阱 | 正确做法 |
+|:---|:---|
+| $\varepsilon_0$ 直接用 F/m 代入 | 先换算为 F/cm: $\times 10^{-2}$ |
+| 面积 $\mu\text{m}^2$ 不换算 | \ \mu\text{m}^2 = 10^{-8}\ \text{cm}^2$ |
+| MOS 耗尽公式用了 PN 结双边公式 | MOSFET 是单边耗尽，/N_D \to 0$ |
+| Early 参数 $\lambda$ 在三极管区也乘上去 | $\lambda$ 只在饱和区有效 |
+
+---
+
+> 整理自样卷解析中所有使用但试卷末页**未提供**的公式。
+
