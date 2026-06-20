@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-19T01:12:11.863Z</updated>
+  <updated>2026-06-20T09:40:59.212Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -573,6 +573,141 @@ $$</p>
 解析中的能带图均为 ASCII 示意，实际答题时需在答题纸上画出带有正确曲率和间距的能带图。</p>
 </blockquote>
 <hr />
+<h1>Solid State Electronics 备考公式清单</h1>
+<blockquote>
+<p>试卷末页<strong>未提供</strong>但在答题中必须使用的公式，按题目编号排列。
+试卷已给出的公式（接触势、阈值电压、PN结饱和电流）不再重复列出。</p>
+</blockquote>
+<hr />
+<h2>目录</h2>
+<ul>
+<li><a href="#%E9%80%9A%E7%94%A8%E5%B8%B8%E6%95%B0%E4%B8%8E%E5%8D%95%E4%BD%8D%E6%8D%A2%E7%AE%97">通用常数与单位换算</a></li>
+<li><a href="#q1-%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%9F%BA%E7%A1%80">Q1 半导体基础</a></li>
+<li><a href="#q2-pn%E7%BB%93">Q2 PN结</a></li>
+<li><a href="#q3-mos-%E7%94%B5%E5%AE%B9%E5%99%A8%E4%B8%8Emosfet">Q3 MOS 电容器与MOSFET</a></li>
+<li><a href="#q4-bjt">Q4 BJT</a></li>
+</ul>
+<hr />
+<h2>通用常数与单位换算</h2>
+<p>试卷给出的常数部分以 SI 制（m, F/m）为标准，但计算中常用 cm 制：</p>
+<table>
+<thead>
+<tr>
+<th>换算</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长度</td>
+<td>$\text{m} = 100\ \text{cm}$</td>
+</tr>
+<tr>
+<td>介电常数</td>
+<td>$\varepsilon_0 = 8.85\times10^{-12}\ \text{F/m} = 8.85\times10^{-14}\ \text{F/cm}$</td>
+</tr>
+<tr>
+<td>面积</td>
+<td>$\mu\text{m}^2 = 10^{-8}\ \text{cm}^2$</td>
+</tr>
+<tr>
+<td>热电压</td>
+<td>$\dfrac{kT}{q} = 0.026\ \text{V}$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Q1 半导体基础</h2>
+<h3>质量作用定律</h3>
+<p>$n \cdot p = n_i^2$</p>
+<h3>多子近似（完全电离，室温）</h3>
+<ul>
+<li>p 型： $\approx N_A$ $， = n_i^2 / N_A$</li>
+<li>n 型： $\approx N_D$ $， = n_i^2 / N_D$</li>
+</ul>
+<h3>费米能级位置</h3>
+<p>$E_f - E_i = \pm kT\ln\frac{N}{n_i}$</p>
+<p>（$+$ 号对应 n 型，$-$ 号对应 p 型）</p>
+<h3>电导率与电阻</h3>
+<p>$\sigma = q(\mu_n n + \mu_p p) \approx q\mu_{\text{majority}} N_{\text{doping}}$</p>
+<p>$\rho = \frac{1}{\sigma}$</p>
+<p>$R = \rho\frac{L}{A}$</p>
+<hr />
+<h2>Q2 PN结</h2>
+<h3>爱因斯坦关系</h3>
+<p>$D_n = \frac{kT}{q}\mu_n,\qquad D_p = \frac{kT}{q}\mu_p$</p>
+<h3>扩散长度</h3>
+<p>$L_n = \sqrt{D_n\tau_n},\qquad L_p = \sqrt{D_p\tau_p}$</p>
+<h3>少子平衡浓度（单边结）</h3>
+<p>对于 P+N 结，N 侧少子（空穴）：${n0} = \dfrac{n_i^2}{N_D}$
+对于 N+P 结，P 侧少子（电子）：${p0} = \dfrac{n_i^2}{N_A}$</p>
+<h3>耗尽电容（平行板电容模型）</h3>
+<p>$C_j = \frac{\varepsilon_s A}{W}$</p>
+<p>其中 $\varepsilon_s = \varepsilon_{r,Si}\cdot\varepsilon_0$，$ 为耗尽层宽度。</p>
+<h3>介电常数</h3>
+<p>$\varepsilon_s = \varepsilon_{r,Si}\cdot\varepsilon_0 = 11.8 \times 8.85\times10^{-14} = 1.0443\times10^{-12}\ \text{F/cm}$</p>
+<hr />
+<h2>Q3 MOS 电容器与 MOSFET</h2>
+<h3>费米势</h3>
+<p>$\phi_F = \frac{kT}{q}\ln\frac{N_A}{n_i}$</p>
+<h3>单位面积氧化层电容</h3>
+<p>$C_{ox} = \frac{\varepsilon_{ox}}{t_{ox}} = \frac{\varepsilon_{r,ox}\varepsilon_0}{t_{ox}}$</p>
+<p>SiO2 相对介电常数：$\varepsilon_{r,ox} = 3.9$</p>
+<h3>耗尽层宽度（MOS 单边，p 衬底）</h3>
+<p>$W_{dep} = \sqrt{\frac{2\varepsilon_s\psi_s}{qN_A}}$</p>
+<p>其中 $\psi_s$ 为表面势。</p>
+<h3>最大耗尽宽度（强反型起始点）</h3>
+<p>$\psi_s(\text{th}) = 2\phi_F$</p>
+<p>$W_{dep,\max} = \sqrt{\frac{4\varepsilon_s\phi_F}{qN_A}}$</p>
+<h3>最大耗尽电荷密度</h3>
+<p>$Q_{dep,\max} = qN_A W_{dep,\max}$</p>
+<h3>阈值电压（完整形式，含平带电压）</h3>
+<p>$V_T = V_{FB} + 2\phi_F + \frac{Q_{dep,\max}}{C_{ox}}$</p>
+<p>理想 MOS：${FB}=0$</p>
+<h3>漏极电流</h3>
+<p><strong>三极管（线性）区</strong>（${DS} &lt; V_{GS} - V_T$）：</p>
+<p>$I_D = \mu_n C_{ox}\frac{W}{L}\left[(V_{GS}-V_T)V_{DS} - \frac{V_{DS}^2}{2}\right]$</p>
+<p><strong>饱和区</strong>（$V_{DS} \geq V_{GS} - V_T$）：
+$I_D = \frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS}-V_T)^2(1 + \lambda V_{DS})$</p>
+<hr />
+<h2>Q4 BJT</h2>
+<h3>考虑 Early 效应的集电极电流</h3>
+<p>$I_C = I_S e^{V_{BE}/V_T}\left(1 + \frac{V_{CE}}{V_A}\right)$</p>
+<p>其中 $ 为 Early 电压（典型值 50–100 V）， = kT/q = 0.026\ \text{V}$。</p>
+<h3>输出电阻</h3>
+<p>$r_o = \frac{V_A + V_{CE}}{I_C} \approx \frac{V_A}{I_C}$</p>
+<hr />
+<h2>常见陷阱提示</h2>
+<table>
+<thead>
+<tr>
+<th>陷阱</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\varepsilon_0$ 直接用 F/m 代入</td>
+<td>先换算为 F/cm: $\times 10^{-2}$</td>
+</tr>
+<tr>
+<td>面积 $\mu\text{m}^2$ 不换算</td>
+<td>\ \mu\text{m}^2 = 10^{-8}\ \text{cm}^2$</td>
+</tr>
+<tr>
+<td>MOS 耗尽公式用了 PN 结双边公式</td>
+<td>MOSFET 是单边耗尽，/N_D \to 0$</td>
+</tr>
+<tr>
+<td>Early 参数 $\lambda$ 在三极管区也乘上去</td>
+<td>$\lambda$ 只在饱和区有效</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>整理自样卷解析中所有使用但试卷末页<strong>未提供</strong>的公式。</p>
+</blockquote>
 ]]></content>
     <author>
       <name>五红酱自动机！</name>
