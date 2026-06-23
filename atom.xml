@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-06-20T09:40:59.212Z</updated>
+  <updated>2026-06-23T02:41:32.992Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -77,6 +77,236 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>固体电子学公式总结</title>
+    <link href="https://s701f.top/posts/%E5%9B%BA%E4%BD%93%E7%94%B5%E5%AD%90%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E5%9B%BA%E4%BD%93%E7%94%B5%E5%AD%90%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%80%BB%E7%BB%93/</id>
+    <published>2026-06-23T00:00:00.000Z</published>
+    <updated>2026-06-23T00:00:00.000Z</updated>
+    <summary>一些公式</summary>
+    <content type="html"><![CDATA[<h1>固态电子学公式总结</h1>
+<blockquote>
+<p>本文件汇总固体电子学课程 (Lecture 5-20, Week 9-10) 的全部核心公式，按主题模块整理，便于复习查阅。</p>
+</blockquote>
+<hr />
+<h1>一、晶体结构与量子力学基础</h1>
+<h2>Bloch 定理</h2>
+<p>晶体中电子波函数：</p>
+<p>$\psi(x) = u(x) \cdot e^{ikx}$</p>
+<p>其中 $u(x)$ 为单胞波函数，与势函数 $U(x)$ 具有相同周期性：$u(x + d) = u(x)$</p>
+<h2>晶胞原子数</h2>
+<table>
+<thead>
+<tr>
+<th>晶格类型</th>
+<th>原子数</th>
+<th>计算方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单立方 (SC)</td>
+<td>1</td>
+<td>$8 \times 1/8 = 1$</td>
+</tr>
+<tr>
+<td>体心立方 (BCC)</td>
+<td>2</td>
+<td>$8 \times 1/8 + 1 = 2$</td>
+</tr>
+<tr>
+<td>面心立方 (FCC)</td>
+<td>4</td>
+<td>$8 \times 1/8 + 6 \times 1/2 = 4$</td>
+</tr>
+<tr>
+<td>金刚石结构</td>
+<td>8</td>
+<td>两个 FCC 子晶格叠加</td>
+</tr>
+</tbody>
+</table>
+<h2>Miller 指数晶面间距</h2>
+<p>$d_{hkl} = a / \sqrt{h^2 + k^2 + l^2}$</p>
+<hr />
+<h1>二、电导率与载流子输运</h1>
+<h2>电导率</h2>
+<p>$\sigma = n e \mu_n + p e \mu_p$</p>
+<h2>漂移电流密度</h2>
+<p>$J_{\text{drift}} = \sigma E = (n e \mu_n + p e \mu_p) E$</p>
+<h2>扩散电流密度</h2>
+<p>$J_n = e D_n \frac{dn}{dx}$（电子扩散电流）</p>
+<p>$J_p = -e D_p \frac{dp}{dx}$（空穴扩散电流）</p>
+<h2>Einstein 关系</h2>
+<p>$\frac{D}{\mu} = \frac{kT}{e}$</p>
+<p>300 K 下：$D/\mu = 0.0259$ V</p>
+<h2>漂移速度</h2>
+<p>$v_d = \mu E$</p>
+<hr />
+<h1>三、半导体载流子统计</h1>
+<h2>本征载流子浓度</h2>
+<p>$n_i^2 = N_c N_v \exp\left(-\frac{E_g}{kT}\right)$</p>
+<h2>本征 Fermi 能级</h2>
+<p>$E_i = \frac{E_c + E_v}{2} + \frac{kT}{2} \ln\left(\frac{N_v}{N_c}\right)$</p>
+<h2>质量作用定律</h2>
+<p>$n p = n_i^2$（热平衡下）</p>
+<h2>电中性条件</h2>
+<p>$n + N_A^- = p + N_D^+$</p>
+<p>N 型（$N_D \gg N_A$）：$n \approx N_D$</p>
+<p>P 型（$N_A \gg N_D$）：$p \approx N_A$</p>
+<h2>Fermi 能级位置</h2>
+<p>N 型：$E_F - E_i = kT \ln(N_D / n_i)$</p>
+<p>P 型：$E_i - E_F = kT \ln(N_A / n_i)$</p>
+<hr />
+<h1>四、PN 结</h1>
+<h2>接触势（内建电势）</h2>
+<p>$V_{bi} = \frac{kT}{e} \ln\left(\frac{N_A N_D}{n_i^2}\right)$</p>
+<p>$V_{bi} = \frac{1}{e}(E_{Fn} - E_{Fp})$</p>
+<h2>耗尽层宽度</h2>
+<p>$W = \sqrt{\frac{2\varepsilon_s}{e}\left(\frac{1}{N_A} + \frac{1}{N_D}\right)(V_{bi} - V)}$</p>
+<p>单边突变结（$N_A \gg N_D$）：$W \approx \sqrt{\frac{2\varepsilon_s}{e N_D}(V_{bi} - V)}$，$W \approx x_n$</p>
+<h2>电场分布</h2>
+<p>P 侧：$E(x) = -\frac{qN_A}{\varepsilon_s}(x + x_p)$</p>
+<p>N 侧：$E(x) = -\frac{qN_D}{\varepsilon_s}(x_n - x)$</p>
+<h2>最大电场</h2>
+<p>$|E_{\max}| = \sqrt{\frac{2e N_A N_D}{\varepsilon_s(N_A + N_D)}(V_{bi} - V)}$</p>
+<h2>耗尽层电容（势垒电容）</h2>
+<p>$C_j = A \sqrt{\frac{e \varepsilon_s N_A N_D}{2(N_A + N_D)(V_{bi} - V)}}$</p>
+<h2>扩散电容</h2>
+<p>$C_{\text{diff}} \propto I_F \tau$</p>
+<h2>I-V 特性</h2>
+<p>$J = J_s (e^{eV/kT} - 1)$</p>
+<p>$J_s = e\left(\frac{D_p n_i^2}{L_p N_D} + \frac{D_n n_i^2}{L_n N_A}\right)$</p>
+<h2>击穿电压</h2>
+<p>$V_{BR} \propto E_g^{3/2} N_D^{-3/4}$</p>
+<hr />
+<h1>五、MOSFET</h1>
+<h2>阈值电压</h2>
+<p>$V_t = V_{FB} + 2\phi_F + \frac{Q_B}{C_{ox}}$</p>
+<p>$\phi_F = \frac{kT}{e} \ln\left(\frac{N_A}{n_i}\right)$，$C_{ox} = \frac{\varepsilon_{ox}}{t_{ox}}$</p>
+<h2>DC 工作区</h2>
+<table>
+<thead>
+<tr>
+<th>工作区</th>
+<th>条件</th>
+<th>$I_D$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>截止区</td>
+<td>$V_{GS} &lt; V_t$</td>
+<td>$0$</td>
+</tr>
+<tr>
+<td>线性区</td>
+<td>$V_{GS} &gt; V_t$, $V_{DS} &lt; V_{GS} - V_t$</td>
+<td>$\mu_n C_{ox} \frac{W}{L}[(V_{GS} - V_t)V_{DS} - \frac{1}{2}V_{DS}^2]$</td>
+</tr>
+<tr>
+<td>饱和区</td>
+<td>$V_{GS} &gt; V_t$, $V_{DS} \ge V_{GS} - V_t$</td>
+<td>$\frac{1}{2}\mu_n C_{ox} \frac{W}{L}(V_{GS} - V_t)^2$</td>
+</tr>
+</tbody>
+</table>
+<h2>沟道长度调制</h2>
+<p>$I_D = \frac{1}{2}\mu_n C_{ox} \frac{W}{L}(V_{GS} - V_t)^2(1 + \lambda V_{DS})$</p>
+<h2>跨导</h2>
+<p>$g_m = \frac{\partial I_D}{\partial V_{GS}}$</p>
+<p>饱和区：$g_m = \mu_n C_{ox} \frac{W}{L}(V_{GS} - V_t)$</p>
+<h2>衬底偏置效应</h2>
+<p>$V_t = V_{t0} + \gamma(\sqrt{2\phi_F + V_{SB}} - \sqrt{2\phi_F})$</p>
+<p>$\gamma = \frac{\sqrt{2e \varepsilon_s N_A}}{C_{ox}}$</p>
+<h2>CMOS 对称条件</h2>
+<p>$\mu_n (W/L)_N = \mu_p (W/L)_P$</p>
+<hr />
+<h1>六、BJT</h1>
+<h2>电流关系</h2>
+<p>$I_E = I_C + I_B$</p>
+<p>$\beta = I_C / I_B$，$\alpha = I_C / I_E$</p>
+<p>$\beta = \frac{\alpha}{1 - \alpha}$，$\alpha = \frac{\beta}{1 + \beta}$</p>
+<h2>集电极电流（正向有源）</h2>
+<p>$I_C = I_S e^{V_{BE} / V_T}$，$V_T = kT/e \approx 0.0259$ V</p>
+<h2>Ebers-Moll 模型</h2>
+<p>$I_C = \alpha_F I_E + I_{C0}$</p>
+<p>$I_E = I_{ES}(e^{V_{BE}/V_T} - 1) - \alpha_R I_{CS}(e^{V_{BC}/V_T} - 1)$</p>
+<p>$I_C = \alpha_F I_{ES}(e^{V_{BE}/V_T} - 1) - I_{CS}(e^{V_{BC}/V_T} - 1)$</p>
+<h2>Early 效应</h2>
+<p>$I_C = I_S e^{V_{BE}/V_T} \left(1 + \frac{V_{CE}}{V_A}\right)$</p>
+<hr />
+<h1>七、连续性方程</h1>
+<p>$\frac{\partial n}{\partial t} = \frac{1}{e}\frac{\partial J_n}{\partial x} + G_n - R_n$</p>
+<p>$\frac{\partial p}{\partial t} = -\frac{1}{e}\frac{\partial J_p}{\partial x} + G_p - R_p$</p>
+<h2>复合寿命</h2>
+<p>$\Delta n(t) = \Delta n(0) e^{-t/\tau}$</p>
+<h2>扩散长度</h2>
+<p>$L_n = \sqrt{D_n \tau_n}$，$L_p = \sqrt{D_p \tau_p}$</p>
+<hr />
+<h1>八、常用物理常数 (300 K)</h1>
+<table>
+<thead>
+<tr>
+<th>常数</th>
+<th>符号</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电子电荷</td>
+<td>$e$</td>
+<td>$1.602 \times 10^{-19}$ C</td>
+</tr>
+<tr>
+<td>Boltzmann 常数</td>
+<td>$k$</td>
+<td>$1.381 \times 10^{-23}$ J/K</td>
+</tr>
+<tr>
+<td>热电压</td>
+<td>$kT/e$</td>
+<td>$0.0259$ V</td>
+</tr>
+<tr>
+<td>真空介电常数</td>
+<td>$\varepsilon_0$</td>
+<td>$8.854 \times 10^{-14}$ F/cm</td>
+</tr>
+<tr>
+<td>硅相对介电常数</td>
+<td>$\varepsilon_r$</td>
+<td>$11.7$</td>
+</tr>
+<tr>
+<td>硅介电常数</td>
+<td>$\varepsilon_s$</td>
+<td>$1.036 \times 10^{-12}$ F/cm</td>
+</tr>
+<tr>
+<td>二氧化硅介电常数</td>
+<td>$\varepsilon_{ox}$</td>
+<td>$3.9$</td>
+</tr>
+<tr>
+<td>硅禁带宽度</td>
+<td>$E_g$</td>
+<td>$1.12$ eV</td>
+</tr>
+<tr>
+<td>硅本征载流子浓度</td>
+<td>$n_i$</td>
+<td>$1.5 \times 10^{10}$ cm$^{-3}$</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
   </entry>
   <entry>
     <title>固体电子学样卷解析</title>
@@ -712,7 +942,7 @@ $I_D = \frac{1}{2}\mu_n C_{ox}\frac{W}{L}(V_{GS}-V_T)^2(1 + \lambda V_{DS})$</p>
     <author>
       <name>五红酱自动机！</name>
     </author>
-    <category term="固体电子学"></category>
+    <category term="电子信息工程"></category>
   </entry>
   <entry>
     <title>stm32学习记录1</title>
@@ -808,6 +1038,7 @@ GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
     <author>
       <name>五红酱自动机！</name>
     </author>
+    <category term="电子信息工程"></category>
   </entry>
   <entry>
     <title>kruskal最小生成树</title>
@@ -885,6 +1116,7 @@ std::cout &lt;&lt; cnt &lt;&lt; std::endl;
     <author>
       <name>五红酱自动机！</name>
     </author>
+    <category term="算法"></category>
   </entry>
   <entry>
     <title>lua学习记录1</title>
