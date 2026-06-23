@@ -3,8 +3,8 @@ title: 固体电子学样卷解析
 published: 2026-06-18
 description: '下周考试，所以让AI写了个样卷解析www'
 image: ''
-tags: ['电子信息工程']
-category: '固体电子学'
+tags: ['固体电子学']
+category: '电子信息工程'
 draft: false 
 lang: ''
 ---

@@ -4,7 +4,7 @@ published: 2026-06-08
 description: '老师课上讲的是kruskal...我prim白学了'
 image: ''
 tags: ['c++', '算法']
-category: ''
+category: '算法'
 draft: false 
 lang: '算法'
 ---
