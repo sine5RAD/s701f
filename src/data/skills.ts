@@ -45,7 +45,7 @@ export const skillsData: Skill[] = [
 		id: "vue",
 		name: "Vue.js",
 		description:
-			"A progressive JavaScript framework that is easy to learn and use, suitable for rapid development.",
+			"ai写的比我好系列",
 		icon: "logos:vue",
 		category: "frontend",
 		level: "intermediate",
@@ -79,7 +79,7 @@ export const skillsData: Skill[] = [
 		id: "csharp",
 		name: "C#",
 		description:
-			"A modern object-oriented programming language developed by Microsoft, suitable for the .NET ecosystem.",
+			"神中神，我出生就是为了这个",
 		icon: "devicon:csharp",
 		category: "backend",
 		level: "advanced",
@@ -125,7 +125,7 @@ export const skillsData: Skill[] = [
 		id: "git",
 		name: "Git",
 		description:
-			"A distributed version control system, an essential tool for code management and team collaboration.",
+			"只会git push origin master -f可以嘛",
 		icon: "logos:git-icon",
 		category: "tools",
 		level: "advanced",
@@ -136,7 +136,7 @@ export const skillsData: Skill[] = [
 		id: "vscode",
 		name: "VS Code",
 		description:
-			"A lightweight but powerful code editor with a rich plugin ecosystem.",
+			"通过设置编辑器背景，成功地让别人认为我是赛级嘉豪",
 		icon: "logos:visual-studio-code",
 		category: "tools",
 		level: "intermediate",
@@ -157,7 +157,7 @@ export const skillsData: Skill[] = [
 	{
 		id: "nginx",
 		name: "Nginx",
-		description: "A high-performance web server and reverse proxy server.",
+		description: "真会吗？",
 		icon: "logos:nginx",
 		category: "tools",
 		level: "beginner",
@@ -168,7 +168,7 @@ export const skillsData: Skill[] = [
 	{
 		id: "linux",
 		name: "Linux",
-		description:
+		description: "真会吗？",
 			"An open-source operating system, the preferred choice for server deployment and development environments.",
 		icon: "logos:linux-tux",
 		category: "tools",
@@ -198,7 +198,7 @@ export const skillsData: Skill[] = [
 		category: "other",
 		level: "beginner",
 		experience: { years: 0, months: 3 },
-		projects: ["电赛的小车？"],
+		projects: ["2024年电赛H题", "还没开始的2026年电赛"],
 		color: "#FF6F61",
 	},
 ];
