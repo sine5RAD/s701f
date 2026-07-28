@@ -169,7 +169,6 @@ export const skillsData: Skill[] = [
 		id: "linux",
 		name: "Linux",
 		description: "真会吗？",
-			"An open-source operating system, the preferred choice for server deployment and development environments.",
 		icon: "logos:linux-tux",
 		category: "tools",
 		level: "beginner",
