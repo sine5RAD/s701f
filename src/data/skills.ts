@@ -57,7 +57,7 @@ export const skillsData: Skill[] = [
 		id: "python",
 		name: "Python",
 		description:
-			"A general-purpose programming language suitable for web development, data analysis, machine learning, and more.",
+			"曾经学的时候感觉莫名其妙，现在学机器学习的时候用上了",
 		icon: "logos:python",
 		category: "backend",
 		level: "beginner",
