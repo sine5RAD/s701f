@@ -3,7 +3,7 @@ title: stm32学习记录1
 published: 2026-06-11
 description: ''
 image: ''
-tags: ['c', 'stm32']
+tags: ['c', '单片机']
 category: '电子信息工程'
 draft: false 
 lang: ''
