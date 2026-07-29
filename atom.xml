@@ -5,7 +5,7 @@
   <link href="https://s701f.top/" rel="alternate" type="text/html"/>
   <link href="https://s701f.top/atom.xml" rel="self" type="application/atom+xml"/>
   <id>https://s701f.top/</id>
-  <updated>2026-07-28T12:21:56.449Z</updated>
+  <updated>2026-07-29T14:58:23.257Z</updated>
   <language>zh_CN</language>
   <entry>
     <title>自我介绍</title>
@@ -78,6 +78,38 @@
       <name>五红酱自动机！</name>
     </author>
     <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>电赛日记-2026.7.29</title>
+    <link href="https://s701f.top/posts/%E7%94%B5%E8%B5%9B%E6%97%A5%E8%AE%B0-2026729/" rel="alternate" type="text/html"/>
+    <id>https://s701f.top/posts/%E7%94%B5%E8%B5%9B%E6%97%A5%E8%AE%B0-2026729/</id>
+    <published>2026-07-29T00:00:00.000Z</published>
+    <updated>2026-07-29T00:00:00.000Z</updated>
+    <summary>电赛第一天</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<p>等了这么久，终于等到电赛了。说实话没啥特别的感觉，可能是因为能上网查资料的原因吧（</p>
+<h1>流程</h1>
+<p>于是乎一早起来cosplay撑杆跳僵尸，扛着五根比我还高的pvc管子去软件楼，提前半个小时占下座位，然后待在座位上喂蚊子以及等待发题&lt;br&gt;
+发题大概是七点半，咱瞅了一眼绝望地发现里面有图传和导出视频这两个我们组完全没准备的内容，讨论了一下我说要做个前端，每帧接收泰山派传来的图片然后把它们做成视频，然后就开始用我三脚猫的vue功夫手搓&lt;br&gt;
+九点半的时候咱就做完了（<s>ds神力</s>），然后他们丢了两百张数据标注给咱。获得了一小时流水线工种体验卡&lt;br&gt;
+做完之后正好食堂开门了，于是去吃饭，吃完回来继续改咱的程序，把摄像头的逻辑加进去。&lt;br&gt;
+设想是这样的：首先从摄像头获取当前帧的图片，保存到本地文件夹中。然后前端读取该目录，每一帧都在网页上渲染图片。导出功能是用cv2把这些图片合成成视频。于是信心满满地开始实现。&lt;br&gt;
+Mozila Firefox: 为了保护用户的隐私，我们无法监控文件夹内容&lt;br&gt;
+然后问ai，ai拿nodejs写了个后端服务器，用api请求获取当前存储的图片&lt;br&gt;
+其实<s>出于炫技以及一个项目用五种语言的考虑</s>咱本来打算用dotnet做后端的，但是懒得创建项目了，遂作罢&lt;br&gt;
+接下来是暴露接口。python直接调用后端api。这个倒不算难&lt;br&gt;
+这一切做完之后打了会游戏，然后开始写电脑和泰山派通信的代码。打算是windows端用python，监听8888端口，然后把接收到的图片存进文件夹里面。linux端用c，采用tcp协议传图片。美中不足之处在于只测试了windows端的（写了一个测试脚本，模拟泰山派从本地出发向8888端口传图，第一次就过了www）&lt;br&gt;
+以及c的代码还没测试啊啊啊&lt;br&gt;</p>
+<h1>今日成就</h1>
+<h2>流水线工人：你标注了超过200张图片</h2>
+<h2>全栈工程师：以前的学着玩的东西真的有用！你在实际项目中运用了前端开发、后端开发、网络通信相关的知识</h2>
+<h2>不良作息：一天吃饭的次数不等于3</h2>
+<h2>提桶跑路：你没在学校住宿</h2>
+]]></content>
+    <author>
+      <name>五红酱自动机！</name>
+    </author>
+    <category term="电子信息工程"></category>
   </entry>
   <entry>
     <title>电磁学笔记</title>
