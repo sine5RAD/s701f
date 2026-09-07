@@ -36,6 +36,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://hongliu.icu",
 		tags: ["Blog"],
 	},
+	{
+		id: 4,
+		title: "探求者",
+		imgurl: "https://spartan-x125.github.io/avatar/avatar.jpg",
+		desc: "23届的工大学长qwq",
+		siteurl: "https://spartan-x125.github.io/",
+		tags: ["Blog"],
+	},
 ];
 
 // 获取所有友情链接数据
