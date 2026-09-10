@@ -44,6 +44,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://spartan-x125.github.io/",
 		tags: ["Blog"],
 	},
+	{
+		id: 5,
+		title: "小涵Naiwenel",
+		imgurl: "https://github.com/yuhan2680/yuhan2680/blob/main/%E5%A4%B4%E5%83%8F.jpg",
+		desc: "以一灯燃百千灯，直至万灯皆明",
+		siteurl: "https://naiwenel.com",
+		tags: ["Friend", "Blog"],
+	},
 ];
 
 // 获取所有友情链接数据
