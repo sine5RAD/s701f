@@ -337,8 +337,8 @@ public static void FindRoad2Position(Location startLocation, Location targetLoca
     road = nodeRoad.Select(node => node.location).ToList();
 }
 ```
-“你还挺有幽默感。”五红看到SpaceObjectId不一致的报错，不禁笑了出来。
-“其实吧，我想到一个问题。”风铃草的表情带着三分严肃和七分苦笑，“现实不是游戏，我们不需要在几十毫秒内算出最短路，对于现代计算机而言，五亿次计算只需要五秒钟。我们完全可以只用dijkstra。”
+“你还挺有幽默感。”五红看到SpaceObjectId不一致的报错，不禁笑了出来。<br>
+“其实吧，我想到一个问题。”风铃草的表情带着三分严肃和七分苦笑，“现实不是游戏，我们不需要在几十毫秒内算出最短路，对于现代计算机而言，五亿次计算只需要五秒钟。我们完全可以只用dijkstra。”<br>
 “...还是有意义的。你至少学会了A*，不是嘛。”
 # 后记
 其实在咱的游戏里，大部分时候用Dijkstra就够了。但咱确实想练一下A*，于是有了这篇博客。
