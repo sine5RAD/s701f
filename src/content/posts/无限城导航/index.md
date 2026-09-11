@@ -156,13 +156,13 @@ private static void DijkstraInChunk(
 }
 ```
 风铃草张了张嘴，但还没开口就被五红阻止了。“m和n太小了，log带2/3次方的算法常数太大，而且就几十个节点你真的有必要在找dist最小值的时候在乎这点运行时开销嘛。”<br>
-见风铃草无话可说了，五红满意地点了点头。“接下来，我们对每一个区块做贪心，从开始节点起，找到到达下一个区块的最短路径，以此类推...”
+见风铃草无话可说了，五红满意地点了点头。“接下来，我们对每一个区块做贪心，从开始节点起，找到到达下一个区块的最短路径，以此类推...”<br>
 “局部最优解不是全局最优解。”<br>
 意外地，这次五红没有怼风铃草。她低下头：“这是个好问题...”<br>
 “也许我能解决这个问题。”风铃草举起手，五红站起身给他让位置。<br>
 “假设第$k$个区块到第$k + 1$个区块连接了t[k]条边，$e[k][i](i∈[0, t[k] - 1])$表示第i条边的长度，$f[i][x]$表示进入第k个区块的第[x]个入口点所用的最短距离，我们还能计算出第$k$个区块第$x$个入口点到第$y$个出口点的最短距离$dis[k][x][y]$...”风铃草的眼角流露出一丝笑意。<br>
 “你的意思是...”五红的声音骤然提高。<br>
-“动态规划。到达第$k + 1$个区块的第$c$个节点的最短路径可以用第$k$个区块的$f[i][x]$算出来。”他开始打字。
+“动态规划。到达第$k + 1$个区块的第$c$个节点的最短路径可以用第$k$个区块的$f[i][x]$算出来。”然后他开始打字。
 ```csharp
 private static List<WorldMapChunkNode> FindRoadInChunkCorridor(
     WorldMapChunkNode startNode,
@@ -197,7 +197,7 @@ private static List<WorldMapChunkNode> FindRoadInChunkCorridor(
         crossLinks.Add(links);
     }
 ```
-他开始写NodeGridPos，计算区块坐标的函数
+他开始写NodeGridPos，一个用来计算区块坐标的函数
 ```csharp
 private static Vector2 NodeGridPos(WorldMapChunkNode node)
 {
@@ -258,7 +258,7 @@ private static List<WorldMapChunkNode> RebuildChunkPath(
 }
 ```
 “最后，我们要算出入口点到导航中点的最短路径。这样就能得到全局最短路了。”<br>
-“其实A*找到的区块路径里不一定有全局最短路...”五红开口了。
+“其实A*找到的区块路径里不一定有全局最短路...”五红开口了。<br>
 “...闭嘴。”这次轮到风铃草扬眉吐气。
 ```csharp
     var lastChunk = map[chunkPath[chunkPath.Count - 1]];
