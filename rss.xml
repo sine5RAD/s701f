@@ -375,8 +375,8 @@
     road = nodeRoad.Select(node =&amp;gt; node.location).ToList();
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;“你还挺有幽默感。”五红看到SpaceObjectId不一致的报错，不禁笑了出来。
-“其实吧，我想到一个问题。”风铃草的表情带着三分严肃和七分苦笑，“现实不是游戏，我们不需要在几十毫秒内算出最短路，对于现代计算机而言，五亿次计算只需要五秒钟。我们完全可以只用dijkstra。”
+&lt;p&gt;“你还挺有幽默感。”五红看到SpaceObjectId不一致的报错，不禁笑了出来。&amp;lt;br&amp;gt;
+“其实吧，我想到一个问题。”风铃草的表情带着三分严肃和七分苦笑，“现实不是游戏，我们不需要在几十毫秒内算出最短路，对于现代计算机而言，五亿次计算只需要五秒钟。我们完全可以只用dijkstra。”&amp;lt;br&amp;gt;
 “...还是有意义的。你至少学会了A*，不是嘛。”&lt;/p&gt;
 &lt;h1&gt;后记&lt;/h1&gt;
 &lt;p&gt;其实在咱的游戏里，大部分时候用Dijkstra就够了。但咱确实想练一下A*，于是有了这篇博客。&lt;/p&gt;
